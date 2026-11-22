@@ -1,21 +1,21 @@
 # STATE
 
 ```
-CURRENT_STAGE:        00 (Inventory, constraints and starting snapshot): AWAITING USER APPROVAL
-LAST_APPROVED_STAGE:  none
-NEXT_ACTION:          User replies "Approve Stage 00" (or requests a revision). Nothing else is started before that.
+CURRENT_STAGE:        01 (Comparable products and originality stress test): AWAITING USER APPROVAL
+LAST_APPROVED_STAGE:  00 (user: "Approve Stage 00", 2026-11-22)
+NEXT_ACTION:          User replies "Approve Stage 01" (or asks for a revision). Stage 02 starts only after that.
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       none selected. Candidate only: Godot 4.7 stable (UNVERIFIED from this container)
 KNOWN_BLOCKERS:
   - No Android test device and no attached user computer (needed from Stage 06)
   - Godot / Unity / adb not installed in the container (needed from Stage 06)
-  - Outbound web limited to an allowlist; Stage 01 research and Stage 06 doc checks are BLOCKED/UNVERIFIED until hosts are allowed or the user supplies pages
+  - Outbound web: user approved web access on 2026-11-22; 15 hosts were added to the environment allowlist (Stage 01 product pages and the sites cited in the user's documents). Stage 06 hosts (godotengine.org, docs.godotengine.org, unity.com, docs.unity.com, developer.android.com) are NOT yet allowed
   - Font and asset licences unchecked (needed before Stage 05 approval)
 ```
 
 ## Last approved stage
 
-None. This is the first stage. The user has not yet given an explicit "Approve Stage 00".
+Stage 00, approved by the user on 2026-11-22 ("Approve Stage 00, Confirm the baseline: Web access approved"). The user explicitly confirmed the baseline (one sign, portrait phone). The test-hardware question was not answered, so that blocker stays open.
 
 ## Resume procedure (from the spec, section 2)
 

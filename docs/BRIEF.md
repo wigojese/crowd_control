@@ -54,7 +54,7 @@ City editor, accounts, multiplayer, live service, boosters, UGC servers, crowd-c
 | Java, Python 3, Node 22, Git | Installed | VERIFIED |
 | Chromium and Playwright | Pre-installed, used for the mockup renders | VERIFIED |
 | Real Android or iOS test device | None attached. No user computer is attached either | VERIFIED |
-| Outbound web | Only an allowlist. A test of 9 sites cited by the user's documents (W3C WCAG, Android and Apple docs, museum pages) reached **none** of them usefully: 7 failed DNS, 2 Apple pages returned only titles | VERIFIED |
+| Outbound web (as of Stage 00) | Only an allowlist. A test of 9 sites cited by the user's documents (W3C WCAG, Android and Apple docs, museum pages) reached **none** of them usefully: 7 failed DNS, 2 Apple pages returned only titles | VERIFIED |
 | Godot 4.7 and Unity 6.3 LTS being the current stable lines | Cannot be checked from here | UNKNOWN (`VERIFY_ON_TARGET_ENGINE`) |
 
 ## 8. Desired platforms and test hardware
@@ -81,3 +81,5 @@ Wanted: a recorded mid-range Android phone for the spec's 60 FPS target and a 10
 2. L01 has a 32 s time limit but each citizen's default deadline is 30 s (section A4). Both can hold at once, but the result copy must say which one applies.
 3. Stage 05 sets up the art competition and approval gate, yet three rounds of art exploration have already happened at your request, ahead of Stage 05. Those are recorded as inputs, not as approvals.
 4. The spec's source register (section I) cannot be date-verified from this container (see section 7).
+
+_Update 2026-11-22 (Stage 01): the user approved web access and 15 hosts were added; see CC-D-008 and docs/RISKS.md R-03._

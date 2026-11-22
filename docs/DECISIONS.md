@@ -13,7 +13,7 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: `max_active_signs = 1`; orientation = portrait
 - rationale: It is the spec's baseline and the north-star verb "redirect"
 - alternatives: landscape; multiple signs. Both rejected by the spec's one-sign invariant
-- approver status: PROPOSED. Awaiting your Stage 00 answer
+- approver status: APPROVED by the user on 2026-11-22 ("Confirm the baseline")
 - affected files: docs/BRIEF.md
 - supersedes: none
 
@@ -75,4 +75,28 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - alternatives: keep them out of the repository
 - approver status: PROPOSED. Informational
 - affected files: docs/art-exploration/**
+- supersedes: none
+
+**CC-D-007**
+- stage: 01
+- date: 2026-11-22
+- question: What is the differentiation statement, and which novelty is tested first?
+- chosen option: Promise: "Place one civic sign at a junction, watch a small city's crowd bend toward it, then see exactly which turn decided the outcome." Test **N1** (one sign biasing next-junction route preference by walker type) first
+- values: 11 products compared; 3 candidate novelties (N1 sign as preference, N2 decisive-junction replay, N3 one data source in three zoom languages)
+- rationale: N1 is the core verb; N2 and N3 only matter if it is fun. Full evidence in docs/DIFFERENTIATION.md
+- alternatives: P2 hard-gate sign, P3 several signs, P4 per-walker skills, P5 drawn paths (all rejected there)
+- approver status: PROPOSED. Awaiting "Approve Stage 01"
+- affected files: docs/DIFFERENTIATION.md
+- supersedes: none
+
+**CC-D-008**
+- stage: 01
+- date: 2026-11-22
+- question: Which outbound hosts may the session reach?
+- chosen option: 15 exact hosts added to the environment allowlist on the user's "Web access approved"
+- values: library.ltmuseum.co.uk, www.londonmuseum.org.uk, isotype.univie.ac.at, www.cooperhewitt.org, www.metmuseum.org, www.w3.org, support.google.com, developer.apple.com, store.steampowered.com, apps.apple.com, en.wikipedia.org, www.nintendo.com, www.pocketgamer.com, toucharcade.com, www.pcgamer.com
+- rationale: Stage 01 research and checking the sites cited in the user's documents
+- alternatives: unrestricted network access (not chosen)
+- approver status: APPROVED by the user on 2026-11-22 (card approval in the environment settings)
+- affected files: none (environment setting)
 - supersedes: none
