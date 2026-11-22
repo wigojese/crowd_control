@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        01 (Comparable products and originality stress test): AWAITING USER APPROVAL
-LAST_APPROVED_STAGE:  00 (user: "Approve Stage 00", 2026-11-22)
-NEXT_ACTION:          User replies "Approve Stage 01" (or asks for a revision). Stage 02 starts only after that.
+CURRENT_STAGE:        02 (Compare three distinct loops): AWAITING USER APPROVAL
+LAST_APPROVED_STAGE:  01 (user: "approve stage 1", 2026-11-22). Stage 00 approved earlier the same day
+NEXT_ACTION:          User picks loop A, B or C (recommended: B) and says "Approve Stage 02". Stage 03 starts only after that.
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       none selected. Candidate only: Godot 4.7 stable (UNVERIFIED from this container)
 KNOWN_BLOCKERS:

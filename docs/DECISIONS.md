@@ -85,7 +85,7 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: 11 products compared; 3 candidate novelties (N1 sign as preference, N2 decisive-junction replay, N3 one data source in three zoom languages)
 - rationale: N1 is the core verb; N2 and N3 only matter if it is fun. Full evidence in docs/DIFFERENTIATION.md
 - alternatives: P2 hard-gate sign, P3 several signs, P4 per-walker skills, P5 drawn paths (all rejected there)
-- approver status: PROPOSED. Awaiting "Approve Stage 01"
+- approver status: APPROVED by the user on 2026-11-22 ("approve stage 1"). The user approved the stage as presented, including the differentiation statement and N1-first
 - affected files: docs/DIFFERENTIATION.md
 - supersedes: none
 
@@ -99,4 +99,16 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - alternatives: unrestricted network access (not chosen)
 - approver status: APPROVED by the user on 2026-11-22 (card approval in the environment settings)
 - affected files: none (environment setting)
+- supersedes: none
+
+**CC-D-009**
+- stage: 02
+- date: 2026-11-22
+- question: Which of the three loops (A one-shot, B placed sign plus one timed 90-degree turn, C re-placeable sign) should Stage 03 specify?
+- chosen option: **B recommended**, not yet selected by the user
+- values: B = one placement before Start plus exactly one 90-degree turn while running; no moving between sockets; turn tied to its tick; a pause or system interruption does not spend it. C's provisional lock would be 4.0 s
+- rationale: only B adds a decision about timing without a juggling task, and it matches the spec's own tutorial baseline. Reasons and the conditions that would change this are in docs/LOOPS.md section 6
+- alternatives: A (cheapest, solvable by memory in 8 runs), C (deepest on paper, riskiest to build and to arbitrate with pan and pinch)
+- approver status: PROPOSED. Awaiting the user's choice of A, B or C
+- affected files: docs/LOOPS.md
 - supersedes: none

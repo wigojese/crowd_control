@@ -4,7 +4,7 @@ Ranked by how much each could block or mislead the project. Labels: VERIFIED, SU
 
 | Rank | ID | Risk | Consequence | Label | Mitigation / next step |
 |---:|---|---|---|---|---|
-| 1 | R-01 | No real Android device and no attached computer | No on-device frame time, touch feel or thermal data can exist. The spec's 60 FPS claim can only be "BLOCKED/UNVERIFIED" | VERIFIED | You supply the phone model, or attach a machine; otherwise performance stays an explicit release blocker (spec stage 16) |
+| 1 | R-01 | No real Android device and no attached computer | No on-device frame time, touch feel or thermal data can exist. The spec's 60 FPS claim can only be "BLOCKED/UNVERIFIED" | VERIFIED | You supply the phone model and a computer with it attached (steps given 2026-11-22: Claude desktop app, Settings, Claude Code, Remote Control, share the project folder; phone on USB with debugging on); otherwise performance stays an explicit release blocker (spec stage 16). Not needed until Stage 06 |
 | 2 | R-02 | Godot, Unity and `adb` are not installed here; versions are unverified | Stage 06 comparison and any export test cannot run in this container | VERIFIED | Run engine work on your computer, or accept a Godot-only spike with the limitation recorded |
 | 3 | R-03 | Outbound web is allowlisted. After the 2026-11-22 approval, 15 hosts work; TouchArcade (bot check), the Met (HTTP 429) and the content of the Apple developer pages (JavaScript) did not return text. Godot, Unity and Android developer hosts are not yet allowed | Stage 06 dated-docs checks cannot run until those hosts are added | VERIFIED | Request the Stage 06 hosts at Stage 06; label anything unread UNVERIFIED |
 | 4 | R-04 | Citizens may be unreadable at real phone size in motion | The three behaviour profiles are the mechanic. If players cannot tell them apart, the game loses its "why" | SUSPECTED | In-engine test at 390×844 and 320×568 (Stage 10). Mockups only show them static |
@@ -17,6 +17,7 @@ Ranked by how much each could block or mislead the project. Labels: VERIFIED, SU
 | 11 | R-11 | Single-reviewer process | Approval gates rely on one person; no playtester data until Stage 17 | UNKNOWN | Do not call anything proven; label judgements as expert opinion |
 | 12 | R-12 | Touch-target rule sources disagree: WCAG 2.2 AA is 24 CSS px (2.5.8), AAA is 44 (2.5.5); Android says 48dp; Apple's 44pt could not be read | A rule quoted as "required by WCAG" would be wrong; the 44pt/48dp floor is our own stricter design choice | VERIFIED | State it as a design rule at Stage 04, not as a WCAG requirement; read Apple's page at Stage 04 |
 | 13 | R-13 | Visual overlap with Mini Metro and Mini Motorways (bold lines, flat minimalism) | The atlas view could read as a copy of a well-known look | SUSPECTED | See docs/DIFFERENTIATION.md section 4; compare at Stage 05 |
+| 14 | R-14 | CC-L01 as specified may be passable with no sign (hand arithmetic: last school-bound walker arrives at about 18.9 s) | The first puzzle may be too easy and no loop variant would feel necessary | SUSPECTED | Stage 03 must run the no-sign baseline and may edit the graph, as the spec allows. See docs/LOOPS.md section 5 |
 
 ## Verified vs suspected code issues
 
