@@ -105,10 +105,22 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - stage: 02
 - date: 2026-11-22
 - question: Which of the three loops (A one-shot, B placed sign plus one timed 90-degree turn, C re-placeable sign) should Stage 03 specify?
-- chosen option: **B recommended**, not yet selected by the user
-- values: B = one placement before Start plus exactly one 90-degree turn while running; no moving between sockets; turn tied to its tick; a pause or system interruption does not spend it. C's provisional lock would be 4.0 s
-- rationale: only B adds a decision about timing without a juggling task, and it matches the spec's own tutorial baseline. Reasons and the conditions that would change this are in docs/LOOPS.md section 6
+- chosen option: **C (re-placeable sign)**, selected by the user on 2026-11-22. The assistant had recommended B; the user's choice stands
+- values: C = one sign; one placement before Start; during the run the sign may be moved to the other socket or turned 90 degrees; a lock of 4.0 s (provisional, to be tuned in Stage 03/08) follows every action; effects only on next-junction decisions; a pause or system interruption does not spend or shorten the lock
+- rationale: the user chose the variant with the most depth. Known costs the user accepted by choosing it: highest input-conflict risk with pan and pinch, largest engineering cost, a likely "chase the crowd" dominant strategy (docs/LOOPS.md section 4). Stage 03 must put a measurable mitigation in the rules
 - alternatives: A (cheapest, solvable by memory in 8 runs), C (deepest on paper, riskiest to build and to arbitrate with pan and pinch)
-- approver status: PROPOSED. Awaiting the user's choice of A, B or C
+- approver status: APPROVED by the user on 2026-11-22 ("Approve Stage 02, choose C")
 - affected files: docs/LOOPS.md
 - supersedes: none
+
+**CC-D-010**
+- stage: 03
+- date: 2026-11-22
+- question: Is the formal ruleset CC-RULESET-01C approved, and what happens to CC-L01?
+- chosen option: Ruleset proposed as written in docs/RULES.md. Level: rev0 is solvable but not a puzzle; candidate R1 recommended
+- values: loop C, lock 80 ticks, hold timeout 60 ticks, held sign inactive, no commands while paused, deadline tick 600, queue wait on first edge only, initial tokens 1.0. R1: Market moved to (270,115); sockets A and B; walkway BD 0.3 walkers/s; sign bonus 6.0 s; pass 18 of 20. R2 idea: second School-bound wave of 8 at tick 300, pass 16
+- rationale: with the spec's numbers the no-sign baseline arrives 20 of 20 and all 8 placements are identical (docs/LEVEL01_SPEC.md section 2). R1 gives baseline 17 (fail) and two distinct passing placements; a running action rarely helps in R1, and R2 shows when it would
+- alternatives: (a) keep rev0 and tune at Stage 08, (c) R1 plus R2 now, (d) other
+- approver status: PROPOSED. Awaiting the user's choice at the Stage 03 gate
+- affected files: docs/RULES.md, docs/LEVEL01_SPEC.md, docs/SIMULATION_EVENTS.md, docs/analysis/*
+- supersedes: none (refines CC-D-002 and CC-D-009)

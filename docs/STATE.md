@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        02 (Compare three distinct loops): AWAITING USER APPROVAL
-LAST_APPROVED_STAGE:  01 (user: "approve stage 1", 2026-11-22). Stage 00 approved earlier the same day
-NEXT_ACTION:          User picks loop A, B or C (recommended: B) and says "Approve Stage 02". Stage 03 starts only after that.
+CURRENT_STAGE:        03 (Formal mechanics, geometry, solver and scoring specification): AWAITING USER APPROVAL
+LAST_APPROVED_STAGE:  02 (user: "Approve Stage 02, choose C", 2026-11-22). Loop C chosen
+NEXT_ACTION:          User approves CC-RULESET-01C (or lists overrides) and chooses the CC-L01 option (a to d), then says "Approve Stage 03". Stage 04 starts only after that.
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       none selected. Candidate only: Godot 4.7 stable (UNVERIFIED from this container)
 KNOWN_BLOCKERS:
@@ -11,6 +11,7 @@ KNOWN_BLOCKERS:
   - Godot / Unity / adb not installed in the container (needed from Stage 06)
   - Outbound web: user approved web access on 2026-11-22; 15 hosts were added to the environment allowlist (Stage 01 product pages and the sites cited in the user's documents). Stage 06 hosts (godotengine.org, docs.godotengine.org, unity.com, docs.unity.com, developer.android.com) are NOT yet allowed
   - Font and asset licences unchecked (needed before Stage 05 approval)
+  - Remote control: not enabled on the user's computer yet; list_computer_folders returned no folders (checked twice, 2026-11-22)
 ```
 
 ## Last approved stage

@@ -17,7 +17,9 @@ Ranked by how much each could block or mislead the project. Labels: VERIFIED, SU
 | 11 | R-11 | Single-reviewer process | Approval gates rely on one person; no playtester data until Stage 17 | UNKNOWN | Do not call anything proven; label judgements as expert opinion |
 | 12 | R-12 | Touch-target rule sources disagree: WCAG 2.2 AA is 24 CSS px (2.5.8), AAA is 44 (2.5.5); Android says 48dp; Apple's 44pt could not be read | A rule quoted as "required by WCAG" would be wrong; the 44pt/48dp floor is our own stricter design choice | VERIFIED | State it as a design rule at Stage 04, not as a WCAG requirement; read Apple's page at Stage 04 |
 | 13 | R-13 | Visual overlap with Mini Metro and Mini Motorways (bold lines, flat minimalism) | The atlas view could read as a copy of a well-known look | SUSPECTED | See docs/DIFFERENTIATION.md section 4; compare at Stage 05 |
-| 14 | R-14 | CC-L01 as specified may be passable with no sign (hand arithmetic: last school-bound walker arrives at about 18.9 s) | The first puzzle may be too easy and no loop variant would feel necessary | SUSPECTED | Stage 03 must run the no-sign baseline and may edit the graph, as the spec allows. See docs/LOOPS.md section 5 |
+| 14 | R-14 | CC-L01 as specified is trivial: no-sign baseline 20 of 20, and all 8 sign placements give identical results (the sign never changes a route) | The first level would not demonstrate the mechanic | VERIFIED (against my model of the rules, not yet an engine) | Candidate R1 in docs/LEVEL01_SPEC.md; reproduce in the Stage 08 graybox |
+| 15 | R-15 | Loop C's running actions may be near-worthless in any level where the decisive fork is at spawn (R1: 1369 of 1440 single actions changed nothing) | The chosen loop degenerates into loop A | VERIFIED (model) | Level design rule and validator V-4 (docs/LEVEL01_SPEC.md sections 4, 5); R2 two-wave idea |
+| 16 | R-16 | My numbers come from a throwaway Python model of the rules, never from an engine | A mismatch between model and engine is possible | SUSPECTED | Stage 08 must reproduce T-27 and the R1 table before they are trusted |
 
 ## Verified vs suspected code issues
 
