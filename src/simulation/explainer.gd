@@ -158,7 +158,8 @@ static func select(claims: Array, limit: int = 3) -> Array:
 	return sorted.slice(0, limit)
 
 
-## Ticks / 20 as seconds with one decimal, rounded half up with integers (float formatting differs from the Python reference).
+## Ticks / 20 as seconds, one decimal, rounded half up with integers.
+## (Float formatting rounds ties differently from the Python reference.)
 static func _tenths(ticks: int) -> String:
 	var t := (ticks + 1) / 2
 	return "%d.%d" % [t / 10, t % 10]
