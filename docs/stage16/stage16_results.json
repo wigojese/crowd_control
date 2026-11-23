@@ -1,0 +1,1661 @@
+{
+ "checks": [
+  {
+   "name": "P CC-L01-R1: determinism holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: order holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: arrive_once holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: arrive_cap holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: sign_pair holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: midedge holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: edge_valid holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: rate holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: softlock holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L01-R1: tick_order holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: determinism holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: order holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: arrive_once holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: arrive_cap holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: sign_pair holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: midedge holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: edge_valid holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: rate holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: softlock holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L02-FERRY: tick_order holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: determinism holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: order holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: arrive_once holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: arrive_cap holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: sign_pair holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: midedge holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: edge_valid holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: rate holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: softlock holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "P CC-L03-NARROW: tick_order holds in 40 random scenarios",
+   "pass": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "F 30 Hz with +-30% frame jitter gives the same event hash as the fixed-tick run",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F 60 Hz with +-30% frame jitter gives the same event hash as the fixed-tick run",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F 90 Hz with +-30% frame jitter gives the same event hash as the fixed-tick run",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F 120 Hz with +-30% frame jitter gives the same event hash as the fixed-tick run",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F 144 Hz with +-30% frame jitter gives the same event hash as the fixed-tick run",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F 400 ms hitches (backlog above 4 ticks is dropped as slowdown, not skipped ticks) leave the event hash unchanged",
+   "pass": true,
+   "detail": "backlog drops 19"
+  },
+  {
+   "name": "C CC-L01-R1 390x844 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L01-R1 390x844 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 390x844 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 390x844 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L01-R1 390x844 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 390x844 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 320x568 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L01-R1 320x568 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 320x568 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 320x568 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L01-R1 320x568 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 320x568 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 768x1024 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L01-R1 768x1024 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 768x1024 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 768x1024 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L01-R1 768x1024 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 768x1024 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L01-R1 390x844: sign focus on A lands between HUD and dock",
+   "pass": true,
+   "detail": "y=366 band 125-698"
+  },
+  {
+   "name": "C CC-L01-R1 390x844: sign focus on B lands between HUD and dock",
+   "pass": true,
+   "detail": "y=366 band 125-698"
+  },
+  {
+   "name": "C CC-L01-R1 320x568: sign focus on A lands between HUD and dock",
+   "pass": true,
+   "detail": "y=248 band 98-456"
+  },
+  {
+   "name": "C CC-L01-R1 320x568: sign focus on B lands between HUD and dock",
+   "pass": true,
+   "detail": "y=248 band 98-456"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 768x1024 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L02-FERRY 768x1024 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 768x1024 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 768x1024 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L02-FERRY 768x1024 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 768x1024 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844: sign focus on A lands between HUD and dock",
+   "pass": true,
+   "detail": "y=366 band 125-698"
+  },
+  {
+   "name": "C CC-L02-FERRY 390x844: sign focus on B lands between HUD and dock",
+   "pass": true,
+   "detail": "y=366 band 125-698"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568: sign focus on A lands between HUD and dock",
+   "pass": true,
+   "detail": "y=248 band 98-456"
+  },
+  {
+   "name": "C CC-L02-FERRY 320x568: sign focus on B lands between HUD and dock",
+   "pass": true,
+   "detail": "y=248 band 98-456"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 768x1024 reduced_motion=False: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L03-NARROW 768x1024 reduced_motion=False: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 768x1024 reduced_motion=False: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 768x1024 reduced_motion=True: transform stays finite and inside the zoom limits",
+   "pass": true,
+   "detail": "nan 0 zoom 0"
+  },
+  {
+   "name": "C CC-L03-NARROW 768x1024 reduced_motion=True: a pinch keeps the world point under the fingers within 2 px",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 768x1024 reduced_motion=True: the camera does not move while a finger is down and no animation runs",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844: sign focus on A lands between HUD and dock",
+   "pass": true,
+   "detail": "y=366 band 125-698"
+  },
+  {
+   "name": "C CC-L03-NARROW 390x844: sign focus on B lands between HUD and dock",
+   "pass": true,
+   "detail": "y=366 band 125-698"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568: sign focus on A lands between HUD and dock",
+   "pass": true,
+   "detail": "y=248 band 98-456"
+  },
+  {
+   "name": "C CC-L03-NARROW 320x568: sign focus on B lands between HUD and dock",
+   "pass": true,
+   "detail": "y=248 band 98-456"
+  },
+  {
+   "name": "L small 320x568 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L small 320x568 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.74"
+  },
+  {
+   "name": "L small 320x568 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "96px"
+  },
+  {
+   "name": "L small 320x568 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.74"
+  },
+  {
+   "name": "L small 320x568 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "96px"
+  },
+  {
+   "name": "L small 320x568 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.74"
+  },
+  {
+   "name": "L small 320x568 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "96px"
+  },
+  {
+   "name": "L 360x640 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 360x640 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.88"
+  },
+  {
+   "name": "L 360x640 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "114px"
+  },
+  {
+   "name": "L 360x640 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.88"
+  },
+  {
+   "name": "L 360x640 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "114px"
+  },
+  {
+   "name": "L 360x640 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.88"
+  },
+  {
+   "name": "L 360x640 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "114px"
+  },
+  {
+   "name": "L iPhone SE 375x667 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L iPhone SE 375x667 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.94"
+  },
+  {
+   "name": "L iPhone SE 375x667 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "122px"
+  },
+  {
+   "name": "L iPhone SE 375x667 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.94"
+  },
+  {
+   "name": "L iPhone SE 375x667 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "122px"
+  },
+  {
+   "name": "L iPhone SE 375x667 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 0.94"
+  },
+  {
+   "name": "L iPhone SE 375x667 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "122px"
+  },
+  {
+   "name": "L 390x844 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 390x844 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.18"
+  },
+  {
+   "name": "L 390x844 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "153px"
+  },
+  {
+   "name": "L 390x844 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.18"
+  },
+  {
+   "name": "L 390x844 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "153px"
+  },
+  {
+   "name": "L 390x844 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.18"
+  },
+  {
+   "name": "L 390x844 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "153px"
+  },
+  {
+   "name": "L 412x915 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L 412x915 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.38"
+  },
+  {
+   "name": "L 412x915 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "179px"
+  },
+  {
+   "name": "L 412x915 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.38"
+  },
+  {
+   "name": "L 412x915 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "179px"
+  },
+  {
+   "name": "L 412x915 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.38"
+  },
+  {
+   "name": "L 412x915 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "179px"
+  },
+  {
+   "name": "L tall 430x932 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 430x932 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.34"
+  },
+  {
+   "name": "L tall 430x932 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "173px"
+  },
+  {
+   "name": "L tall 430x932 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.34"
+  },
+  {
+   "name": "L tall 430x932 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "173px"
+  },
+  {
+   "name": "L tall 430x932 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.34"
+  },
+  {
+   "name": "L tall 430x932 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "173px"
+  },
+  {
+   "name": "L tall 360x800 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tall 360x800 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.16"
+  },
+  {
+   "name": "L tall 360x800 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "150px"
+  },
+  {
+   "name": "L tall 360x800 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.16"
+  },
+  {
+   "name": "L tall 360x800 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "150px"
+  },
+  {
+   "name": "L tall 360x800 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.16"
+  },
+  {
+   "name": "L tall 360x800 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "150px"
+  },
+  {
+   "name": "L long 412x960 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L long 412x960 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.49"
+  },
+  {
+   "name": "L long 412x960 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "193px"
+  },
+  {
+   "name": "L long 412x960 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.49"
+  },
+  {
+   "name": "L long 412x960 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "193px"
+  },
+  {
+   "name": "L long 412x960 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.49"
+  },
+  {
+   "name": "L long 412x960 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "193px"
+  },
+  {
+   "name": "L tablet 768x1024 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 768x1024 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.63"
+  },
+  {
+   "name": "L tablet 768x1024 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "211px"
+  },
+  {
+   "name": "L tablet 768x1024 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.63"
+  },
+  {
+   "name": "L tablet 768x1024 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "211px"
+  },
+  {
+   "name": "L tablet 768x1024 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 1.63"
+  },
+  {
+   "name": "L tablet 768x1024 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "211px"
+  },
+  {
+   "name": "L tablet 1024x1366 left=False larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=False larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=False larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=False larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=False larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=False larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=True larger=False: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=True larger=False: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=True larger=False: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=True larger=True: dock controls do not overlap",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=True larger=True: dock inside the safe area and the 24 px edge reserve",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 left=True larger=True: every dock control at least 44x44",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "L tablet 1024x1366 CC-L01-R1: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 2.33"
+  },
+  {
+   "name": "L tablet 1024x1366 CC-L01-R1: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "302px"
+  },
+  {
+   "name": "L tablet 1024x1366 CC-L02-FERRY: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 2.33"
+  },
+  {
+   "name": "L tablet 1024x1366 CC-L02-FERRY: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "302px"
+  },
+  {
+   "name": "L tablet 1024x1366 CC-L03-NARROW: whole graph fits between HUD and dock at zoom >= 0.65",
+   "pass": true,
+   "detail": "fit 2.33"
+  },
+  {
+   "name": "L tablet 1024x1366 CC-L03-NARROW: sockets are 56+ px apart so a finger can tell them apart",
+   "pass": true,
+   "detail": "302px"
+  },
+  {
+   "name": "L tablet 768x1024: dock span is at most 520 px (thumb reach)",
+   "pass": true,
+   "detail": "span 480px"
+  }
+ ],
+ "numbers": {
+  "property": {
+   "CC-L01-R1": {
+    "scenarios": 40,
+    "violations": {
+     "determinism": 0,
+     "order": 0,
+     "arrive_once": 0,
+     "arrive_cap": 0,
+     "sign_pair": 0,
+     "midedge": 0,
+     "edge_valid": 0,
+     "rate": 0,
+     "softlock": 0,
+     "tick_order": 0
+    },
+    "latest_arrival_tick_when_run_3x_long": 765
+   },
+   "CC-L02-FERRY": {
+    "scenarios": 40,
+    "violations": {
+     "determinism": 0,
+     "order": 0,
+     "arrive_once": 0,
+     "arrive_cap": 0,
+     "sign_pair": 0,
+     "midedge": 0,
+     "edge_valid": 0,
+     "rate": 0,
+     "softlock": 0,
+     "tick_order": 0
+    },
+    "latest_arrival_tick_when_run_3x_long": 1100
+   },
+   "CC-L03-NARROW": {
+    "scenarios": 40,
+    "violations": {
+     "determinism": 0,
+     "order": 0,
+     "arrive_once": 0,
+     "arrive_cap": 0,
+     "sign_pair": 0,
+     "midedge": 0,
+     "edge_valid": 0,
+     "rate": 0,
+     "softlock": 0,
+     "tick_order": 0
+    },
+    "latest_arrival_tick_when_run_3x_long": 900
+   }
+  },
+  "framerate": {
+   "30": {
+    "hash_equal": true,
+    "backlog_drops": 0,
+    "wall_seconds": 32.01
+   },
+   "60": {
+    "hash_equal": true,
+    "backlog_drops": 0,
+    "wall_seconds": 32.0
+   },
+   "90": {
+    "hash_equal": true,
+    "backlog_drops": 0,
+    "wall_seconds": 32.0
+   },
+   "120": {
+    "hash_equal": true,
+    "backlog_drops": 0,
+    "wall_seconds": 32.01
+   },
+   "144": {
+    "hash_equal": true,
+    "backlog_drops": 0,
+    "wall_seconds": 32.0
+   },
+   "60_with_400ms_hitches": {
+    "hash_equal": true,
+    "backlog_drops": 19,
+    "wall_seconds": 36.35
+   }
+  },
+  "layout": {
+   "small 320x568|CC-L01-R1": {
+    "fit_zoom": 0.74,
+    "socket_gap_px": 95.6,
+    "free_height": 358
+   },
+   "small 320x568|CC-L02-FERRY": {
+    "fit_zoom": 0.74,
+    "socket_gap_px": 95.6,
+    "free_height": 358
+   },
+   "small 320x568|CC-L03-NARROW": {
+    "fit_zoom": 0.74,
+    "socket_gap_px": 95.6,
+    "free_height": 358
+   },
+   "360x640|CC-L01-R1": {
+    "fit_zoom": 0.88,
+    "socket_gap_px": 113.7,
+    "free_height": 426
+   },
+   "360x640|CC-L02-FERRY": {
+    "fit_zoom": 0.88,
+    "socket_gap_px": 113.7,
+    "free_height": 426
+   },
+   "360x640|CC-L03-NARROW": {
+    "fit_zoom": 0.88,
+    "socket_gap_px": 113.7,
+    "free_height": 426
+   },
+   "iPhone SE 375x667|CC-L01-R1": {
+    "fit_zoom": 0.94,
+    "socket_gap_px": 122.0,
+    "free_height": 457
+   },
+   "iPhone SE 375x667|CC-L02-FERRY": {
+    "fit_zoom": 0.94,
+    "socket_gap_px": 122.0,
+    "free_height": 457
+   },
+   "iPhone SE 375x667|CC-L03-NARROW": {
+    "fit_zoom": 0.94,
+    "socket_gap_px": 122.0,
+    "free_height": 457
+   },
+   "390x844|CC-L01-R1": {
+    "fit_zoom": 1.18,
+    "socket_gap_px": 153.0,
+    "free_height": 573
+   },
+   "390x844|CC-L02-FERRY": {
+    "fit_zoom": 1.18,
+    "socket_gap_px": 153.0,
+    "free_height": 573
+   },
+   "390x844|CC-L03-NARROW": {
+    "fit_zoom": 1.18,
+    "socket_gap_px": 153.0,
+    "free_height": 573
+   },
+   "412x915|CC-L01-R1": {
+    "fit_zoom": 1.38,
+    "socket_gap_px": 178.6,
+    "free_height": 669
+   },
+   "412x915|CC-L02-FERRY": {
+    "fit_zoom": 1.38,
+    "socket_gap_px": 178.6,
+    "free_height": 669
+   },
+   "412x915|CC-L03-NARROW": {
+    "fit_zoom": 1.38,
+    "socket_gap_px": 178.6,
+    "free_height": 669
+   },
+   "tall 430x932|CC-L01-R1": {
+    "fit_zoom": 1.34,
+    "socket_gap_px": 173.3,
+    "free_height": 649
+   },
+   "tall 430x932|CC-L02-FERRY": {
+    "fit_zoom": 1.34,
+    "socket_gap_px": 173.3,
+    "free_height": 649
+   },
+   "tall 430x932|CC-L03-NARROW": {
+    "fit_zoom": 1.34,
+    "socket_gap_px": 173.3,
+    "free_height": 649
+   },
+   "tall 360x800|CC-L01-R1": {
+    "fit_zoom": 1.16,
+    "socket_gap_px": 150.1,
+    "free_height": 562
+   },
+   "tall 360x800|CC-L02-FERRY": {
+    "fit_zoom": 1.16,
+    "socket_gap_px": 150.1,
+    "free_height": 562
+   },
+   "tall 360x800|CC-L03-NARROW": {
+    "fit_zoom": 1.16,
+    "socket_gap_px": 150.1,
+    "free_height": 562
+   },
+   "long 412x960|CC-L01-R1": {
+    "fit_zoom": 1.49,
+    "socket_gap_px": 192.8,
+    "free_height": 722
+   },
+   "long 412x960|CC-L02-FERRY": {
+    "fit_zoom": 1.49,
+    "socket_gap_px": 192.8,
+    "free_height": 722
+   },
+   "long 412x960|CC-L03-NARROW": {
+    "fit_zoom": 1.49,
+    "socket_gap_px": 192.8,
+    "free_height": 722
+   },
+   "tablet 768x1024|CC-L01-R1": {
+    "fit_zoom": 1.63,
+    "socket_gap_px": 210.9,
+    "free_height": 790
+   },
+   "tablet 768x1024|CC-L02-FERRY": {
+    "fit_zoom": 1.63,
+    "socket_gap_px": 210.9,
+    "free_height": 790
+   },
+   "tablet 768x1024|CC-L03-NARROW": {
+    "fit_zoom": 1.63,
+    "socket_gap_px": 210.9,
+    "free_height": 790
+   },
+   "tablet 1024x1366|CC-L01-R1": {
+    "fit_zoom": 2.33,
+    "socket_gap_px": 302.2,
+    "free_height": 1132
+   },
+   "tablet 1024x1366|CC-L02-FERRY": {
+    "fit_zoom": 2.33,
+    "socket_gap_px": 302.2,
+    "free_height": 1132
+   },
+   "tablet 1024x1366|CC-L03-NARROW": {
+    "fit_zoom": 2.33,
+    "socket_gap_px": 302.2,
+    "free_height": 1132
+   }
+  }
+ },
+ "summary": {
+  "total": 283,
+  "failed": 0,
+  "quick": true,
+  "scope": "Python reference of the rules; not the engine; not a device"
+ }
+}

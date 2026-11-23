@@ -59,6 +59,8 @@ There is no code, so there are no code issues. VERIFIED: nothing to audit. Do no
 | 49 | R-49 | 3 of 6 critical cues have a visual equivalent that is only designed (pickup lift, turn ring, refused-action shake) | A muted player misses them in the game | VERIFIED | Build them in the Stage 16 integration |
 | 50 | R-50 | Static camera, reduced motion and the other settings exist as data and logic but are not wired to the camera, transitions or any menu | Settings that do nothing | VERIFIED | Wire at integration |
 | 51 | R-51 | Screen-reader support, dynamic text size and testing with disabled players are not done | Excludes some players | VERIFIED gap | Plan with real testers at Stage 17 |
+| 50 | R-50 | At 320 wide the whole map fits only at zoom 0.74 (atlas band), so the first view may be ribbons not walkers | Small phones lose the district view | VERIFIED by calculation (`docs/stage16/stage16_results.json`) | Decide: crop the map, or allow a district start at zoom 1.0 with scroll |
+| 51 | R-51 | No device or engine measurement exists: FPS, thermal, memory, APK | Release blocker: performance targets unproven | UNKNOWN | Needs a phone and a running Godot |
 
 ## Manual checks I could not do (reproducible later)
 

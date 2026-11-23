@@ -155,3 +155,7 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 | T15-09 | How the sounds sound | **UNVERIFIED**: I cannot hear. Please listen to the two mix files | `docs/stage15/mix_*.wav` |
 | T15-10 | Reduced-motion recording | RAN as reference renderings, not engine | `docs/stage15/reduced_motion_*` |
 | T15-11 | Haptics on a device, speakers, earphones, screen readers | **BLOCKED**: no device | |
+
+## Stage 16
+
+See `docs/TEST_REPORT.md` (T16-01 to T16-10). 283 reference-model checks pass; engine and device items BLOCKED.

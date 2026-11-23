@@ -1,0 +1,19 @@
+{
+ "tracked_files": 293,
+ "by_kind": {
+  "own config": 5,
+  "own docs": 30,
+  "own synthesised audio": 13,
+  "third-party licence text only (no font file shipped)": 3,
+  "own data": 57,
+  "own code": 73,
+  "generated image (own scripts)": 74,
+  "own tool": 17,
+  "own data (generated)": 7,
+  "generated video (own scripts)": 12,
+  "own scene": 2
+ },
+ "third_party_or_unclassified": [],
+ "font_files_shipped": [],
+ "note": "Classified by extension; origin of each generated file is its script. A file extension is not proof of origin: the audit confirms no font, music or image binary of unknown provenance is tracked, not that every file was reviewed by a lawyer."
+}

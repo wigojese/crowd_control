@@ -266,6 +266,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: master 0.8, effects 0.8, texture 0.5, ui 0.8; max 6 effect voices; cooldowns reroute 250 ms, arrival 120 ms, queue 4 s per street
 - rationale: restrained by rule, and tested against a 50-walker stream
 - alternatives: licensed music (not allowed without permission)
-- approver status: PROPOSED. Awaiting "Approve Stage 15" after listening
+- approver status: APPROVED (user: "Approve Stage 15, option A", 2026-11-23). Note: the sounds were approved without the listening check being confirmed; tone stays UNVERIFIED by me
 - affected files: assets/audio/*, data/audio_map.json, data/visual_cues.json, data/settings_schema.json, src/audio/*, src/core/settings.gd, src/input/dock_layout.gd, scripts/synth_audio.py, ref_audio.py, ref_settings.py, check_audio_files.py, docs/AUDIO.md, docs/ACCESSIBILITY.md, docs/stage15/*
+- supersedes: none
+
+**CC-D-023**
+- stage: 16
+- date: 2026-11-23
+- question: How is correctness verified without an engine or a device, and what did it find?
+- chosen option: reference-model property and fuzz tests (`scripts/stage16_checks.py`, 283 checks); dock layout made width-aware (never wider than three controls fit; tablets 480 px on the thumb side); device profiling recorded as a release blocker
+- values: dock span on tablets 480 px; button width = min(wanted, (span - tray - 24) / 2); fuzz 200 scenarios per level
+- rationale: the sweep found a real layout bug (360 wide with larger targets broke the 24 px edge reserve; tablet dock spread 712 px)
+- alternatives: skipping the sweep (rejected)
+- approver status: PROPOSED. Awaiting "Approve Stage 16"
+- affected files: scripts/stage16_checks.py, scripts/stage16_evidence.py, scripts/ref_settings.py, src/input/dock_layout.gd, scripts/check_all.sh, docs/TEST_REPORT.md, docs/stage16/*
 - supersedes: none

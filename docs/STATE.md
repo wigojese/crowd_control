@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        15 (Audio, haptics, accessible UX): PARTIAL, AWAITING APPROVAL. Sounds made and measured; nobody has listened; nothing plays in the engine
-LAST_APPROVED_STAGE:  14 (user: "Approve Stage 14, option A", 2026-11-23): future content emphasises timing. Engine runs still BLOCKED
-NEXT_ACTION:          User listens to docs/stage15/mix_*.wav and approves or revises tone and defaults. Stage 16 starts only after "Approve Stage 15"
+CURRENT_STAGE:        16 (Correctness, profiling, regression): PARTIAL, AWAITING APPROVAL. Reference-model tests pass; every device and engine item is a release blocker
+LAST_APPROVED_STAGE:  15 (user: "Approve Stage 15, option A", 2026-11-23): sound tone and accessible defaults. Engine runs still BLOCKED
+NEXT_ACTION:          User approves the remaining risks or asks for a corrective sprint, ideally by enabling a phone or computer so Godot can run. Stage 17 starts only after "Approve Stage 16"
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:

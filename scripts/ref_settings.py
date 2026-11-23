@@ -28,20 +28,16 @@ def sanitize(raw, schema=SCHEMA):
 def dock_layout(left_handed, larger, viewport, bottom_inset=34):
     """Rects [x, y, w, h] for restart, tray, pause on one row. Right-handed: pause on the right (thumb side). Left-handed: mirrored."""
     w, h = viewport
-    bw = (88 if larger else 92) if w <= 320 else 104
     extra = 8 if larger else 0
     bh, th = 48 + extra, 56 + extra
-    if w > 320:
-        bw += extra  # at 320 wide the buttons get 4 px narrower and 8 px taller: three controls must still fit in one row
     tray_w = 56 + extra
     margin, gap = 28, 12
+    want = (88 if larger else 92) if w <= 320 else 104 + extra
+    span_w = 480 if w > 600 else w - 2 * margin  # tablets: keep the row within thumb reach, anchored on the thumb side
+    x0 = w - margin - span_w
+    bw = min(want, (span_w - tray_w - 2 * gap) // 2)  # never wider than three controls and two gaps allow (Stage 16: 360 wide, larger targets)
     y = h - bottom_inset - 112 + (112 - max(bh, th)) // 2
-    left = margin
-    xs = [left, left + bw + gap, left + bw + gap + tray_w + gap]
-    if w - margin - (xs[2] + bw) > 0:  # spread across the width when there is room
-        spare = (w - 2 * margin) - (3 * bw + tray_w - bw + 2 * gap)
-        xs = [margin, margin + bw + gap + spare // 2, w - margin - bw]
-        xs[1] = (w - tray_w) // 2
+    xs = [x0, x0 + (span_w - tray_w) // 2, x0 + span_w - bw]
     rects = {"restart": [xs[0], y, bw, bh], "tray": [xs[1], y - (th - bh) // 2 if th > bh else y, tray_w, th], "pause": [xs[2], y, bw, bh]}
     if left_handed:
         rects = {k: [w - v[0] - v[2], v[1], v[2], v[3]] for k, v in rects.items()}  # exact mirror of every rectangle
