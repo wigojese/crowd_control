@@ -149,3 +149,27 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - affected files: docs/ART_BIBLE.md, docs/stage05-art/*
 - supersedes: CC-D-004
 - required changes to C before Stage 10 (PROPOSED, from the contrast tests): use plum for hatched fills only (4.07:1 is below text size 4.5:1); disabled text raised to at least 4.5:1; sign arrow drawn dark on the vermilion disc (4.69:1) instead of parchment (3.11:1); keep daylight legibility as a measured gate on a real phone (R-21)
+
+**CC-D-013**
+- stage: 06
+- date: 2026-11-23
+- question: Which engine and version?
+- chosen option: **Provisional: Godot 4.7.2 with GDScript.** Not final. The comparison with Unity 6.3 LTS and any measurement is blocked (docs/ENGINE_DECISION.md)
+- values: conditions to make it final: l01_check.gd ALL PASS; simulation tick p95 at most 4 ms at 500 walkers and 50 nodes on the target phone; a real Android build starts and takes touch; no engine switch without a new approval
+- rationale: spec default, verified current stable, MIT licence, the only engine I could obtain and checksum here. The main risk (GDScript speed for the simulation at 500 walkers) is unmeasured
+- alternatives: Unity 6.3 LTS (not evaluated); Godot .NET or a native extension if GDScript is too slow
+- approver status: PROPOSED. Awaiting the user's decision A, B or C in docs/ENGINE_DECISION.md section 6
+- affected files: docs/ENGINE_DECISION.md, docs/SOURCES.md, spikes/godot-sim/*
+- supersedes: none
+
+**CC-D-014**
+- stage: 06
+- date: 2026-11-23
+- question: Which outbound hosts may the session reach for the engine spike?
+- chosen option: 8 more exact hosts added on the user's request to continue (card approved)
+- values: godotengine.org, docs.godotengine.org, downloads.godotengine.org, unity.com, docs.unity.com, github.com, objects.githubusercontent.com, release-assets.githubusercontent.com (plus developer.android.com added earlier in Stage 04)
+- rationale: read the spec's source register and fetch the Godot build; GitHub was needed because the vendor's download host redirects to a storage host that is not allowed
+- alternatives: unrestricted access (not chosen)
+- approver status: APPROVED by the user (environment card)
+- affected files: none (environment setting)
+- supersedes: none

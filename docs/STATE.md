@@ -1,14 +1,14 @@
 # STATE
 
 ```
-CURRENT_STAGE:        06 (Technical spike and documented engine selection): IN PROGRESS
+CURRENT_STAGE:        06 (Technical spike and documented engine selection): PARTIAL, BLOCKED ON A USER DECISION
 LAST_APPROVED_STAGE:  05 (user: "Approve Stage 05 … continue with C, dark theme", 2026-11-23). Art direction C chosen
-NEXT_ACTION:          Finish the Stage 06 spike and docs/ENGINE_DECISION.md; present the Stage 06 gate; STOP. Stage 07 starts only after "Approve Stage 06".
+NEXT_ACTION:          User chooses A (allow the run here), B (run it on their computer) or C (accept the limitation) from docs/ENGINE_DECISION.md section 6. Stage 07 starts only after "Approve Stage 06".
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       none selected. Candidate only: Godot 4.7 stable (UNVERIFIED from this container)
 KNOWN_BLOCKERS:
   - No Android test device and no attached user computer (needed from Stage 06)
-  - Godot / Unity / adb not installed in the container (needed from Stage 06)
+  - Godot 4.7.2 is downloaded and checksum-verified in the scratchpad but running it was denied by the security classifier; Unity and adb are not installed; no Android SDK
   - Outbound web: user approved web access on 2026-11-22; 15 hosts were added to the environment allowlist (Stage 01 product pages and the sites cited in the user's documents). Stage 06 hosts (godotengine.org, docs.godotengine.org, unity.com, docs.unity.com, developer.android.com) are NOT yet allowed
   - Font and asset licences unchecked (needed before Stage 05 approval)
   - Remote control: not enabled on the user's computer yet; list_computer_folders returned no folders (checked twice, 2026-11-22)

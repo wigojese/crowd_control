@@ -1,0 +1,7 @@
+; Engine configuration file for the Stage 06 spike (not the production project).
+config_version=5
+
+[application]
+
+config/name="CC Sim Spike"
+config/features=PackedStringArray("4.7")
