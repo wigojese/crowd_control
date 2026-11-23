@@ -1,95 +1,130 @@
-# HOW TO TEST CROWD CONTROL YOURSELF
+# HOW TO TEST CROWD CONTROL: BEGINNER GUIDE
 
-Honest warning: the GDScript has **never been run**. Parts 1 and 2 are known to pass. Parts 3 to 5 are the first real run, so expect some errors. Copy any error text back to me and I will fix it.
+You need: a Windows or Mac computer, an internet connection, about 30 minutes. You do **not** need to know programming. You will only copy, paste and click.
 
-## Part 1. Get the code (any computer with Git)
+**Important honesty note.** The game code has never been run by anyone yet. So errors may appear. That is normal and useful. When something goes wrong, do not worry: copy the red text or take a screenshot and send it to me (see "How to report a problem" at the bottom).
 
-```bash
-git clone https://github.com/wigojese/crowd_control.git
-```
+Words used here:
+- **Terminal**: a window where you type a command and press Enter. Windows calls it PowerShell, Mac calls it Terminal.
+- **Folder**: a place on your computer that holds files.
+- **Godot**: the free program that runs this game.
 
-```bash
-cd crowd_control && git checkout claude/affectionate-planck-p2bk56
-```
+---
 
-## Part 2. Python checks (needs Python 3 only, about 5 seconds)
+## STEP 1. Download the game files
 
-```bash
-python3 --version
-```
+1. Open your web browser and go to this address (copy and paste it into the address bar):
 
-```bash
-scripts/check_all.sh
-```
+   `https://github.com/wigojese/crowd_control/archive/refs/heads/claude/affectionate-planck-p2bk56.zip`
 
-Pass: the last line is `CHECK_ALL: OK`. This tests the rules, levels, camera, audio, settings and layout on the Python reference. On Windows use Git Bash or WSL.
+2. If GitHub asks you to sign in, sign in with your GitHub account (the project is yours; it may be private). Then paste the address again.
+3. A file ending in `.zip` downloads. Find it in your **Downloads** folder.
+4. Unzip it:
+   - **Windows:** right-click the file, choose **Extract All...**, then **Extract**.
+   - **Mac:** double-click the file.
+5. You now have a folder named something like `crowd_control-claude-affectionate-planck-p2bk56`. Move it to your **Desktop** so it is easy to find. Open it: you should see files such as `project.godot`, `README.md` and folders named `docs`, `src`, `data`.
 
-For the longer 283-check suite:
+## STEP 2. Download Godot (the program that runs the game)
 
-```bash
-python3 -I scripts/stage16_checks.py
-```
+1. Go to `https://godotengine.org/download/archive/`
+2. Find **4.7.2** in the list (it must be exactly 4.7.2 and "stable") and click it.
+3. Download the **Standard** version for your computer. Choose **Windows** or **macOS**. Do **not** choose ".NET" and do **not** choose "Android" or "Web".
+4. Unzip it the same way as step 1.
+   - **Windows:** you get a file like `Godot_v4.7.2-stable_win64.exe`. Move it to your Desktop. You do not install it; you just double-click it.
+   - **Mac:** you get `Godot` (an app). Drag it into your **Applications** folder. The first time, right-click it and choose **Open**, then **Open** again, because Mac warns about downloaded apps.
 
-(about one minute; pass: `STAGE16 RESULT: ALL PASS`).
+## STEP 3. Open the project in Godot
 
-## Part 3. Run the game on a computer (Godot 4.7.2)
+1. Double-click Godot. A window called **Project Manager** appears.
+2. Click **Import** (right side).
+3. Click **Browse**, go to the folder from step 1, click the file **`project.godot`**, then **Open**, then **Import & Edit**.
+4. Wait. The first time it needs a minute to prepare. The editor opens.
+5. Look at the **bottom** of the Godot window. There is a panel with tabs named **Output** and **Debugger**. If you see **red text**, that is an error. Take a screenshot of the whole window (see "How to report a problem") and keep going.
 
-1. Download **Godot 4.7.2 stable** (standard, not .NET) from https://godotengine.org/download/archive/ and unzip it. No install needed.
-2. Start Godot, press **Import**, choose `project.godot` in the repo folder, open it. Let it import (first time takes a minute). Errors in the bottom panel: copy them to me.
-3. Run the engine tests. Put `godot` on your PATH or use its full path:
+## STEP 4. Play the level (the main test)
 
-```bash
-godot --headless --path . --script res://tools/test_runner.gd
-```
+1. In the left-bottom panel called **FileSystem**, click the small arrow next to **src**, then **app**.
+2. Double-click **graybox.tscn**. (The "graybox" is the plain version of the game.)
+3. Press the key **F6** on your keyboard. (Or click the small "play scene" button at the top right, the one with a clapper-board icon.)
+4. A game window should open showing: a small map with 7 places, dots that are people walking, and numbers.
 
-Pass: every line PASS, no script errors. This is the first time these run: **failures here are expected and useful**.
+If the window does not open or is empty, take a screenshot of the Godot window (including the Output panel at the bottom) and send it to me. That is a valid result for this test.
 
-```bash
-godot --headless --path . --quit-after 2
-```
+### How to play
 
-Pass: it prints `BOOT_STATE=READY`.
+Click inside the game window first (so it listens to your keyboard), then use these keys:
 
-## Part 4. Play the graybox (L01)
-
-The main scene is a blank boot screen. To see the game, in the editor open `src/app/graybox.tscn` and press **F6** (Run Current Scene). You should see the map, dots for walkers, queue numbers and the sign. Keys:
-
-| Key | Does |
+| Key | What it does |
 |---|---|
-| A / B | choose the sign's junction (North Gate / Canal Turn) |
-| 1 2 3 4 | point the sign N, E, S, W |
-| Space | run / pause |
-| R | retry |
-| H | high contrast |
+| **A** | Choose the sign's place: North Gate (top) |
+| **B** | Choose the sign's place: Canal Turn (left, a bit lower) |
+| **1** | Sign points up (north) |
+| **2** | Sign points right (east) |
+| **3** | Sign points down (south) |
+| **4** | Sign points left (west) |
+| **Space** | Start / pause the walking |
+| **R** | Start over (retry) |
+| **H** | High contrast colours on or off |
 
-Things to try, and what you should see (from the Python model, so the engine should match):
-1. Press Space with no sign: most walkers jam at the bridge, you **fail** (fewer than 16 of 20).
-2. Retry (R), pick junction B (Canal Turn), press 2 (East), Space: the walkers go around and you **pass**.
-3. Retry, try other headings: some pass, some fail. Notice which junction and heading matter.
+The goal: at least **16 of 20 people** must reach their place (the School at the bottom left, or the Plaza at the bottom right) before the clock reaches **0:32**.
 
-The goal is 16 of 20 arrived before 0:32. Check that the numbers shown match: no one walks through gaps with no street, retry resets everything.
+### Three small experiments
 
-## Part 5. Compare engine against the reference
+**Experiment 1: no sign.** Do not press A, B or a number. Just press **Space**. Watch. Expected: people crowd up at the narrow bridge in the middle, and you do **not** reach 16. Write down how many arrived.
 
-```bash
-godot --headless --path . --script res://tools/run_level.gd -- res://data/levels/cc_l01_r1.json B E
-```
+**Experiment 2: the winning move.** Press **R** to restart. Press **B**, then **2**, then **Space**. Expected: the people spread out and you reach **20 of 20**. Write down the number.
 
-It prints a result and writes events and a replay file. Compare with `data/replays/CC-L01-R1__east_at_canal_turn.json`: `arrived` and `event_hash` should be **2120841323** and 20 arrived. A different hash means the GDScript port differs from the reference: tell me the numbers.
+**Experiment 3: your own tries.** Press **R**, try other letters and numbers (for example **A** then **3**). Write down each choice and the result in a note, like "A + 3: 14 arrived".
 
-## Part 6. On a phone (needs more setup)
+### What to check and write down
 
-1. Install Android Studio's SDK tools, then in Godot: **Editor > Manage Export Templates** (download 4.7.2 templates), **Project > Export > Add > Android**, set the SDK path in Editor Settings.
-2. Enable USB debugging on the phone, plug it in, press the **Remote Debug** (phone) icon top right.
-3. Test: drag/tap with one thumb, rotate the sign, pinch, small-screen legibility. Note anything that feels wrong.
-4. Turn on **Settings > Developer options > Profile GPU rendering** or use Godot's **Debugger > Monitors** to read frame time. Write down your phone model.
+Answer these with Yes / No / Not sure, and add a sentence if something looks wrong:
+1. Did the game window open at all?
+2. Can you see the sign and tell which way it points?
+3. Do the people walk only along the streets (never across empty space)?
+4. When you press **R**, is everything reset (score back to zero, people back at the start)?
+5. Is any text too small or hard to read?
+6. Was anything confusing? (This matters a lot: you are the first person to see it.)
 
-Godot's Android export is one thing I have never tested, so expect to ask for help.
+## STEP 5. Run the automatic tests (optional but very useful)
 
-## Part 7. Show it to people
+These are checks that run by themselves. You need a terminal.
 
-Follow `docs/PLAYTEST.md` with 5 to 10 people. Do not explain the sign. Fill in the grid and send it to me.
+**Open a terminal inside the project folder:**
+- **Windows:** open the project folder in File Explorer, click the address bar at the top, type `powershell`, press Enter. A blue window opens.
+- **Mac:** open the **Terminal** app. Type `cd ` (the letters c, d, and a space), then drag the project folder from Finder into the Terminal window, then press Enter.
 
-## What to send back
+**Run the test:**
+- **Windows:** you must tell it where Godot is. Type this, but replace the path with where your Godot file really is (you can drag the Godot file into the window to paste its path), then press Enter:
 
-Any red error text, the output of Parts 3 and 5, and screenshots of Part 4. That is what unblocks Stage 16 and Stage 17.
+  `& "C:\Users\YOUR_NAME\Desktop\Godot_v4.7.2-stable_win64_console.exe" --headless --path . --script res://tools/test_runner.gd`
+
+  (If you only have the file without "_console" in its name, use that one. It still works.)
+- **Mac:** type this, then press Enter:
+
+  `/Applications/Godot.app/Contents/MacOS/Godot --headless --path . --script res://tools/test_runner.gd`
+
+What you should see: many lines starting with **PASS**. If you see **FAIL** or red error text, copy **all the text in the window** (select it with the mouse, copy with Ctrl+C on Windows or Cmd+C on Mac) and paste it into our chat. Do not try to fix anything.
+
+## STEP 6. Phone testing
+
+Skip this for now. It needs developer tools that are hard for a first try. Do steps 1 to 5 first and tell me the results. When you are ready, I will guide you through the phone part one click at a time.
+
+## STEP 7. Show it to a friend (optional)
+
+Let 1 or 2 people try step 4 **without explaining anything**. Watch silently and note: what did they press first? Were they confused? Send me your notes.
+
+---
+
+## How to report a problem
+
+Send me, in the chat:
+1. **A screenshot.** Windows: press the **Windows key + Shift + S**, drag over the Godot window, then paste into the chat. Mac: press **Command + Shift + 4** and drag over the window; the picture saves to your Desktop.
+2. **Red text.** Select it in the Output panel at the bottom of Godot, copy it, and paste it into the chat.
+3. **What you did just before**, in one sentence ("I pressed F6 on graybox.tscn").
+
+You cannot break anything. If you get stuck at any step, tell me the step number and what you see on the screen, and I will walk you through it.
+
+## For later (developers only)
+
+Advanced commands (Python checks, comparing results with the reference model) are in `docs/TEST_REPORT.md` and `README.md`.
