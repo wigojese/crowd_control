@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        17 (Playtest): PROTOCOL ONLY, AWAITING APPROVAL. No players, no build; results grid empty
-LAST_APPROVED_STAGE:  16 (user: "Approve Stage 16, option A", 2026-11-23): remaining risks accepted, device and engine items stay release blockers
-NEXT_ACTION:          Get a playable build and 5 to 10 real testers, run docs/PLAYTEST.md, or approve the protocol as is. Stage 18 starts only after "Approve Stage 17"
+CURRENT_STAGE:        18 (Release-candidate freeze and handoff): DOCUMENTS ONLY, AWAITING APPROVAL. Not a release candidate: no build exists
+LAST_APPROVED_STAGE:  17 (user: "Approve Stage 17, option A", 2026-11-23): playtest protocol approved; no players tested
+NEXT_ACTION:          User decides: approve the freeze as a handoff, or unblock a Godot run and a phone. Nothing is published or submitted
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:

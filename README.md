@@ -1,7 +1,7 @@
 # CROWD CONTROL
 
 A portrait mobile pedestrian-flow strategy game: redirect a miniature city's crowd with one movable directional sign.
-Status: Stage 07 scaffold. No playable level yet. Docs are in `docs/` (start with `docs/STATE.md`).
+Status: Stage 18 design-and-reference freeze. Rules, levels, camera, audio and accessibility exist as GDScript plus a tested Python reference; **no engine run, no build, no device or player test yet**. Start with `docs/STATE.md`, then `docs/RELEASE.md` (checklist, blockers, handoff).
 
 ## Commands
 

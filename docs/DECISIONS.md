@@ -290,6 +290,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: 5 to 10 players, 15 minutes each, counts only, no in-game telemetry
 - rationale: the prompt forbids invented testers and invented validation
 - alternatives: simulated players (rejected: not evidence)
-- approver status: PROPOSED. Awaiting "Approve Stage 17"
+- approver status: APPROVED (user: "Approve Stage 17, option A", 2026-11-23)
 - affected files: docs/PLAYTEST.md
+- supersedes: none
+
+**CC-D-025**
+- stage: 18
+- date: 2026-11-23
+- question: What is frozen and handed off when no build exists?
+- chosen option: freeze rules, levels, art C and tokens as a design-and-reference freeze; release checklist with every device, engine and store item BLOCKED or NOT RE-VERIFIED; no submission
+- values: design bible label v0.18-unbuilt
+- rationale: the prompt forbids unsupported launch claims and automatic shipping
+- alternatives: calling it a release candidate (rejected: nothing was built)
+- approver status: PROPOSED. Awaiting "Approve Stage 18"
+- affected files: docs/RELEASE.md, docs/TRAILER_STORYBOARD.md, README.md
 - supersedes: none
