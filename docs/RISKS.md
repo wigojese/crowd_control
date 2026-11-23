@@ -44,6 +44,8 @@ There is no code, so there are no code issues. VERIFIED: nothing to audit. Do no
 | 34 | R-34 | At 320 px wide the notes are about 15 px (rule: 18 px) and pile up at nodes | Crowd unreadable on small phones | VERIFIED in the picture | Fewer notes per node at narrow widths, or a count badge; decide at Stage 11 |
 | 35 | R-35 | All map drawing uses per-frame `_draw` calls, never measured | Frame time on a mid-range phone | UNKNOWN | Stage 16 measurement; cache static layers |
 | 36 | R-36 | No engine screenshots exist; the visual identity is shown only from model data | The engine may look different | UNKNOWN | T10-08 |
+| 37 | R-37 | Camera logic is verified only in a Python reference; the GDScript port and the wiring to input, the sign and the renderer do not exist or have not run | Stage 11 may not work in the engine | UNKNOWN | T11-06, T11-07, T11-08 |
+| 38 | R-38 | In the narrow layout, walkers moving along a street still overlap (only queues become badges) | Crowd density still hard to read on 320 px | VERIFIED in the picture | Decide a density rule with the Stage 11 feedback |
 
 ## Manual checks I could not do (reproducible later)
 

@@ -206,6 +206,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: ribbon width = clamp(3 + 1.9 x (sqrt(count) - 1), 3, 16) px; stave grid every 24 px of world space; notes 18 px (failed at 320 px, R-34)
 - rationale: the contrast script found amber and sage identical in grayscale
 - alternatives: separate hues only (rejected by the calculation)
-- approver status: PROPOSED. Awaiting "Approve Stage 10"
+- approver status: APPROVED (user: "Approve Stage 10, option B": fix narrow-phone legibility with fewer notes or a count badge)
 - affected files: data/art_tokens.json, src/rendering/*, src/app/graybox.gd, scripts/check_contrast.py, scripts/ref_ribbon.py, scripts/stage10_preview.py, docs/VISUAL_IMPLEMENTATION.md, docs/stage10/*
+- supersedes: none
+
+**CC-D-018**
+- stage: 11
+- date: 2026-11-23
+- question: How does the camera work, and what may each zoom band show?
+- chosen option: CameraDirector with priorities touch > user > critical > decorative; Catmull-Rom path through A, B, D, F, G; hysteresis bands (street 1.75/1.55, city 0.85/1.00); ribbons only from the last 20 ticks of EDGE_ENTERED; queue badges (4, or 3 below 360 px wide); camera layer isolated from the simulation by lint rule L10
+- values: scroll gain 0.85; inertia k 6.0, cap 1.6 viewport heights per second; zoom 0.65 to 2.80; notes 18 logical px
+- rationale: the prompt's C1 to C3, with the camera unable to touch a run
+- alternatives: none compared
+- approver status: PROPOSED. Awaiting "Approve Stage 11" and the camera-feel choice
+- affected files: src/camera/*, scripts/ref_camera.py, scripts/stage11_preview.py, tests/test_camera.gd, data/art_tokens.json, docs/CAMERA.md, docs/stage11/*
 - supersedes: none

@@ -50,6 +50,7 @@ def main():
     bad += expect("L2", append("project.godot", "\n[autoload]\nGlobal=\"*res://x.gd\"\n"))
     bad += expect("L3", append("src/core/bad.gd", "class_name Bad\nextends RefCounted\n"))
     bad += expect("L4", append("src/core/rng_service.gd", "var b = CcScenarioValidator\n"))
+    bad += expect("L10", append("src/simulation/tick_fixture.gd", "var cam = CcCameraDirector\n"))
     bad += expect("L5", append("src/simulation/tick_fixture.gd", "var r = randi()\n"))
     bad += expect("L6", append("data/boot_states.json", "{broken"))
     bad += expect("L7", lambda d: (d / "data/events.schema.json").write_text(

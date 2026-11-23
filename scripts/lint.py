@@ -11,6 +11,7 @@ Rules:
  L6 JSON files parse; the state table has no duplicate (from,event) and no unknown states.
  L7 data/events.schema.json lists exactly the events in docs/SIMULATION_EVENTS.md section 2.
  L8 simulation/ and core/ never touch the scene tree (Node, get_tree, Input, OS.get_ticks, Time.).
+ L10 simulation and camera never reference each other's classes (the camera cannot change a run).
  L9 No hard-coded asset paths to files that do not exist (res://assets/...).
 Usage: python3 -I scripts/lint.py [--root DIR]   (--root is used by the self-test)
 """
@@ -19,7 +20,7 @@ import pathlib
 import re
 import sys
 
-LAYERS = {"core": 0, "simulation": 1, "input": 2, "levels": 2, "rendering": 3, "app": 3}
+LAYERS = {"core": 0, "simulation": 1, "camera": 0.5, "input": 2, "levels": 2, "rendering": 3, "app": 3}
 
 
 def gd_files(root):
@@ -37,6 +38,7 @@ def lint(root):
         errs.append("%s:%s: %s %s" % (rel, n, code, msg))
 
     classes = {}
+    other_layer_classes = {}
     for p, rel in gd_files(root):
         m = re.search(r"^class_name (\w+)", p.read_text(), re.M)
         if m:
@@ -44,6 +46,8 @@ def lint(root):
                 err(rel, 1, "L3", "class_name must start with Cc: " + m.group(1))
             if rel.parts[0] == "src" and rel.parts[1] in LAYERS:
                 classes[m.group(1)] = LAYERS[rel.parts[1]]
+                if rel.parts[1] in ("simulation", "camera"):
+                    other_layer_classes[m.group(1)] = rel.parts[1]
 
     for p, rel in gd_files(root):
         text = p.read_text()
@@ -62,6 +66,10 @@ def lint(root):
                 err(rel, n, "L5", "use CcRng, not the engine random")
             if layer is not None and layer <= 2 and re.search(r"\b(Node|Node2D|Control|get_tree|Input|Time|OS)\b\s*[.(]", code):
                 err(rel, n, "L8", "core/simulation/input/levels must not touch the scene tree or clock")
+            if layer is not None and rel.parts[1] in ("simulation", "camera"):
+                for cname, clayer_name in other_layer_classes.items():
+                    if clayer_name != rel.parts[1] and re.search(r"\b" + cname + r"\b", code):
+                        err(rel, n, "L10", "simulation and camera must not reference each other (%s)" % cname)
             if layer is not None:
                 for cname, clayer in classes.items():
                     if clayer > layer and re.search(r"\b" + cname + r"\b", code):

@@ -14,7 +14,7 @@
   },
   "geometry": {
     "stave_line_px": 1.0, "stave_gap_px": 3.2, "stave_lines": 3, "stave_grid_px": 12,
-    "note_px": 18, "min_ribbon_px": 3, "max_ribbon_px": 16, "sign_disc_px": 44,
+    "note_px": 18, "narrow_width_px": 360, "badge_min_notes": 4, "badge_min_notes_narrow": 3, "min_ribbon_px": 3, "max_ribbon_px": 16, "sign_disc_px": 44,
     "label_halo_px": 3
   },
   "ribbon": {

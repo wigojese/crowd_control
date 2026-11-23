@@ -86,3 +86,17 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 | T10-08 | Five real engine screenshots, 15 s capture, narrow capture, draw-order and performance delta | **BLOCKED** | Missing: runnable Godot, display, phone. Manual: open `src/app/graybox.tscn`, F6, space to run, H toggles high contrast |
 | T10-09 | `map_view.gd` parses and draws | **BLOCKED / UNVERIFIED** | Never loaded |
 | T10-10 | No engine-default buttons in main gameplay | **NOT MET**: the styled buttons exist only in the pictures | |
+
+## Stage 11 (camera and semantic zoom)
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T11-01 | Lint with `camera` layer and rule L10 (simulation and camera must not reference each other) | RAN, PASS, rule fires on a bad copy | `scripts/lint.py`, `scripts/test_lint.py` |
+| T11-02 | 44 camera checks on the Python reference | RAN, PASS | `python3 -I scripts/ref_camera.py`. I tightened two weak checks of my own (a flux check with an `or`, and a jitter test that could not fail) before accepting the result |
+| T11-03 | One world anchor survives pinch within 2 px | RAN, PASS in the reference (3.6e-13 px). Engine: BLOCKED | |
+| T11-04 | No label flicker at thresholds | RAN in the reference (band changes at most once per threshold under jitter; the walkthrough changes band exactly 4 times). Real screen: BLOCKED | |
+| T11-05 | No hidden edge, no duplicated agent, exact counts at every band | RAN, PASS in the reference | |
+| T11-06 | GDScript camera tests (9) | **BLOCKED** | Missing: runnable Godot. Manual: the test runner |
+| T11-07 | No input conflict with the sign | RAN only as a rule: a finger down outranks every camera request and freezes the camera. The router and the camera are not wired together. **BLOCKED** in the engine | |
+| T11-08 | 3× zoom screenshots at one tick, 20 s walkthrough, narrow capture | RAN as model-data previews (not engine). Engine captures: **BLOCKED** | `docs/stage11/` |
+| T11-09 | Reduced motion and RETURN TO SIGN | Logic RAN in the reference; no button exists in the engine | |
