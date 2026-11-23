@@ -242,6 +242,6 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: material blocked-time threshold 10%; bottleneck shown if at least 100 queue-ticks
 - rationale: the prompt forbids fake explanations
 - alternatives: model-written prose (rejected: unverifiable)
-- approver status: PROPOSED. Awaiting "Approve Stage 13" and the strategic-depth answer
+- approver status: APPROVED (user: "Approve Stage 13, option A": depth is enough for now; follower behaviour investigated as a bug-or-feature question, result in docs/BEHAVIOR_MATRIX.md section 4)
 - affected files: src/simulation/explainer.gd, src/simulation/sim_world.gd (alt_edge), scripts/ref_sim.py, scripts/ref_explain.py, tests/test_explainer.gd, tests/fixtures/explainer_cases.json, docs/BEHAVIOR_MATRIX.md, docs/CAUSAL_EXPLANATION.md, docs/stage13/*
 - supersedes: none

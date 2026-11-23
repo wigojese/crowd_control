@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        13 (Behavioural diversity and causal explanation): PARTIAL, AWAITING APPROVAL. Reference checks run; GDScript, UI wiring and engine videos BLOCKED
-LAST_APPROVED_STAGE:  12 (user: "Approve Stage 12, option A", 2026-11-23): all six transitions approved as built. Engine runs still BLOCKED
-NEXT_ACTION:          User answers the Stage 13 strategic-depth question. Stage 14 starts only after "Approve Stage 13"
+CURRENT_STAGE:        13 (Behavioural diversity and causal explanation): APPROVED, follower investigation done (see docs/BEHAVIOR_MATRIX.md section 4). GDScript, UI wiring and engine videos still BLOCKED
+LAST_APPROVED_STAGE:  13 (user: "Approve Stage 13, option A", 2026-11-23): depth is enough for now; follower behaviour to be treated as a bug-or-feature question. Engine runs still BLOCKED
+NEXT_ACTION:          User decides the follower finding (keep rule and rename, or retune crowd aversion). Stage 14 starts after that answer
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:
