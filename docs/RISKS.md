@@ -33,6 +33,10 @@ Ranked by how much each could block or mislead the project. Labels: VERIFIED, SU
 ## Verified vs suspected code issues
 
 There is no code, so there are no code issues. VERIFIED: nothing to audit. Do not read this as "the codebase is clean"; it means "there is no codebase yet".
+| 26 | R-26 | None of the Stage 07 GDScript has been parsed or run: syntax, typing and the hand-written `project.godot`/`boot.tscn` may need fixes on first load | Stage 07 looks done but may not open | UNVERIFIED | First action when Godot is runnable: T07-06 to T07-10 in `docs/TEST_LOG.md`. Same gap as the spike (R-23, R-24) |
+| 27 | R-27 | Two scenario validators (GDScript, Python) may drift | A level passes CI but fails in game, or the reverse | PROPOSED mitigation | Shared fixtures and verdict file; consider one implementation at Stage 08 |
+| 28 | R-28 | The event log takes only int and string fields; decimals in `DECISION` cost breakdowns need a fixed-point form | Replay hash mismatch from float formatting | PROPOSED | Decide at Stage 08 |
+| 29 | R-29 | Inter's copyright file says OFL-1.1 and Apache-2.0; which files are under which licence is not checked | A licence obligation missed when fonts ship | UNVERIFIED | Read the font files' own licence fields at Stage 10 |
 
 ## Manual checks I could not do (reproducible later)
 

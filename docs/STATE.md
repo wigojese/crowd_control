@@ -1,16 +1,16 @@
 # STATE
 
 ```
-CURRENT_STAGE:        06 (Technical spike and documented engine selection): PARTIAL, BLOCKED ON A USER DECISION
-LAST_APPROVED_STAGE:  05 (user: "Approve Stage 05 … continue with C, dark theme", 2026-11-23). Art direction C chosen
-NEXT_ACTION:          User chooses A (allow the run here), B (run it on their computer) or C (accept the limitation) from docs/ENGINE_DECISION.md section 6. Stage 07 starts only after "Approve Stage 06".
+CURRENT_STAGE:        07 (Production repository scaffold and enforceable tests): PARTIAL, AWAITING APPROVAL. Python checks run; every engine check BLOCKED (no runnable Godot)
+LAST_APPROVED_STAGE:  06 (user: "Approve Stage 06, option C", 2026-11-23): accepted as documented, provisional Godot 4.7.2, no engine evidence yet. Conditions 1 to 4 of docs/ENGINE_DECISION.md section 4 carry into Stage 07 and Stage 08
+NEXT_ACTION:          User approves or revises the repository architecture (docs/ARCHITECTURE.md). Stage 08 starts only after "Approve Stage 07". First thing to do with a runnable Godot: run T07-06 to T07-10 and the Stage 06 spike
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
-ENGINE_VERSION:       none selected. Candidate only: Godot 4.7 stable (UNVERIFIED from this container)
+ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:
   - No Android test device and no attached user computer (needed from Stage 06)
-  - Godot 4.7.2 is downloaded and checksum-verified in the scratchpad but running it was denied by the security classifier; Unity and adb are not installed; no Android SDK
-  - Outbound web: user approved web access on 2026-11-22; 15 hosts were added to the environment allowlist (Stage 01 product pages and the sites cited in the user's documents). Stage 06 hosts (godotengine.org, docs.godotengine.org, unity.com, docs.unity.com, developer.android.com) are NOT yet allowed
-  - Font and asset licences unchecked (needed before Stage 05 approval)
+  - No Godot has been run: Stage 07 engine checks T07-06 to T07-10 are BLOCKED. Godot 4.7.2 is downloaded and checksum-verified in the scratchpad but running it was denied by the security classifier; Unity and adb are not installed; no Android SDK
+  - Outbound web: approved; Stage 01 and Stage 06 hosts are allowed (CC-D-008, CC-D-014)
+  - Font licences: families verified OFL 1.1 (Stage 05); Inter's Apache-2.0 part unchecked (R-29); no font files shipped yet
   - Remote control: not enabled on the user's computer yet; list_computer_folders returned no folders (checked twice, 2026-11-22)
 ```
 

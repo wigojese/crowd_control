@@ -158,7 +158,7 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: conditions to make it final: l01_check.gd ALL PASS; simulation tick p95 at most 4 ms at 500 walkers and 50 nodes on the target phone; a real Android build starts and takes touch; no engine switch without a new approval
 - rationale: spec default, verified current stable, MIT licence, the only engine I could obtain and checksum here. The main risk (GDScript speed for the simulation at 500 walkers) is unmeasured
 - alternatives: Unity 6.3 LTS (not evaluated); Godot .NET or a native extension if GDScript is too slow
-- approver status: PROPOSED. Awaiting the user's decision A, B or C in docs/ENGINE_DECISION.md section 6
+- approver status: APPROVED with a stated limitation (user: "Approve Stage 06, option C", 2026-11-23). Option C means: accepted without engine evidence. Conditions 1 to 4 stay open and are re-tested as soon as a runnable Godot exists
 - affected files: docs/ENGINE_DECISION.md, docs/SOURCES.md, spikes/godot-sim/*
 - supersedes: none
 
@@ -172,4 +172,16 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - alternatives: unrestricted access (not chosen)
 - approver status: APPROVED by the user (environment card)
 - affected files: none (environment setting)
+- supersedes: none
+
+**CC-D-015**
+- stage: 07
+- date: 2026-11-23
+- question: How is the production repository laid out, and which rules are enforced?
+- chosen option: one Godot project at the repository root; layers core, simulation, levels, app (each may use only lower layers); no autoloads; one stable random service; schema-checked event log; table-driven state machine; Python lint, scenario validator and golden check that run without the engine
+- values: layer order and rules L1 to L9 in scripts/lint.py; tick 20/s, 640 ticks; RNG xorshift32 with FNV-1a named streams; event hash FNV-1a 32
+- rationale: keeps the rules headless and replayable, and gives checks that can run here while the engine cannot
+- alternatives: Godot project in a subfolder (rejected: more path indirection); engine random numbers (rejected: not stable across versions); autoload services (rejected by the spec)
+- approver status: PROPOSED. Awaiting "Approve Stage 07"
+- affected files: project.godot, src/*, data/*, tests/*, tools/*, scripts/*, docs/ARCHITECTURE.md, docs/VERSION_MANIFEST.md
 - supersedes: none
