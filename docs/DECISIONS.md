@@ -278,6 +278,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: dock span on tablets 480 px; button width = min(wanted, (span - tray - 24) / 2); fuzz 200 scenarios per level
 - rationale: the sweep found a real layout bug (360 wide with larger targets broke the 24 px edge reserve; tablet dock spread 712 px)
 - alternatives: skipping the sweep (rejected)
-- approver status: PROPOSED. Awaiting "Approve Stage 16"
+- approver status: APPROVED (user: "Approve Stage 16, option A", 2026-11-23)
 - affected files: scripts/stage16_checks.py, scripts/stage16_evidence.py, scripts/ref_settings.py, src/input/dock_layout.gd, scripts/check_all.sh, docs/TEST_REPORT.md, docs/stage16/*
+- supersedes: none
+
+**CC-D-024**
+- stage: 17
+- date: 2026-11-23
+- question: How is the playtest run when no players and no build exist?
+- chosen option: protocol, consent text, empty outcome grid, one A/B question (reroute ink tick) and three candidate revisions marked as not playtest-derived
+- values: 5 to 10 players, 15 minutes each, counts only, no in-game telemetry
+- rationale: the prompt forbids invented testers and invented validation
+- alternatives: simulated players (rejected: not evidence)
+- approver status: PROPOSED. Awaiting "Approve Stage 17"
+- affected files: docs/PLAYTEST.md
 - supersedes: none

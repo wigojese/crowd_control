@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        16 (Correctness, profiling, regression): PARTIAL, AWAITING APPROVAL. Reference-model tests pass; every device and engine item is a release blocker
-LAST_APPROVED_STAGE:  15 (user: "Approve Stage 15, option A", 2026-11-23): sound tone and accessible defaults. Engine runs still BLOCKED
-NEXT_ACTION:          User approves the remaining risks or asks for a corrective sprint, ideally by enabling a phone or computer so Godot can run. Stage 17 starts only after "Approve Stage 16"
+CURRENT_STAGE:        17 (Playtest): PROTOCOL ONLY, AWAITING APPROVAL. No players, no build; results grid empty
+LAST_APPROVED_STAGE:  16 (user: "Approve Stage 16, option A", 2026-11-23): remaining risks accepted, device and engine items stay release blockers
+NEXT_ACTION:          Get a playable build and 5 to 10 real testers, run docs/PLAYTEST.md, or approve the protocol as is. Stage 18 starts only after "Approve Stage 17"
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:
