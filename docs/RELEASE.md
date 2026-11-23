@@ -73,10 +73,10 @@ Versioned set, all at the freeze commit: `docs/BRIEF.md`, `RULES.md`, `ART_BIBLE
 | 05 | "Approve Stage 05 … continue with C, dark theme" | 2026-11-23 |
 | 06 | "Approve Stage 06, option C" (accepted without engine evidence) | 2026-11-23 |
 | 07 | "Approve Stage 07, option A. split app at Stage 09 or 10" | 2026-11-23 |
-| 08 | option B (recorded in commit 6b8a8b3; spawn-window experiment) | 2026-11-23 |
+| 08 | option B (spawn-window experiment); confirmed by you afterwards: "Stage 08 approval - approved" | 2026-11-23 |
 | 09 to 14 | "Approve Stage NN, option A/B" as recorded in CC-D-016 to CC-D-021 | 2026-11-23 |
 | 15 | "Approve Stage 15, option A" | 2026-11-23 |
 | 16 | "Approve Stage 16, option A" | 2026-11-23 |
 | 17 | "Approve Stage 17, option A" | 2026-11-23 |
 
-Decision records: `docs/DECISIONS.md` (CC-D-001 to CC-D-025). CC-D-005, CC-D-006 and CC-D-007 are still marked PROPOSED there: please confirm or close them.
+Decision records: `docs/DECISIONS.md` (CC-D-001 to CC-D-025). CC-D-005, CC-D-006 and CC-D-007 are APPROVED (2026-11-23).

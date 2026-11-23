@@ -61,7 +61,7 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: names only
 - rationale: The reviews found that "home", "market crossing" and "Plaza" were used inconsistently against what the map showed. Every sentence in the UI and result copy must name something that exists on the map
 - alternatives: keep the spec's node letters in the UI (worse for first-time players)
-- approver status: PROPOSED
+- approver status: APPROVED (user, 2026-11-23: "approve all of them")
 - affected files: docs/BRIEF.md
 - supersedes: none
 
@@ -73,7 +73,7 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: 16 PNG files, 3 JS files
 - rationale: They are the evidence behind CC-D-004 and CC-D-005. They are mockups, not game assets, and they contain made-up sample numbers
 - alternatives: keep them out of the repository
-- approver status: PROPOSED. Informational
+- approver status: APPROVED (user, 2026-11-23: "approve all of them")
 - affected files: docs/art-exploration/**
 - supersedes: none
 
@@ -85,7 +85,7 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: 11 products compared; 3 candidate novelties (N1 sign as preference, N2 decisive-junction replay, N3 one data source in three zoom languages)
 - rationale: N1 is the core verb; N2 and N3 only matter if it is fun. Full evidence in docs/DIFFERENTIATION.md
 - alternatives: P2 hard-gate sign, P3 several signs, P4 per-walker skills, P5 drawn paths (all rejected there)
-- approver status: APPROVED by the user on 2026-11-22 ("approve stage 1"). The user approved the stage as presented, including the differentiation statement and N1-first
+- approver status: APPROVED (user, 2026-11-22: "approve stage 1"; reconfirmed 2026-11-23)
 - affected files: docs/DIFFERENTIATION.md
 - supersedes: none
 
@@ -305,3 +305,5 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - approver status: PROPOSED. Awaiting "Approve Stage 18"
 - affected files: docs/RELEASE.md, docs/TRAILER_STORYBOARD.md, README.md
 - supersedes: none
+
+**Stage 08 approval note (2026-11-23):** the user confirmed the Stage 08 approval ("Stage 08 approval - approved"), option B (spawn-window experiment), as recorded in commit 6b8a8b3.
