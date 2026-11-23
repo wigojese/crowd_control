@@ -117,10 +117,22 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - stage: 03
 - date: 2026-11-22
 - question: Is the formal ruleset CC-RULESET-01C approved, and what happens to CC-L01?
-- chosen option: Ruleset proposed as written in docs/RULES.md. Level: rev0 is solvable but not a puzzle; candidate R1 recommended
+- chosen option: Ruleset as written in docs/RULES.md. Level: rev0 is solvable but not a puzzle; **R1 adopted** (option b); R2 two-wave idea held for L02 or L03
 - values: loop C, lock 80 ticks, hold timeout 60 ticks, held sign inactive, no commands while paused, deadline tick 600, queue wait on first edge only, initial tokens 1.0. R1: Market moved to (270,115); sockets A and B; walkway BD 0.3 walkers/s; sign bonus 6.0 s; pass 18 of 20. R2 idea: second School-bound wave of 8 at tick 300, pass 16
 - rationale: with the spec's numbers the no-sign baseline arrives 20 of 20 and all 8 placements are identical (docs/LEVEL01_SPEC.md section 2). R1 gives baseline 17 (fail) and two distinct passing placements; a running action rarely helps in R1, and R2 shows when it would
 - alternatives: (a) keep rev0 and tune at Stage 08, (c) R1 plus R2 now, (d) other
-- approver status: PROPOSED. Awaiting the user's choice at the Stage 03 gate
+- approver status: APPROVED by the user on 2026-11-23 ("approve and continue" in reply to the Stage 03 gate). The user did not name a CC-L01 option; I recorded my recommended option (b), adopt R1, as the one approved. Correct this if wrong
 - affected files: docs/RULES.md, docs/LEVEL01_SPEC.md, docs/SIMULATION_EVENTS.md, docs/analysis/*
 - supersedes: none (refines CC-D-002 and CC-D-009)
+
+**CC-D-011**
+- stage: 04
+- date: 2026-11-23
+- question: What is the default sign control, and what are the touch rules?
+- chosen option: **Recommended: A.** Drag from the tray is the primary way to place and move the sign; tapping a ring also places or moves it; tapping the sign turns it. The user has not yet chosen
+- values: drag starts after 8 px; pan after 12 px; tap = lift within 220 ms and under 8 px; long press 420 ms; pinch ratio 1.06; snap radius 44 px; hit area 56×56 for sign, ring and tray; edge reserve 24 px each side; required controls at least 44×44, primary at least 48 high; tap-to-move flight 10 ticks (0.5 s)
+- rationale: the physical sign is the art direction's centrepiece; a tap alternative keeps the game playable without dragging. Edge width and thresholds are unmeasured starting values
+- alternatives: B tap-a-ring primary; C tap only (docs/INPUT_SPEC.md section 6)
+- approver status: PROPOSED. Awaiting "Approve Stage 04" and the user's choice of A, B or C
+- affected files: docs/INPUT_SPEC.md, docs/RULES.md (tap-to-move line), docs/stage04-input/*
+- supersedes: none

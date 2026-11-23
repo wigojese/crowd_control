@@ -124,6 +124,8 @@ Every command is assigned to the next simulation tick and logged with that tick 
 | `START` | PLACEMENT, sign PLACED | → RUNNING | `no_sign_placed` |
 | `PAUSE`, `RESUME` | RUNNING / PAUSED | as in the state table | |
 
+**Tap-to-move (input alternative, docs/INPUT_SPEC.md).** A tap on the other ring issues `MOVE(slot)` and an automatic `DROP` **10 ticks (0.5 s) later**; the sign is inactive in between, exactly like a drag. It is rejected while locked.
+
 **Snap-back.** If a HELD sign is not dropped on a legal socket within 60 ticks, it returns to its previous socket and heading, is active again, and **no lock starts** (the inactive time was the cost).
 
 **Same-tick order.** Commands for one tick apply in ordinal order. A rotate and a drop in the same tick apply as logged.
