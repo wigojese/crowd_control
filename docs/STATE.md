@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        04 (Touch interaction choreography and first-time-player UX): AWAITING USER APPROVAL
-LAST_APPROVED_STAGE:  03 (user: "approve and continue", 2026-11-23). Ruleset CC-RULESET-01C and level option (b) R1 recorded
-NEXT_ACTION:          User chooses the default sign control (A, B or C; recommended A) and says "Approve Stage 04". Stage 05 starts only after that.
+CURRENT_STAGE:        05 (Art direction competition with complete visual grammar): AWAITING USER APPROVAL
+LAST_APPROVED_STAGE:  04 (user: "Approve Stage 04, choose A", 2026-11-23). Default sign control A: drag primary, tap alternative
+NEXT_ACTION:          User picks one art direction (A, B or C, optionally with one named detail from another) and says "Approve Stage 05". Stage 06 starts only after that.
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       none selected. Candidate only: Godot 4.7 stable (UNVERIFIED from this container)
 KNOWN_BLOCKERS:

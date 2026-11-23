@@ -129,10 +129,22 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - stage: 04
 - date: 2026-11-23
 - question: What is the default sign control, and what are the touch rules?
-- chosen option: **Recommended: A.** Drag from the tray is the primary way to place and move the sign; tapping a ring also places or moves it; tapping the sign turns it. The user has not yet chosen
+- chosen option: **A, chosen by the user on 2026-11-23.** Drag from the tray is the primary way to place and move the sign; tapping a ring also places or moves it; tapping the sign turns it. The user has not yet chosen
 - values: drag starts after 8 px; pan after 12 px; tap = lift within 220 ms and under 8 px; long press 420 ms; pinch ratio 1.06; snap radius 44 px; hit area 56×56 for sign, ring and tray; edge reserve 24 px each side; required controls at least 44×44, primary at least 48 high; tap-to-move flight 10 ticks (0.5 s)
 - rationale: the physical sign is the art direction's centrepiece; a tap alternative keeps the game playable without dragging. Edge width and thresholds are unmeasured starting values
 - alternatives: B tap-a-ring primary; C tap only (docs/INPUT_SPEC.md section 6)
-- approver status: PROPOSED. Awaiting "Approve Stage 04" and the user's choice of A, B or C
+- approver status: APPROVED by the user on 2026-11-23 ("Approve Stage 04, choose A")
 - affected files: docs/INPUT_SPEC.md, docs/RULES.md (tap-to-move line), docs/stage04-input/*
 - supersedes: none
+
+**CC-D-012**
+- stage: 05
+- date: 2026-11-23
+- question: Which art direction is chosen: A print atlas (Civic Press), B fold-out paper theater, or C transit score?
+- chosen option: **Not chosen yet.** Recommended: A as the base, optionally with C's dock timeline
+- values: weighted rubric (spec B5): A 7.58, B 6.70, C 7.28 (my judgements from static pictures); palette tokens for each in docs/ART_BIBLE.md
+- rationale: A scores highest, is the cheapest to build and reads best. C is more distinctive but weak in sunlight and for touch feel. B is the most tactile but the most expensive and noisy. If distinctiveness is weighted above 30 %, C overtakes A
+- alternatives: B; C; a revision of any
+- approver status: PROPOSED. Awaiting the user's choice and "Approve Stage 05". Supersedes the provisional status of CC-D-004 only after approval
+- affected files: docs/ART_BIBLE.md, docs/stage05-art/*
+- supersedes: CC-D-004 (once chosen)

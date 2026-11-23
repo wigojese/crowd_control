@@ -23,6 +23,8 @@ Ranked by how much each could block or mislead the project. Labels: VERIFIED, SU
 | 17 | R-17 | The 24 px edge reserve and the system inset values are guesses; Android gives no edge width in dp, Apple gave no inset numbers | A drag could collide with the OS back or home gesture | UNKNOWN | Measure on a real phone (R-01). Read real insets from the OS at runtime |
 | 18 | R-18 | North Gate (a sign ring) is near the top of a tall screen | A long thumb reach; the loop depends on a quick, accurate action | SUSPECTED | Camera places the active ring in the lower 60 % while the sign is held; test with real thumbs |
 | 19 | R-19 | The earlier D2 mockups ignored safe areas (HUD under the status bar; dock into the bottom inset) | Controls under system UI | VERIFIED (fixed in the Stage 04 pictures) | Always draw insets in pictures; 320×568 North Gate ring still touches the HUD band (Stage 09 padding) |
+| 20 | R-20 | The art choice rests on static pictures: motion, real fonts, grain stability and shadow or filter cost are untested | A direction that looks good still may not move or perform well | VERIFIED | Stage 10 realises the chosen direction in the engine; keep the choice revisable until then |
+| 21 | R-21 | Direction C has several low-contrast elements (plum 4.07:1, faint grey 3.15:1, parchment arrow on the vermilion disc 3.11:1) and a dark ground | Poor legibility in sunlight | VERIFIED (numbers), UNVERIFIED (in sunlight) | Outdoor test on a real phone before choosing C; use plum for fills only |
 
 ## Verified vs suspected code issues
 
