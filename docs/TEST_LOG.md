@@ -32,3 +32,23 @@ Run date: 2026-11-23. Machine: this cloud container (Linux, Python 3 at `/usr/lo
 ```bash
 scripts/check_all.sh
 ```
+
+## Stage 08 (graybox CC-L01-R1)
+
+Level data: `data/levels/cc_l01_r1.json` (passes both scenario validators). Engine code: `src/simulation/sim_world.gd`, `src/app/graybox.gd`, `tools/run_level.gd`. Tests: `tests/test_sim_l01.gd` (6 tests).
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T08-01 | Lint on all new files | RAN, PASS | `python3 -I scripts/lint.py` |
+| T08-02 | Level file valid | RAN, PASS | `python3 -I scripts/validate_scenarios.py data/levels/cc_l01_r1.json` prints `VALID` |
+| T08-03 | Reference numbers for 9 scenarios on R1 (**Python model, not the engine**) | RAN | `python3 -I scripts/stage08_reference_runs.py`; output in `docs/stage08/scenarios.csv` |
+| T08-04 | At least one pass and one failure achievable and provable (**Python model**) | RAN | NO_SIGN 17 of 20 FAIL; A/E 20 of 20 PASS (pass mark 18) |
+| T08-05 | Sign input changes at least 2 downstream route choices (**Python model**) | RAN | 8 of 20 walkers choose a different first edge with A/E than with no sign (`docs/stage08/first_decisions.csv`) |
+| T08-06 | Engine simulation reproduces the reference numbers (`test_sim_l01.gd`) | **BLOCKED** | Missing: runnable Godot 4.7.2. Manual: `godot --headless --path . --script res://tools/test_runner.gd` |
+| T08-07 | Restart reproduces (same event hash twice) | **BLOCKED** | Same. Test `test_replay_is_deterministic`. The Python model reproduces its numbers (they match the Stage 06 JSON) |
+| T08-08 | No deadlock, no routing through walls | Partly: in the Python model every walker arrives or is still en route at tick 640; routes can only use graph edges. **Engine: BLOCKED** | The 17 of 20 failure cases are slow queues, not deadlock: the last arrival is tick 581, before the end |
+| T08-09 | Headless run with CSV event log and replay JSON from the engine | **BLOCKED** | Manual: `godot --headless --path . --script res://tools/run_level.gd -- res://data/levels/cc_l01_r1.json A E docs/stage08/engine` |
+| T08-10 | Phone APK, video of 3 runs, benchmark of the real simulation | **BLOCKED** | Missing: Godot export templates and Android SDK (not reachable), a phone, a screen recorder. The Stage 06 bench (`spikes/godot-sim/bench.gd`) is also not run |
+| T08-11 | Graybox scene (`graybox.tscn`) is readable: queues, dots, sign, score | **BLOCKED / UNVERIFIED** | Never rendered or seen. Manual: open `src/app/graybox.tscn` in the editor and press F6; space runs |
+
+Finding from T08-03 (Python model): `B/E then MOVE A at tick 100` scores 17 (fail), the same as no sign, and `A/E then ROTATE N at tick 200` still scores 20. Everything that decides the result happens before about tick 100; later actions barely matter (risk R-15 again, now with numbers).

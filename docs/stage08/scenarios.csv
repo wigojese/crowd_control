@@ -1,0 +1,10 @@
+scenario,arrived_of_20,on_time,blocked_ticks,score,last_arrival_tick,vs_pass_mark_18
+NO_SIGN,17,17,2710,86,581,FAIL
+A/N,17,17,2710,86,581,FAIL
+A/E,20,20,1001,99,473,PASS
+A/S,17,17,2813,86,581,FAIL
+B/E,20,19,1785,97,631,PASS
+B/N,17,17,2710,86,581,FAIL
+A/N then ROTATE E at tick 0,20,20,1001,99,473,PASS
+B/E then MOVE A at tick 100,17,17,2710,86,581,FAIL
+A/E then ROTATE N at tick 200,20,20,1001,99,473,PASS

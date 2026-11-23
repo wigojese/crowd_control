@@ -182,6 +182,6 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: layer order and rules L1 to L9 in scripts/lint.py; tick 20/s, 640 ticks; RNG xorshift32 with FNV-1a named streams; event hash FNV-1a 32
 - rationale: keeps the rules headless and replayable, and gives checks that can run here while the engine cannot
 - alternatives: Godot project in a subfolder (rejected: more path indirection); engine random numbers (rejected: not stable across versions); autoload services (rejected by the spec)
-- approver status: PROPOSED. Awaiting "Approve Stage 07"
+- approver status: APPROVED (user: "Approve Stage 07, option A. split app at Stage 09 or 10", 2026-11-23). The `app` layer is to be split into input / rendering / audio-save modules at Stage 09 or 10, with the lint layer table updated then
 - affected files: project.godot, src/*, data/*, tests/*, tools/*, scripts/*, docs/ARCHITECTURE.md, docs/VERSION_MANIFEST.md
 - supersedes: none

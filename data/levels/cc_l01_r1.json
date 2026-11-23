@@ -1,0 +1,136 @@
+{
+ "ruleset_version": "CC-RULESET-01C",
+ "level_id": "CC-L01-R1",
+ "seed": 1007,
+ "ticks": 640,
+ "deadline_tick": 600,
+ "pass_mark": 18,
+ "sign_bonus": 6.0,
+ "sockets": [
+  "A",
+  "B"
+ ],
+ "nodes": [
+  {
+   "id": "A",
+   "x": 180,
+   "y": 50,
+   "name": "North Gate"
+  },
+  {
+   "id": "B",
+   "x": 92,
+   "y": 145,
+   "name": "Canal Turn"
+  },
+  {
+   "id": "C",
+   "x": 270,
+   "y": 115,
+   "name": "Market"
+  },
+  {
+   "id": "D",
+   "x": 120,
+   "y": 286,
+   "name": "Bridge West"
+  },
+  {
+   "id": "E",
+   "x": 254,
+   "y": 290,
+   "name": "Bridge East"
+  },
+  {
+   "id": "F",
+   "x": 106,
+   "y": 470,
+   "name": "School"
+  },
+  {
+   "id": "G",
+   "x": 266,
+   "y": 475,
+   "name": "Plaza"
+  }
+ ],
+ "edges": [
+  {
+   "id": "AB",
+   "from": "A",
+   "to": "B",
+   "rate": 3.0
+  },
+  {
+   "id": "AC",
+   "from": "A",
+   "to": "C",
+   "rate": 3.0
+  },
+  {
+   "id": "BC",
+   "from": "B",
+   "to": "C",
+   "rate": 3.0
+  },
+  {
+   "id": "BD",
+   "from": "B",
+   "to": "D",
+   "rate": 0.3
+  },
+  {
+   "id": "CE",
+   "from": "C",
+   "to": "E",
+   "rate": 3.0
+  },
+  {
+   "id": "DE",
+   "from": "D",
+   "to": "E",
+   "rate": 1.2
+  },
+  {
+   "id": "DF",
+   "from": "D",
+   "to": "F",
+   "rate": 3.0
+  },
+  {
+   "id": "EG",
+   "from": "E",
+   "to": "G",
+   "rate": 3.0
+  },
+  {
+   "id": "FG",
+   "from": "F",
+   "to": "G",
+   "rate": 3.0
+  }
+ ],
+ "schedule": [
+  {
+   "tick": 0,
+   "origin": "A",
+   "destination": "F",
+   "mix": {
+    "C": 7,
+    "F": 3,
+    "I": 2
+   }
+  },
+  {
+   "tick": 40,
+   "origin": "A",
+   "destination": "G",
+   "mix": {
+    "C": 4,
+    "F": 3,
+    "I": 1
+   }
+  }
+ ],
+ "commands": []
+}

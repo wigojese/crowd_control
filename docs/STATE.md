@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        07 (Production repository scaffold and enforceable tests): PARTIAL, AWAITING APPROVAL. Python checks run; every engine check BLOCKED (no runnable Godot)
-LAST_APPROVED_STAGE:  06 (user: "Approve Stage 06, option C", 2026-11-23): accepted as documented, provisional Godot 4.7.2, no engine evidence yet. Conditions 1 to 4 of docs/ENGINE_DECISION.md section 4 carry into Stage 07 and Stage 08
-NEXT_ACTION:          User approves or revises the repository architecture (docs/ARCHITECTURE.md). Stage 08 starts only after "Approve Stage 07". First thing to do with a runnable Godot: run T07-06 to T07-10 and the Stage 06 spike
+CURRENT_STAGE:        08 (True playable graybox CC-L01-R1): PARTIAL, AWAITING APPROVAL. Code and Python reference evidence done; every engine run BLOCKED
+LAST_APPROVED_STAGE:  07 (user: "Approve Stage 07, option A. split app at Stage 09 or 10", 2026-11-23). Engine checks T07-06..T07-10 still BLOCKED
+NEXT_ACTION:          User answers the Stage 08 feedback question (sign strength, round duration or map simplification). Stage 09 starts only after "Approve Stage 08". First thing to do with a runnable Godot: T07-06..T07-10, T08-06..T08-11
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:
