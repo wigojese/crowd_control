@@ -38,6 +38,8 @@ There is no code, so there are no code issues. VERIFIED: nothing to audit. Do no
 | 28 | R-28 | The event log takes only int and string fields; decimals in `DECISION` cost breakdowns need a fixed-point form | Replay hash mismatch from float formatting | PROPOSED | Decide at Stage 08 |
 | 29 | R-29 | Inter's copyright file says OFL-1.1 and Apache-2.0; which files are under which licence is not checked | A licence obligation missed when fonts ship | UNVERIFIED | Read the font files' own licence fields at Stage 10 |
 | 30 | R-30 | In CC-L01-R1 the first sign placement decides the round: a move at tick 100 gives the same result as no sign, and a rotation at tick 200 changes nothing (Python model, T08-03). Running play (loop C) has almost no effect on the outcome | The game may feel like a one-choice puzzle, not a live strategy game | VERIFIED in the model, **UNKNOWN in the engine** | Stage 08 feedback question: more sign strength, longer spawn window (R2 idea: second wave at tick 300), or simpler map |
+| 31 | R-31 | Spawn-window option B tried in the Python model: a late third wave adds at most 2 arrivals from a running action. Running play stays weak even after a second wave | The core fantasy of live decisions may not hold | VERIFIED in the model, UNKNOWN in the engine | Needs a different lever (a wave whose best heading differs from wave 1, or a weaker sign that decays); decide after seeing the graybox run |
+| 32 | R-32 | Input thresholds, the router and every touch claim are untested on a device | Pan or tap errors, wrong edge reserve | UNKNOWN | IB-07 in docs/INPUT_BUGS.md; needs a phone |
 
 ## Manual checks I could not do (reproducible later)
 

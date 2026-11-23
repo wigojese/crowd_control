@@ -185,3 +185,15 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - approver status: APPROVED (user: "Approve Stage 07, option A. split app at Stage 09 or 10", 2026-11-23). The `app` layer is to be split into input / rendering / audio-save modules at Stage 09 or 10, with the lint layer table updated then
 - affected files: project.godot, src/*, data/*, tests/*, tools/*, scripts/*, docs/ARCHITECTURE.md, docs/VERSION_MANIFEST.md
 - supersedes: none
+
+**CC-D-016**
+- stage: 09
+- date: 2026-11-23
+- question: How is touch input arbitrated, and where do the thresholds live?
+- chosen option: a pure per-touch state machine (CcGestureRouter) in a new src/input layer; thresholds only in data/input_tokens.json; one Python reference and one GDScript port running the same 21 cases
+- values: drag 8 px, pan 12 px, tap 220 ms, long press 420 ms, pinch 1.06, snap 44 px, hit 56 px, edge reserve 24 px, hold timeout 3000 ms (all starting values, unmeasured)
+- rationale: logic testable without a phone; the app layer is being split as approved at Stage 07
+- alternatives: logic inside the scene script (rejected: untestable headless)
+- approver status: PROPOSED. Awaiting "Approve Stage 09" and a ruling on IB-02
+- affected files: src/input/*, data/input_tokens.json, tests/fixtures/input_cases.json, scripts/ref_input.py, scripts/lint.py (new layer)
+- supersedes: none

@@ -1,0 +1,1966 @@
+[
+ {
+  "id": "G-01 tap sign turns once",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 100
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_TURN"
+  ]
+ },
+ {
+  "id": "G-02 6px wobble within 220ms is still a tap",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     126,
+     200
+    ],
+    "t": 100
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     126,
+     200
+    ],
+    "t": 200
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_TURN"
+  ]
+ },
+ {
+  "id": "G-03 9px drag picks the sign up, no pan",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     129,
+     200
+    ],
+    "t": 50
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_PICKUP"
+  ]
+ },
+ {
+  "id": "G-04 locked sign: drag is rejected, no pan, no pickup",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": true,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     140,
+     200
+    ],
+    "t": 50
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     160,
+     200
+    ],
+    "t": 80
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     160,
+     200
+    ],
+    "t": 120
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "LOCK_REJECT"
+  ]
+ },
+ {
+  "id": "G-05 pan across the sign never touches it",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     150,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     163,
+     200
+    ],
+    "t": 30
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 60
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 90
+   }
+  ],
+  "expect": [
+   "PAN",
+   "PAN"
+  ]
+ },
+ {
+  "id": "G-06 pinch ratio 1.07 pinches, no tap",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     200,
+     400
+    ],
+    "t": 0
+   },
+   {
+    "op": "down",
+    "id": 2,
+    "pos": [
+     300,
+     400
+    ],
+    "t": 10
+   },
+   {
+    "op": "move",
+    "id": 2,
+    "pos": [
+     307,
+     400
+    ],
+    "t": 40
+   },
+   {
+    "op": "up",
+    "id": 2,
+    "pos": [
+     307,
+     400
+    ],
+    "t": 80
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     200,
+     400
+    ],
+    "t": 90
+   }
+  ],
+  "expect": [
+   "PINCH"
+  ]
+ },
+ {
+  "id": "G-07 second finger cancels pending sign action",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "down",
+    "id": 2,
+    "pos": [
+     250,
+     400
+    ],
+    "t": 20
+   },
+   {
+    "op": "up",
+    "id": 2,
+    "pos": [
+     250,
+     400
+    ],
+    "t": 60
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 80
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_ACTION_CANCELLED"
+  ]
+ },
+ {
+  "id": "G-08 tray drag released off a ring snaps back",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": false,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     195,
+     700
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     195,
+     650
+    ],
+    "t": 40
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     195,
+     650
+    ],
+    "t": 90
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_PICKUP",
+   "SNAPBACK"
+  ]
+ },
+ {
+  "id": "G-08b tray drag released on a ring drops",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": false,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     195,
+     700
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     195,
+     650
+    ],
+    "t": 40
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     125,
+     205
+    ],
+    "t": 80
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     125,
+     205
+    ],
+    "t": 120
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_PICKUP",
+   "SIGN_DRAG_MOVE",
+   "SIGN_DROP"
+  ]
+ },
+ {
+  "id": "G-09 touch inside the 24px edge reserve is ignored",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     10,
+     400
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     60,
+     400
+    ],
+    "t": 30
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     60,
+     400
+    ],
+    "t": 60
+   }
+  ],
+  "expect": []
+ },
+ {
+  "id": "G-10 system cancel while holding snaps back once",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     140,
+     200
+    ],
+    "t": 40
+   },
+   {
+    "op": "cancel",
+    "id": 1,
+    "t": 80
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_PICKUP",
+   "SNAPBACK"
+  ]
+ },
+ {
+  "id": "G-11 paused: sign ignores touch, Resume works",
+  "scene": {
+   "mode": "PAUSED",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 50
+   },
+   {
+    "op": "down",
+    "id": 2,
+    "pos": [
+     200,
+     520
+    ],
+    "t": 100
+   },
+   {
+    "op": "up",
+    "id": 2,
+    "pos": [
+     200,
+     520
+    ],
+    "t": 160
+   }
+  ],
+  "expect": [
+   "PAUSED_MESSAGE",
+   "PRESS_FEEDBACK",
+   "UI"
+  ]
+ },
+ {
+  "id": "G-12 long press inspects, release does not turn",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "update",
+    "t": 450
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 500
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "INSPECT"
+  ]
+ },
+ {
+  "id": "G-13 Pause pressed while another finger pans",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     200,
+     400
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     230,
+     400
+    ],
+    "t": 30
+   },
+   {
+    "op": "down",
+    "id": 2,
+    "pos": [
+     300,
+     800
+    ],
+    "t": 40
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     240,
+     400
+    ],
+    "t": 60
+   },
+   {
+    "op": "up",
+    "id": 2,
+    "pos": [
+     300,
+     800
+    ],
+    "t": 90
+   }
+  ],
+  "expect": [
+   "PAN",
+   "PRESS_FEEDBACK",
+   "PAN",
+   "UI"
+  ]
+ },
+ {
+  "id": "G-14 locked: tap on other ring is rejected",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": true,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     270,
+     230
+    ],
+    "t": 0
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     270,
+     230
+    ],
+    "t": 100
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "LOCK_REJECT"
+  ]
+ },
+ {
+  "id": "G-15 held sign times out after 3 s and snaps back",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     140,
+     200
+    ],
+    "t": 40
+   },
+   {
+    "op": "update",
+    "t": 3100
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     140,
+     200
+    ],
+    "t": 3200
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_PICKUP",
+   "SNAPBACK"
+  ]
+ },
+ {
+  "id": "X-01 tap other ring moves the sign",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     270,
+     230
+    ],
+    "t": 0
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     270,
+     230
+    ],
+    "t": 100
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_MOVE_TAP"
+  ]
+ },
+ {
+  "id": "X-02 slow press (300 ms) on sign is neither turn nor inspect",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 0
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     120,
+     200
+    ],
+    "t": 300
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK"
+  ]
+ },
+ {
+  "id": "X-03 button released outside does nothing",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     300,
+     800
+    ],
+    "t": 0
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     200,
+     400
+    ],
+    "t": 60
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK"
+  ]
+ },
+ {
+  "id": "X-04 cancel during pan is reported once",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     200,
+     400
+    ],
+    "t": 0
+   },
+   {
+    "op": "move",
+    "id": 1,
+    "pos": [
+     230,
+     400
+    ],
+    "t": 30
+   },
+   {
+    "op": "cancel",
+    "id": 1,
+    "t": 60
+   }
+  ],
+  "expect": [
+   "PAN",
+   "CANCELLED"
+  ]
+ },
+ {
+  "id": "X-05 tap 7px off the sign centre still turns it",
+  "scene": {
+   "mode": "RUNNING",
+   "viewport": [
+    390,
+    844
+   ],
+   "tray": [
+    195,
+    700
+   ],
+   "sign": {
+    "placed": true,
+    "locked": false,
+    "held": false,
+    "pos": [
+     120,
+     200
+    ],
+    "slot": "A"
+   },
+   "rings": [
+    {
+     "id": "A",
+     "pos": [
+      120,
+      200
+     ]
+    },
+    {
+     "id": "B",
+     "pos": [
+      270,
+      230
+     ]
+    }
+   ],
+   "buttons": [
+    {
+     "id": "pause",
+     "rect": [
+      280,
+      780,
+      104,
+      48
+     ]
+    },
+    {
+     "id": "resume",
+     "rect": [
+      65,
+      500,
+      260,
+      52
+     ]
+    }
+   ]
+  },
+  "events": [
+   {
+    "op": "down",
+    "id": 1,
+    "pos": [
+     125,
+     205
+    ],
+    "t": 0
+   },
+   {
+    "op": "up",
+    "id": 1,
+    "pos": [
+     125,
+     205
+    ],
+    "t": 100
+   }
+  ],
+  "expect": [
+   "PRESS_FEEDBACK",
+   "SIGN_TURN"
+  ]
+ }
+]

@@ -9,6 +9,7 @@ run python3 -I scripts/lint.py
 run python3 -I scripts/test_lint.py
 run python3 -I scripts/validate_scenarios.py --fixtures
 run python3 -I scripts/check_golden.py
+run python3 -I scripts/ref_input.py
 if command -v godot >/dev/null 2>&1; then
   run godot --headless --path . --script res://tools/test_runner.gd
   run godot --headless --path . --script res://tools/scenario_runner.gd -- res://tests/fixtures/scenario_ok.json

@@ -5,7 +5,7 @@ Rules:
     final newline.
  L2 No [autoload] section in project.godot (no global singletons).
  L3 Every class_name starts with Cc.
- L4 Layer dependencies: core <- simulation <- levels <- app. A file may mention only classes (and
+ L4 Layer dependencies: core <- simulation <- (input, levels) <- app; input and levels may not use each other's rules but are not forbidden to. A file may mention only classes (and
     res://src paths) of its own or lower layers. tests/ and tools/ may use any layer.
  L5 No random source other than CcRng in src/ (randi, randf, randomize, RandomNumberGenerator).
  L6 JSON files parse; the state table has no duplicate (from,event) and no unknown states.
@@ -19,7 +19,7 @@ import pathlib
 import re
 import sys
 
-LAYERS = {"core": 0, "simulation": 1, "levels": 2, "app": 3}
+LAYERS = {"core": 0, "simulation": 1, "input": 2, "levels": 2, "app": 3}
 
 
 def gd_files(root):
@@ -60,8 +60,8 @@ def lint(root):
             code = ln.split("##")[0].split("#")[0]
             if rel.parts[0] == "src" and re.search(r"\b(randi|randf|randomize|RandomNumberGenerator|randi_range|randf_range)\b", code):
                 err(rel, n, "L5", "use CcRng, not the engine random")
-            if layer is not None and layer <= 1 and re.search(r"\b(Node|Node2D|Control|get_tree|Input|Time|OS)\b\s*[.(]", code):
-                err(rel, n, "L8", "core/simulation must not touch the scene tree or clock")
+            if layer is not None and layer <= 2 and re.search(r"\b(Node|Node2D|Control|get_tree|Input|Time|OS)\b\s*[.(]", code):
+                err(rel, n, "L8", "core/simulation/input/levels must not touch the scene tree or clock")
             if layer is not None:
                 for cname, clayer in classes.items():
                     if clayer > layer and re.search(r"\b" + cname + r"\b", code):

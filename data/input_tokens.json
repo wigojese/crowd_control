@@ -1,0 +1,13 @@
+{
+  "note": "Stage 09 starting values from docs/INPUT_SPEC.md. Logical px and ms. Tune here, nowhere else. UNMEASURED on a real device.",
+  "drag_px": 8,
+  "pan_px": 12,
+  "tap_ms": 220,
+  "long_press_ms": 420,
+  "pinch_ratio": 1.06,
+  "snap_px": 44,
+  "hit_px": 56,
+  "edge_reserve_px": 24,
+  "hold_timeout_ms": 3000,
+  "accessible_hit_extra_px": 8
+}

@@ -52,3 +52,22 @@ Level data: `data/levels/cc_l01_r1.json` (passes both scenario validators). Engi
 | T08-11 | Graybox scene (`graybox.tscn`) is readable: queues, dots, sign, score | **BLOCKED / UNVERIFIED** | Never rendered or seen. Manual: open `src/app/graybox.tscn` in the editor and press F6; space runs |
 
 Finding from T08-03 (Python model): `B/E then MOVE A at tick 100` scores 17 (fail), the same as no sign, and `A/E then ROTATE N at tick 200` still scores 20. Everything that decides the result happens before about tick 100; later actions barely matter (risk R-15 again, now with numbers).
+
+## Stage 09 (input and gesture arbitration)
+
+Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `scripts/ref_input.py`; cases `tests/fixtures/input_cases.json` (21 cases: G-01 to G-15, G-08b, X-01 to X-05); GDScript tests `tests/test_input_router.gd` (3 tests).
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T09-01 | Lint with the new `input` layer | RAN, PASS | `scripts/lint.py`, `scripts/test_lint.py` |
+| T09-02 | 21 gesture cases on the Python reference | RAN, PASS (after fixing one wrong test coordinate, IB-01) | `python3 -I scripts/ref_input.py` ends `INPUT RESULT: ALL PASS` |
+| T09-03 | Same cases on the GDScript router | **BLOCKED** | Missing: runnable Godot. Manual: `godot --headless --path . --script res://tools/test_runner.gd` |
+| T09-04 | Pan never spends a sign action; cancel neither duplicates nor loses the sign (G-05, G-10, every pickup has one resolution) | RAN, PASS in the Python reference. Engine: BLOCKED | `test_every_pickup_has_exactly_one_resolution` in the GDScript tests |
+| T09-05 | Finger starts on sign, map, dock, notification edge, two simultaneous touches | RAN in the reference (G-03, G-05, G-08, G-09, G-07, G-13). Engine and real touchscreen: BLOCKED | |
+| T09-06 | Real touchscreen feel, 390×844 and 320×568 recordings, alternative control comparison | **BLOCKED** | Missing: phone, screen recorder |
+| T09-07 | Measured first-acknowledgement latency | **BLOCKED** | Missing: phone and a high-speed or on-device capture. The router's own `first_ack` is not this number |
+| T09-08 | Input thresholds live in tokens, not scattered | RAN | Router reads only `tok[...]`; no number literal for a threshold in `gesture_router.gd` (checked by reading; there is no lint rule for it yet) |
+
+## Stage 08 experiment, user option B (spawn window first)
+
+`python3 -I docs/analysis/stage08_r2_experiment.py` (Python model). A third walker group at tick 200, 300 or 360 from gates A, B, C or E: the best case adds **2 of 27** arrivals over the best fixed placement (group from Canal Turn to School at tick 200: 23 fixed, 25 with one running action). Most variants add 0 or 1. **A second wave alone does not make running play decisive.** The level file is unchanged (still R1).

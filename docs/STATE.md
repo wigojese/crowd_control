@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        08 (True playable graybox CC-L01-R1): PARTIAL, AWAITING APPROVAL. Code and Python reference evidence done; every engine run BLOCKED
-LAST_APPROVED_STAGE:  07 (user: "Approve Stage 07, option A. split app at Stage 09 or 10", 2026-11-23). Engine checks T07-06..T07-10 still BLOCKED
-NEXT_ACTION:          User answers the Stage 08 feedback question (sign strength, round duration or map simplification). Stage 09 starts only after "Approve Stage 08". First thing to do with a runnable Godot: T07-06..T07-10, T08-06..T08-11
+CURRENT_STAGE:        09 (Tactile feel, one-thumb clarity, gesture arbitration): PARTIAL, AWAITING APPROVAL. Router logic done and checked in Python; GDScript, device and latency work BLOCKED
+LAST_APPROVED_STAGE:  08 (user: "Approve Stage 08, option B", 2026-11-23). Engine runs still BLOCKED
+NEXT_ACTION:          User answers the Stage 09 feedback and decides IB-02. Stage 10 starts only after "Approve Stage 09". With a runnable Godot: T07-06..10, T08-06..11, T09-03
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:
