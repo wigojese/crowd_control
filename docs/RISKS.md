@@ -40,6 +40,10 @@ There is no code, so there are no code issues. VERIFIED: nothing to audit. Do no
 | 30 | R-30 | In CC-L01-R1 the first sign placement decides the round: a move at tick 100 gives the same result as no sign, and a rotation at tick 200 changes nothing (Python model, T08-03). Running play (loop C) has almost no effect on the outcome | The game may feel like a one-choice puzzle, not a live strategy game | VERIFIED in the model, **UNKNOWN in the engine** | Stage 08 feedback question: more sign strength, longer spawn window (R2 idea: second wave at tick 300), or simpler map |
 | 31 | R-31 | Spawn-window option B tried in the Python model: a late third wave adds at most 2 arrivals from a running action. Running play stays weak even after a second wave | The core fantasy of live decisions may not hold | VERIFIED in the model, UNKNOWN in the engine | Needs a different lever (a wave whose best heading differs from wave 1, or a weaker sign that decays); decide after seeing the graybox run |
 | 32 | R-32 | Input thresholds, the router and every touch claim are untested on a device | Pan or tap errors, wrong edge reserve | UNKNOWN | IB-07 in docs/INPUT_BUGS.md; needs a phone |
+| 33 | R-33 | Standard theme: School amber and Plaza sage are 1.03:1 in luminance; colour-off play depends on the solid/dashed rule | Routes confused by colour-blind or sunlit players | VERIFIED by calculation | Dash rule built into pictures and map_view; keep for every route graphic |
+| 34 | R-34 | At 320 px wide the notes are about 15 px (rule: 18 px) and pile up at nodes | Crowd unreadable on small phones | VERIFIED in the picture | Fewer notes per node at narrow widths, or a count badge; decide at Stage 11 |
+| 35 | R-35 | All map drawing uses per-frame `_draw` calls, never measured | Frame time on a mid-range phone | UNKNOWN | Stage 16 measurement; cache static layers |
+| 36 | R-36 | No engine screenshots exist; the visual identity is shown only from model data | The engine may look different | UNKNOWN | T10-08 |
 
 ## Manual checks I could not do (reproducible later)
 

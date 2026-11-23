@@ -194,6 +194,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: drag 8 px, pan 12 px, tap 220 ms, long press 420 ms, pinch 1.06, snap 44 px, hit 56 px, edge reserve 24 px, hold timeout 3000 ms (all starting values, unmeasured)
 - rationale: logic testable without a phone; the app layer is being split as approved at Stage 07
 - alternatives: logic inside the scene script (rejected: untestable headless)
-- approver status: PROPOSED. Awaiting "Approve Stage 09" and a ruling on IB-02
+- approver status: APPROVED (user: "Approve Stage 09, option A": a lift off a ring snaps back at once)
 - affected files: src/input/*, data/input_tokens.json, tests/fixtures/input_cases.json, scripts/ref_input.py, scripts/lint.py (new layer)
+- supersedes: none
+
+**CC-D-017**
+- stage: 10
+- date: 2026-11-23
+- question: How is direction C implemented, and how are routes told apart without colour?
+- chosen option: tokens in data/art_tokens.json; CcMapView in a new src/rendering layer; School route solid and Plaza route dashed; high-contrast theme; ribbon width only from counted EDGE_ENTERED
+- values: ribbon width = clamp(3 + 1.9 x (sqrt(count) - 1), 3, 16) px; stave grid every 24 px of world space; notes 18 px (failed at 320 px, R-34)
+- rationale: the contrast script found amber and sage identical in grayscale
+- alternatives: separate hues only (rejected by the calculation)
+- approver status: PROPOSED. Awaiting "Approve Stage 10"
+- affected files: data/art_tokens.json, src/rendering/*, src/app/graybox.gd, scripts/check_contrast.py, scripts/ref_ribbon.py, scripts/stage10_preview.py, docs/VISUAL_IMPLEMENTATION.md, docs/stage10/*
 - supersedes: none

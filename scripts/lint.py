@@ -19,7 +19,7 @@ import pathlib
 import re
 import sys
 
-LAYERS = {"core": 0, "simulation": 1, "input": 2, "levels": 2, "app": 3}
+LAYERS = {"core": 0, "simulation": 1, "input": 2, "levels": 2, "rendering": 3, "app": 3}
 
 
 def gd_files(root):

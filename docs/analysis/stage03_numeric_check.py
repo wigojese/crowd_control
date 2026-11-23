@@ -48,7 +48,7 @@ def make_walkers():
         for p,n in mix:
             for _ in range(n): W.append(dict(id=i,prof=p,origin=origin,dest=dest,spawn=tick,state='UNSPAWNED',node=None,edge=None,t=0.0,hist=[],q=None,qtick=0,lasteval=-99,arr=None,blocked=0,alive=0,prev=None,decisions=[])); i+=1
     return W
-def run(sign_state, commands, trace=False):
+def run(sign_state, commands, trace=False, hook=None):
     """sign_state: None or (slot,heading) at Start. commands: list of (tick,'ROTATE',heading) or (tick,'MOVE',slot)."""
     W=make_walkers(); tokens={e:min(1.0,max(1.0,v[3])) for e,v in EDGES.items()}
     fifo={e:[] for e in EDGES}
@@ -110,6 +110,7 @@ def run(sign_state, commands, trace=False):
         for w in W:
             if w['state'] in('QUEUED','NEEDS','ON_EDGE'): person_total+=1; w['alive']+=1
             if w['state']=='QUEUED': w['blocked']+=1; blocked_total+=1
+        if hook: hook(t,W,fifo,sign,entered)
     arrived=[w for w in W if w['state']=='ARRIVED']
     ontime=[w for w in arrived if w['arr']<=DEADLINE_TICK]
     dr=len(arrived)/20; otr=len(ontime)/max(1,len(arrived)); cs=blocked_total/max(1,person_total)

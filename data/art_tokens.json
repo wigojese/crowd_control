@@ -1,0 +1,24 @@
+{
+  "note": "Direction C, transit score, dark theme (CC-D-012). Tokens only; no colour literal belongs in rendering code. Stage 10.",
+  "themes": {
+    "standard": {
+      "night": "#17120F", "panel": "#100C0A", "stave": "#EFE3C8", "dim": "#B7A98F", "disabled": "#A39680",
+      "amber": "#E6A532", "sage": "#A8B56A", "coral": "#E8765A", "vermilion": "#E04E2D", "plum": "#B8566F",
+      "sign_arrow": "#17120F"
+    },
+    "high_contrast": {
+      "night": "#000000", "panel": "#000000", "stave": "#FFFFFF", "dim": "#E6DCC6", "disabled": "#CFC5AE",
+      "amber": "#FFC24D", "sage": "#C5D585", "coral": "#FF8F73", "vermilion": "#FF5A36", "plum": "#E58BA2",
+      "sign_arrow": "#000000"
+    }
+  },
+  "geometry": {
+    "stave_line_px": 1.0, "stave_gap_px": 3.2, "stave_lines": 3, "stave_grid_px": 12,
+    "note_px": 18, "min_ribbon_px": 3, "max_ribbon_px": 16, "sign_disc_px": 44,
+    "label_halo_px": 3
+  },
+  "ribbon": {
+    "note": "Width comes only from counted EDGE_ENTERED events: width = clamp(min + k * sqrt(count), min, max). Zero count draws nothing.",
+    "k_px": 1.9
+  }
+}

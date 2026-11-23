@@ -71,3 +71,18 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 ## Stage 08 experiment, user option B (spawn window first)
 
 `python3 -I docs/analysis/stage08_r2_experiment.py` (Python model). A third walker group at tick 200, 300 or 360 from gates A, B, C or E: the best case adds **2 of 27** arrivals over the best fixed placement (group from Canal Turn to School at tick 200: 23 fixed, 25 with one running action). Most variants add 0 or 1. **A second wave alone does not make running play decisive.** The level file is unchanged (still R1).
+
+## Stage 10 (visual identity)
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T10-01 | Lint with the new `rendering` layer | RAN, PASS | `scripts/lint.py`, `scripts/test_lint.py` |
+| T10-02 | Contrast of all token pairs, both themes | RAN, PASS (20 checks) | `python3 -I scripts/check_contrast.py` |
+| T10-03 | Colour-off separation of routes and queues | RAN: amber vs sage 1.03:1, so a dash pattern is required and used | same script, INFO lines |
+| T10-04 | Ribbon rule (zero flow draws nothing, monotone, capped, counts from `EDGE_ENTERED` only) | RAN, PASS 7 of 7 | `python3 -I scripts/ref_ribbon.py` |
+| T10-05 | Ribbon model in GDScript | **BLOCKED** | `tests/test_ribbon_model.gd`, run with the test runner |
+| T10-06 | Preview pictures: five states, high contrast, no-colour (grayscale filter), 320 px scaled | RAN (pictures read by me) | `docs/stage10/*.png`. Found and fixed two preview bugs: a caption overlapping the buttons, and a "sign locked" claim shown before any action (it would have misreported the rules) |
+| T10-07 | 320 px legibility | FAILED as drawn (notes about 15 px, queued notes overlap) | `v_narrow320_t120.png`; see docs/VISUAL_IMPLEMENTATION.md |
+| T10-08 | Five real engine screenshots, 15 s capture, narrow capture, draw-order and performance delta | **BLOCKED** | Missing: runnable Godot, display, phone. Manual: open `src/app/graybox.tscn`, F6, space to run, H toggles high contrast |
+| T10-09 | `map_view.gd` parses and draws | **BLOCKED / UNVERIFIED** | Never loaded |
+| T10-10 | No engine-default buttons in main gameplay | **NOT MET**: the styled buttons exist only in the pictures | |

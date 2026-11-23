@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        09 (Tactile feel, one-thumb clarity, gesture arbitration): PARTIAL, AWAITING APPROVAL. Router logic done and checked in Python; GDScript, device and latency work BLOCKED
-LAST_APPROVED_STAGE:  08 (user: "Approve Stage 08, option B", 2026-11-23). Engine runs still BLOCKED
-NEXT_ACTION:          User answers the Stage 09 feedback and decides IB-02. Stage 10 starts only after "Approve Stage 09". With a runnable Godot: T07-06..10, T08-06..11, T09-03
+CURRENT_STAGE:        10 (Visual identity realized in engine): PARTIAL, AWAITING APPROVAL. Code and model-data previews done; every engine screenshot and capture BLOCKED
+LAST_APPROVED_STAGE:  09 (user: "Approve Stage 09, option A", 2026-11-23): IB-02 stays as built. Engine runs still BLOCKED
+NEXT_ACTION:          User approves or revises the visual language (docs/VISUAL_IMPLEMENTATION.md, docs/stage10/). Stage 11 starts only after "Approve Stage 10"
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:

@@ -1,0 +1,12 @@
+{
+ "A/E": {
+  "arrived": 20,
+  "ontime": 20,
+  "score": 99
+ },
+ "NO_SIGN": {
+  "arrived": 17,
+  "ontime": 17,
+  "score": 86
+ }
+}
