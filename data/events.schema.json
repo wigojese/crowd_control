@@ -1,0 +1,21 @@
+{
+  "ruleset_version": "CC-RULESET-01C",
+  "note": "Source of truth: docs/SIMULATION_EVENTS.md section 2. Every event also carries tick and seq (added by the log).",
+  "events": {
+    "COMMAND_ACCEPTED": ["command", "slot", "heading", "ordinal"],
+    "COMMAND_REJECTED": ["command", "reason"],
+    "SIGN_PICKED": ["from_slot", "heading"],
+    "SIGN_DROPPED": ["slot", "heading", "lock_until"],
+    "SIGN_SNAPPED_BACK": ["slot", "heading"],
+    "SIGN_ROTATED": ["heading", "lock_until"],
+    "WALKER_SPAWNED": ["walker", "profile", "origin", "destination", "deadline_tick"],
+    "DECISION": ["walker", "node", "chosen_edge", "reason"],
+    "QUEUE_JOINED": ["walker", "edge", "position"],
+    "QUEUE_LEFT": ["walker", "edge", "position"],
+    "EDGE_ENTERED": ["walker", "edge", "tokens_after"],
+    "NODE_ARRIVED": ["walker", "node"],
+    "WALKER_ARRIVED": ["walker", "arrival_tick", "on_time"],
+    "WALKER_STRANDED": ["walker", "node"],
+    "RUN_ENDED": ["reason"]
+  }
+}

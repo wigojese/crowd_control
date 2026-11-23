@@ -1,0 +1,13 @@
+{
+  "machine": "boot",
+  "initial": "BOOT",
+  "states": ["BOOT", "READY", "RUNNING", "PAUSED", "ENDED"],
+  "transitions": [
+    {"from": "BOOT", "event": "BOOT_COMPLETE", "to": "READY"},
+    {"from": "READY", "event": "RUN", "to": "RUNNING"},
+    {"from": "RUNNING", "event": "PAUSE", "to": "PAUSED"},
+    {"from": "PAUSED", "event": "RESUME", "to": "RUNNING"},
+    {"from": "RUNNING", "event": "FINISH", "to": "ENDED"},
+    {"from": "ENDED", "event": "RETRY", "to": "READY"}
+  ]
+}

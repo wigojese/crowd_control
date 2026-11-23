@@ -1,0 +1,66 @@
+{
+  "ruleset_version": "CC-RULESET-01C",
+  "level_id": "CC-L01",
+  "seed": 1007,
+  "ticks": 640,
+  "nodes": [
+    {
+      "id": "A"
+    },
+    {
+      "id": "B"
+    },
+    {
+      "id": "F"
+    },
+    {
+      "id": "G"
+    }
+  ],
+  "edges": [
+    {
+      "id": "AB",
+      "from": "A",
+      "to": "B",
+      "rate": 3.0
+    },
+    {
+      "id": "BF",
+      "from": "B",
+      "to": "F",
+      "rate": 3.0
+    },
+    {
+      "id": "BG",
+      "from": "B",
+      "to": "G",
+      "rate": 1.2
+    }
+  ],
+  "schedule": [
+    {
+      "tick": 0,
+      "origin": "A",
+      "destination": "F"
+    },
+    {
+      "tick": 40,
+      "origin": "A",
+      "destination": "G"
+    }
+  ],
+  "commands": [
+    {
+      "tick": 10,
+      "ordinal": 0,
+      "command": "DROP",
+      "heading": "E"
+    },
+    {
+      "tick": 100,
+      "ordinal": 0,
+      "command": "ROTATE",
+      "heading": "N"
+    }
+  ]
+}

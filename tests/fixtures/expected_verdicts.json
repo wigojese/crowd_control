@@ -1,0 +1,16 @@
+{
+  "scenario_ok.json": [],
+  "scenario_bad_edge_node.json": [
+    "edge_unknown_node"
+  ],
+  "scenario_bad_spawn_tick.json": [
+    "spawn_tick_out_of_range"
+  ],
+  "scenario_bad_command_order.json": [
+    "commands_not_sorted"
+  ],
+  "scenario_bad_dupnode_ruleset.json": [
+    "bad_ruleset",
+    "duplicate_or_empty_node"
+  ]
+}
