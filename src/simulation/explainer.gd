@@ -114,8 +114,8 @@ static func explain(lines: Array, result: Dictionary, baseline, replay: Dictiona
 	if top_wait >= 100:
 		var ab: PackedStringArray = top_key.split("|")
 		claims.append({"id": "bottleneck", "kind": "BOTTLENECK",
-			"text": "Most waiting: %s and %s, %.1f walker-seconds in queues (all walkers added up)." % [
-				names[ab[0]], names[ab[1]], float(top_wait) / 20.0]})
+			"text": "Most waiting: %s and %s, %s walker-seconds in queues (all walkers added up)." % [
+				names[ab[0]], names[ab[1]], _tenths(top_wait)]})
 	var late := 0
 	for e in arrivals:
 		if e["f"]["on_time"] == "0":
@@ -156,3 +156,9 @@ static func select(claims: Array, limit: int = 3) -> Array:
 	var sorted := claims.duplicate()
 	sorted.sort_custom(func(a, b): return ORDER.find(a["kind"]) < ORDER.find(b["kind"]))
 	return sorted.slice(0, limit)
+
+
+## Ticks / 20 as seconds with one decimal, rounded half up with integers (float formatting differs from the Python reference).
+static func _tenths(ticks: int) -> String:
+	var t := (ticks + 1) / 2
+	return "%d.%d" % [t / 10, t % 10]

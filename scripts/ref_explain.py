@@ -32,8 +32,14 @@ def street(edge, names):
     return "%s to %s" % (names[a], names[b])
 
 
+def tenths(ticks):
+    """ticks / 20 seconds to one decimal, rounding half up with integers (float formatting differs between Python and GDScript)."""
+    t = (ticks + 1) // 2
+    return "%d.%d" % (t // 10, t % 10)
+
+
 def secs(ticks):
-    return "%.1f s" % (ticks / 20.0)
+    return tenths(ticks) + " s"
 
 
 def explain(lines, result, baseline, replay, names, goal=18, total=20):
@@ -103,7 +109,7 @@ def explain(lines, result, baseline, replay, names, goal=18, total=20):
         if total_w >= 100:
             a, b = key.split("|")
             claims.append(dict(id="bottleneck", kind="BOTTLENECK", evidence=dict(event="QUEUE_JOINED/EDGE_ENTERED", street=key, wait_ticks=total_w),
-                               text="Most waiting: %s and %s, %.1f walker-seconds in queues (all walkers added up)." % (names[a], names[b], total_w / 20.0)))
+                               text="Most waiting: %s and %s, %s walker-seconds in queues (all walkers added up)." % (names[a], names[b], tenths(total_w))))
     late = [e for e in arrivals if e[3]["on_time"] == "0"]
     if late:
         claims.append(dict(id="late", kind="LATE", evidence=dict(event="WALKER_ARRIVED:on_time=0", count=len(late)),

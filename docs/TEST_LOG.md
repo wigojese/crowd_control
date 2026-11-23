@@ -159,3 +159,10 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 ## Stage 16
 
 See `docs/TEST_REPORT.md` (T16-01 to T16-10). 283 reference-model checks pass; engine and device items BLOCKED.
+
+## First engine run (user, Windows, Godot 4.7.2 stable, 2026-11-23)
+
+56 of 58 GDScript tests PASSED on the first real run, including `test_engine_matches_python_replays` (engine reproduces the Python reference). Two failures, both fixed afterwards (not yet re-run in the engine):
+- `test_input_router`: parse error, `_set` in gesture_router.gd clashed with Object._set. Renamed `_set_state`.
+- `test_explainer::test_texts_match_reference`: 107.6 vs 107.5. GDScript and Python round a tie (107.55) differently with `%.1f`. Both now use integer half-up rounding.
+Graybox play test: sign A east 20/20 (blocked 1001), B east 20/20 (1785), A south 17/20 (2813): all equal to the Python model.
