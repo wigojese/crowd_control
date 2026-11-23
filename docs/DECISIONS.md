@@ -242,6 +242,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: material blocked-time threshold 10%; bottleneck shown if at least 100 queue-ticks
 - rationale: the prompt forbids fake explanations
 - alternatives: model-written prose (rejected: unverifiable)
-- approver status: PROPOSED. Awaiting "Approve Stage 13" and the strategic-depth answer
+- approver status: APPROVED (user: "Approve Stage 13, option A")
 - affected files: src/simulation/explainer.gd, src/simulation/sim_world.gd (alt_edge), scripts/ref_sim.py, scripts/ref_explain.py, tests/test_explainer.gd, tests/fixtures/explainer_cases.json, docs/BEHAVIOR_MATRIX.md, docs/CAUSAL_EXPLANATION.md, docs/stage13/*
+- supersedes: none
+
+**CC-D-021**
+- stage: 14
+- date: 2026-11-23
+- question: What are L02 and L03, and what is not built?
+- chosen option: L02 Ferry Landing (move the sign: 30 walkers, goal 28, best fixed placement 26) and L03 Two Narrow Roads (balance the load: 40 walkers, goal 29, two passing placements); both on the L01 geometry; L04 to L08 specified only; no share string; level validator extended; replays stored in data/replays
+- values: L02 pass mark 28 of 30; L03 pass mark 29 of 40; moving to Canal Turn at ticks 100 to 230 passes L02
+- rationale: found by search in the reference model; each has exactly one lesson and a second solution
+- alternatives: new graphs per level (rejected: composition risk); a second wave from the same gate (rejected: gained at most 2)
+- approver status: PROPOSED. Awaiting "Approve Stage 14" and the pacing answer
+- affected files: data/levels/*, data/replays/*, scripts/check_levels.py, scripts/stage14_diagrams.py, docs/analysis/stage14_level_search.py, tests/test_levels.gd, docs/LEVELS.md, docs/LEVELS_L04_L08_SPEC.md, docs/stage14/*
 - supersedes: none

@@ -126,3 +126,16 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 | T13-05 | Player can say why a reroute helped or hurt | **NOT TESTABLE**: needs people. The copy is generated; whether it is understood is unmeasured | |
 | T13-06 | No profile is a joke or a stereotype | Reviewed by me against the copy and profile names; no automated test beyond a banned-word list. A person should review it | |
 | T13-07 | Three scenario videos | RAN as model-data previews (not engine), 2x speed | `docs/stage13/scenario_*.mp4` |
+
+## Stage 14 (level pack)
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T14-01 | 27 level checks: valid, no sign fails, solutions pass, not trivial, composition fits, sockets 60 px apart at 320 wide | RAN, PASS (Python reference) | `python3 -I scripts/check_levels.py` |
+| T14-02 | At least two tested solutions per level with replay files | RAN, PASS | `data/replays/*.json` |
+| T14-03 | New validator rules (pass mark, sockets, mix) and 2 new bad fixtures | RAN, PASS (Python); GDScript half BLOCKED | `scripts/validate_scenarios.py --fixtures` |
+| T14-04 | The engine rules reproduce the replays' arrivals and event hashes | **BLOCKED** | `tests/test_levels.gd`; missing Godot |
+| T14-05 | No unsolvable seed | TRIVIALLY TRUE: the ruleset has no randomness (R-46) | |
+| T14-06 | Level changes never break composition or input | RAN for geometry only (identical geometry, sockets far enough apart). Real screen and input: BLOCKED | |
+| T14-07 | A user can complete L01 to L03 without a manual | **UNTESTED**: needs people and a playable build | |
+| T14-08 | Follower behaviour (R-42) | RAN: event log shows `queue_flipped` for walkers 7 and 8; explained, not a bug | `docs/BEHAVIOR_MATRIX.md` |

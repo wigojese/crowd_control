@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        13 (Behavioural diversity and causal explanation): PARTIAL, AWAITING APPROVAL. Reference checks run; GDScript, UI wiring and engine videos BLOCKED
-LAST_APPROVED_STAGE:  12 (user: "Approve Stage 12, option A", 2026-11-23): all six transitions approved as built. Engine runs still BLOCKED
-NEXT_ACTION:          User answers the Stage 13 strategic-depth question. Stage 14 starts only after "Approve Stage 13"
+CURRENT_STAGE:        14 (Level pack L01 to L03, L04 to L08 specified): PARTIAL, AWAITING APPROVAL. Reference checks run; engine, playtest BLOCKED
+LAST_APPROVED_STAGE:  13 (user: "Approve Stage 13, option A", 2026-11-23): depth enough for now; follower behaviour investigated and explained. Engine runs still BLOCKED
+NEXT_ACTION:          User answers the Stage 14 pacing question (timing, profiles or bottlenecks). Stage 15 starts only after "Approve Stage 14"
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:

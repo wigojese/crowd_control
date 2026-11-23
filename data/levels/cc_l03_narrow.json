@@ -1,0 +1,156 @@
+{
+ "ruleset_version": "CC-RULESET-01C",
+ "level_id": "CC-L03-NARROW",
+ "seed": 1007,
+ "ticks": 640,
+ "deadline_tick": 600,
+ "pass_mark": 29,
+ "sign_bonus": 6.0,
+ "sockets": [
+  "A",
+  "B"
+ ],
+ "nodes": [
+  {
+   "id": "A",
+   "x": 180,
+   "y": 50,
+   "name": "North Gate"
+  },
+  {
+   "id": "B",
+   "x": 92,
+   "y": 145,
+   "name": "Canal Turn"
+  },
+  {
+   "id": "C",
+   "x": 270,
+   "y": 115,
+   "name": "Market"
+  },
+  {
+   "id": "D",
+   "x": 120,
+   "y": 286,
+   "name": "Bridge West"
+  },
+  {
+   "id": "E",
+   "x": 254,
+   "y": 290,
+   "name": "Bridge East"
+  },
+  {
+   "id": "F",
+   "x": 106,
+   "y": 470,
+   "name": "School"
+  },
+  {
+   "id": "G",
+   "x": 266,
+   "y": 475,
+   "name": "Plaza"
+  }
+ ],
+ "edges": [
+  {
+   "id": "AB",
+   "from": "A",
+   "to": "B",
+   "rate": 3.0
+  },
+  {
+   "id": "AC",
+   "from": "A",
+   "to": "C",
+   "rate": 0.9
+  },
+  {
+   "id": "BC",
+   "from": "B",
+   "to": "C",
+   "rate": 3.0
+  },
+  {
+   "id": "BD",
+   "from": "B",
+   "to": "D",
+   "rate": 0.9
+  },
+  {
+   "id": "CE",
+   "from": "C",
+   "to": "E",
+   "rate": 0.6
+  },
+  {
+   "id": "DE",
+   "from": "D",
+   "to": "E",
+   "rate": 1.2
+  },
+  {
+   "id": "DF",
+   "from": "D",
+   "to": "F",
+   "rate": 3.0
+  },
+  {
+   "id": "EG",
+   "from": "E",
+   "to": "G",
+   "rate": 3.0
+  },
+  {
+   "id": "FG",
+   "from": "F",
+   "to": "G",
+   "rate": 3.0
+  }
+ ],
+ "schedule": [
+  {
+   "tick": 0,
+   "origin": "A",
+   "destination": "F",
+   "mix": {
+    "C": 14,
+    "F": 6,
+    "I": 4
+   }
+  },
+  {
+   "tick": 40,
+   "origin": "A",
+   "destination": "G",
+   "mix": {
+    "C": 8,
+    "F": 6,
+    "I": 2
+   }
+  }
+ ],
+ "commands": [],
+ "lesson": "Balance the load: both routes are narrow, so sending everyone one way jams it. Two different placements share the load well enough to pass.",
+ "name": "Two Narrow Roads",
+ "solutions": [
+  {
+   "id": "east_at_north_gate",
+   "initial_sign": [
+    "A",
+    "E"
+   ],
+   "commands": []
+  },
+  {
+   "id": "south_at_canal_turn",
+   "initial_sign": [
+    "B",
+    "S"
+   ],
+   "commands": []
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "ruleset_version": "CC-RULESET-01C",
+ "level_id": "CC-L01-R1",
+ "seed": 1007,
+ "initial_sign": [
+  "A",
+  "E"
+ ],
+ "actions": [],
+ "result": {
+  "arrived": 20,
+  "passed": true
+ },
+ "event_hash": 125569109,
+ "note": "Python reference of the engine rules; replay the same actions in the engine and compare the hash (BLOCKED here)"
+}

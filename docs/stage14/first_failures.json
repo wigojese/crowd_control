@@ -1,0 +1,40 @@
+{
+ "CC-L01-R1": {
+  "no_sign": {
+   "arrived": 17,
+   "copy": [
+    "17 / 20 arrived. Goal 18: 1 short.",
+    "No sign was placed in this round.",
+    "Most waiting: Canal Turn and Bridge West, 107.5 walker-seconds in queues (all walkers added up)."
+   ]
+  }
+ },
+ "CC-L02-FERRY": {
+  "no_sign": {
+   "arrived": 23,
+   "copy": [
+    "23 / 30 arrived. Goal 28: 5 short.",
+    "No sign was placed in this round.",
+    "Most waiting: Canal Turn and Bridge West, 155.6 walker-seconds in queues (all walkers added up)."
+   ]
+  },
+  "fixed_best": {
+   "arrived": 26,
+   "copy": [
+    "26 / 30 arrived. Goal 28: 2 short.",
+    "Compared with no sign on the same seed, your sign delivered 3 more (26 against 23).",
+    "Your sign at North Gate (pointing east) changed the route of 8 walkers: all of them at North Gate took North Gate to Market instead of North Gate to Canal Turn."
+   ]
+  }
+ },
+ "CC-L03-NARROW": {
+  "no_sign": {
+   "arrived": 27,
+   "copy": [
+    "27 / 40 arrived. Goal 29: 2 short.",
+    "No sign was placed in this round.",
+    "Most waiting: Canal Turn and Bridge West, 160.6 walker-seconds in queues (all walkers added up)."
+   ]
+  }
+ }
+}

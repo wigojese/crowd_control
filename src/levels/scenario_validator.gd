@@ -34,6 +34,17 @@ static func validate(s: Dictionary) -> Array[String]:
 			errs.append("edge_unknown_node")
 		if float(e.get("rate", 0.0)) <= 0.0:
 			errs.append("edge_rate_not_positive")
+	var total := 0
+	for sp in s.get("schedule", []):
+		for k in (sp.get("mix", {}) as Dictionary).keys():
+			if int(sp["mix"][k]) <= 0:
+				errs.append("bad_mix")
+			total += int(sp["mix"][k])
+	if s.has("pass_mark") and (int(s["pass_mark"]) < 1 or int(s["pass_mark"]) > total):
+		errs.append("bad_pass_mark")
+	for sock in s.get("sockets", []):
+		if not node_ids.has(String(sock)):
+			errs.append("socket_unknown_node")
 	var last := -1
 	for sp in s.get("schedule", []):
 		var t := int(sp.get("tick", -1))

@@ -132,5 +132,25 @@
    }
   }
  ],
- "commands": []
+ "commands": [],
+ "lesson": "Point the sign at the open street: a sign changes the route of the walkers who decide at its junction.",
+ "name": "School Crossing",
+ "solutions": [
+  {
+   "id": "east_at_north_gate",
+   "initial_sign": [
+    "A",
+    "E"
+   ],
+   "commands": []
+  },
+  {
+   "id": "east_at_canal_turn",
+   "initial_sign": [
+    "B",
+    "E"
+   ],
+   "commands": []
+  }
+ ]
 }

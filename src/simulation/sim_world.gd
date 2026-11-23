@@ -26,6 +26,7 @@ const DIRS := {"N": Vector2(0, -1), "E": Vector2(1, 0), "S": Vector2(0, 1), "W":
 var events: CcEventLog
 var ticks: int = 640
 var deadline_tick: int = 600
+var pass_mark: int = 18
 var bonus: float = 4.0
 var tick: int = 0
 var walkers: Array = []
@@ -52,6 +53,7 @@ func _init(level: Dictionary, event_schema: Dictionary) -> void:
 	_schema = event_schema
 	ticks = int(level.get("ticks", 640))
 	deadline_tick = int(level.get("deadline_tick", 600))
+	pass_mark = int(level.get("pass_mark", 18))
 	bonus = float(level.get("sign_bonus", 4.0))
 	for n in level["nodes"]:
 		_nodes[String(n["id"])] = Vector2(float(n["x"]), float(n["y"]))
@@ -374,5 +376,5 @@ func run(sign_state: Array, commands: Array) -> Dictionary:
 	var res := result()
 	_emit("RUN_ENDED", {"reason": "time_limit"})
 	res["hash"] = events.hash32()
-	res["passed"] = res["arrived"] >= 18
+	res["passed"] = res["arrived"] >= pass_mark
 	return res

@@ -49,9 +49,12 @@ There is no code, so there are no code issues. VERIFIED: nothing to audit. Do no
 | 39 | R-39 | The auto-camera limit (1.2 viewport widths per second) is applied to average speed; peak speed with cubic easing is about 3 times higher | Whip-pan feel on a phone | UNKNOWN | Feel test on a device; may need a peak cap |
 | 40 | R-40 | consequence_follows_ink keeps the sign only 8 px below the HUD at its end | The sign sits tight under the HUD on short phones | VERIFIED by calculation at 390×844 | Recheck at 320×568 |
 | 41 | R-41 | None of the six transitions is wired to the game, and sound and haptic hooks are ids with no player | Stage 12 may not be felt as a whole | UNKNOWN | Stage 16 integration |
-| 42 | R-42 | In the best placement only 1 of 6 followers is re-routed although they have the highest sign sensitivity; the reason is unestablished | A profile that does not behave as its description says | VERIFIED as a count, cause UNKNOWN | Decide at the Stage 13 feedback question; investigate before changing a rule |
+| 42 | R-42 | In the best placement only 1 of 6 followers is re-routed although they have the highest sign sensitivity; the reason is unestablished | A profile that does not behave as its description says | INVESTIGATED: a feature (queue_flipped events show queue aversion overriding the sign) | Rewrite the profile description; no rule change |
 | 43 | R-43 | The explainer covers only the initial sign; running actions and counterfactuals other than NO_SIGN are not explained | Result copy silent on the mid-round decisions the player took | VERIFIED gap | Extend with executed replays at Stage 14 or later |
 | 44 | R-44 | Whether players understand the generated sentences is untested | Copy that is correct but unclear | UNKNOWN | Playtest |
+| 45 | R-45 | L03 passes with a margin of 2 walkers over no sign, and L02's pass window is wide only for the one move tested | Levels may be too tight or too easy in the engine | VERIFIED in the reference, UNKNOWN in the engine | Playtest and engine run |
+| 46 | R-46 | The ruleset has no randomness, so the level seed has no effect and daily reproducibility adds no variety | A share or daily feature would be an empty promise | VERIFIED | Do not ship a seed or share feature unless randomness is approved |
+| 47 | R-47 | No level where a wrong sign hurts was found; L06 as sketched may not exist under these rules | A lesson in the plan may be impossible | VERIFIED so far (no counter-example found) | Search at Stage 14 follow-up if L06 is authorized |
 
 ## Manual checks I could not do (reproducible later)
 

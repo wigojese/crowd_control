@@ -1,0 +1,83 @@
+{
+ "CC-L01-R1": {
+  "name": "School Crossing",
+  "walkers": 20,
+  "pass_mark": 18,
+  "no_sign": 17,
+  "best_fixed": 20,
+  "fixed_placements_passing": [
+   "AE",
+   "BE"
+  ],
+  "fixed_placements_tested": 8,
+  "solutions": [
+   {
+    "id": "east_at_north_gate",
+    "arrived": 20,
+    "event_hash": 125569109
+   },
+   {
+    "id": "east_at_canal_turn",
+    "arrived": 20,
+    "event_hash": 2120841323
+   }
+  ],
+  "move_window_ticks": null,
+  "margin_over_no_sign": 1,
+  "lesson": "Point the sign at the open street: a sign changes the route of the walkers who decide at its junction."
+ },
+ "CC-L02-FERRY": {
+  "name": "Ferry Landing",
+  "walkers": 30,
+  "pass_mark": 28,
+  "no_sign": 23,
+  "best_fixed": 26,
+  "fixed_placements_passing": [],
+  "fixed_placements_tested": 8,
+  "solutions": [
+   {
+    "id": "east_at_north_gate_then_move_to_canal_turn_at_0_08",
+    "arrived": 30,
+    "event_hash": 670659308
+   },
+   {
+    "id": "east_at_north_gate_then_move_to_canal_turn_at_0_10",
+    "arrived": 29,
+    "event_hash": 4271468481
+   }
+  ],
+  "move_window_ticks": [
+   100,
+   230
+  ],
+  "margin_over_no_sign": 5,
+  "lesson": "A sign you can move: when a new group appears at another junction at 0:08, re-aim the sign there. One fixed position is not enough."
+ },
+ "CC-L03-NARROW": {
+  "name": "Two Narrow Roads",
+  "walkers": 40,
+  "pass_mark": 29,
+  "no_sign": 27,
+  "best_fixed": 29,
+  "fixed_placements_passing": [
+   "AE",
+   "BS"
+  ],
+  "fixed_placements_tested": 8,
+  "solutions": [
+   {
+    "id": "east_at_north_gate",
+    "arrived": 29,
+    "event_hash": 4173258423
+   },
+   {
+    "id": "south_at_canal_turn",
+    "arrived": 29,
+    "event_hash": 2440102296
+   }
+  ],
+  "move_window_ticks": null,
+  "margin_over_no_sign": 2,
+  "lesson": "Balance the load: both routes are narrow, so sending everyone one way jams it. Two different placements share the load well enough to pass."
+ }
+}

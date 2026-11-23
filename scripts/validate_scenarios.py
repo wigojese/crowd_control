@@ -39,6 +39,17 @@ def validate(s):
             errs.append("edge_unknown_node")
         if float(e.get("rate", 0.0)) <= 0.0:
             errs.append("edge_rate_not_positive")
+    total = 0
+    for sp in s.get("schedule", []):
+        for k, v in (sp.get("mix") or {}).items():
+            if int(v) <= 0:
+                errs.append("bad_mix")
+            total += int(v)
+    if "pass_mark" in s and not (1 <= int(s["pass_mark"]) <= total):
+        errs.append("bad_pass_mark")
+    for sock in s.get("sockets", []):
+        if str(sock) not in nodes:
+            errs.append("socket_unknown_node")
     last = -1
     for sp in s.get("schedule", []):
         t = int(sp.get("tick", -1))

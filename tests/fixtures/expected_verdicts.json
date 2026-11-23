@@ -12,5 +12,11 @@
   "scenario_bad_dupnode_ruleset.json": [
     "bad_ruleset",
     "duplicate_or_empty_node"
+  ],
+  "scenario_bad_pass_mark.json": [
+    "bad_pass_mark"
+  ],
+  "scenario_bad_socket.json": [
+    "socket_unknown_node"
   ]
 }
