@@ -133,5 +133,5 @@ func _draw_sign(at: Vector2, head: String) -> void:
 func _label(at: Vector2, text: String) -> void:
 	var font := ThemeDB.fallback_font
 	var halo: int = int(_tokens["geometry"]["label_halo_px"])
-	draw_string_outline(font, at, text, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, halo, _c("night"))
-	draw_string(font, at, text, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, _c("stave"))
+	draw_string_outline(font, at, text, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, halo, _c("night"))
+	draw_string(font, at, text, HORIZONTAL_ALIGNMENT_LEFT, -1, 18, _c("stave"))

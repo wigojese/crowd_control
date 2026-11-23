@@ -66,13 +66,13 @@ Click inside the game window first (so it listens to your keyboard), then use th
 | **R** | Start over (retry) |
 | **H** | High contrast colours on or off |
 
-The goal: at least **16 of 20 people** must reach their place (the School at the bottom left, or the Plaza at the bottom right) before the clock reaches **0:32**.
+The goal (shown at the top of the screen): at least **18 of 20 people** must reach their place (the School at the bottom left, or the Plaza at the bottom right) before the clock reaches **0:32**.
 
 ### Three small experiments
 
-**Experiment 1: no sign.** Do not press A, B or a number. Just press **Space**. Watch. Expected: people crowd up at the narrow bridge in the middle, and you do **not** reach 16. Write down how many arrived.
+**Experiment 1: no sign.** Press **0** (zero) to remove the sign, then **Space**. Expected: 17 of 20 arrive (the goal is 18), so you narrowly miss. (Note: the game starts with the sign already at North Gate pointing right, which already wins with 20. An earlier version of this guide forgot to say so.)
 
-**Experiment 2: the winning move.** Press **R** to restart. Press **B**, then **2**, then **Space**. Expected: the people spread out and you reach **20 of 20**. Write down the number.
+**Experiment 2: another winning move.** Press **R**, then **B**, then **2**, then **Space**. Expected: **20 of 20**. Write down the number.
 
 **Experiment 3: your own tries.** Press **R**, try other letters and numbers (for example **A** then **3**). Write down each choice and the result in a note, like "A + 3: 14 arrived".
 

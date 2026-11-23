@@ -46,7 +46,7 @@ func _ring_near(p: Vector2) -> String:
 	return best
 
 
-func _set(tid: int, state: String) -> void:
+func _set_state(tid: int, state: String) -> void:
 	transitions.append([touches[tid]["state"], state])
 	touches[tid]["state"] = state
 
@@ -68,12 +68,12 @@ func down(tid: int, pos_in: Array, t_ms: int) -> Array:
 		if _in_rect(pos, b["rect"]):
 			rec["source"] = "button"
 			rec["target"] = b["id"]
-			_set(tid, "UI_PRESS")
+			_set_state(tid, "UI_PRESS")
 			_emit(out, tid, t_ms, "PRESS_FEEDBACK", {"target": b["id"]})
 			return out
 	var w: float = float(scene["viewport"][0])
 	if pos.x < float(tok["edge_reserve_px"]) or pos.x > w - float(tok["edge_reserve_px"]):
-		_set(tid, "IGNORED")
+		_set_state(tid, "IGNORED")
 		return out
 	var sg: Dictionary = scene["sign"]
 	var others := []
@@ -84,33 +84,33 @@ func down(tid: int, pos_in: Array, t_ms: int) -> Array:
 		var a: int = others[0]
 		if touches[a]["state"] == "SIGN_PENDING":
 			_emit(out, a, t_ms, "SIGN_ACTION_CANCELLED")
-		_set(a, "PINCH")
-		_set(tid, "PINCH")
+		_set_state(a, "PINCH")
+		_set_state(tid, "PINCH")
 		var d0: float = (touches[a]["pos"] as Vector2).distance_to(pos)
 		pair = {"a": a, "b": tid, "d_prev": d0, "d0": d0, "active": false}
 		return out
 	if sg["placed"] and not sg["held"] and _near(pos, _v(sg["pos"])):
 		rec["source"] = "sign"
 		if scene["mode"] == "PAUSED":
-			_set(tid, "LOCK_REJECT")
+			_set_state(tid, "LOCK_REJECT")
 			_emit(out, tid, t_ms, "PAUSED_MESSAGE")
 			return out
-		_set(tid, "SIGN_PENDING")
+		_set_state(tid, "SIGN_PENDING")
 		_emit(out, tid, t_ms, "PRESS_FEEDBACK", {"target": "sign"})
 		return out
 	for r in scene["rings"]:
 		if _near(pos, _v(r["pos"])):
 			rec["source"] = "ring"
 			rec["target"] = r["id"]
-			_set(tid, "SIGN_PENDING")
+			_set_state(tid, "SIGN_PENDING")
 			_emit(out, tid, t_ms, "PRESS_FEEDBACK", {"target": r["id"]})
 			return out
 	if not sg["placed"] and _near(pos, _v(scene["tray"])):
 		rec["source"] = "tray"
-		_set(tid, "SIGN_PENDING")
+		_set_state(tid, "SIGN_PENDING")
 		_emit(out, tid, t_ms, "PRESS_FEEDBACK", {"target": "tray"})
 		return out
-	_set(tid, "MAP_PENDING")
+	_set_state(tid, "MAP_PENDING")
 	return out
 
 
@@ -135,18 +135,18 @@ func move(tid: int, pos_in: Array, t_ms: int) -> Array:
 	var delta: Array = [pos.x - (rec["start"] as Vector2).x, pos.y - (rec["start"] as Vector2).y]
 	if st == "SIGN_PENDING" and moved > float(tok["drag_px"]):
 		if rec["source"] == "ring":
-			_set(tid, "PAN")
+			_set_state(tid, "PAN")
 			_emit(out, tid, t_ms, "PAN", {"delta": delta})
 		elif rec["source"] == "sign" and scene["sign"]["locked"]:
-			_set(tid, "LOCK_REJECT")
+			_set_state(tid, "LOCK_REJECT")
 			_emit(out, tid, t_ms, "LOCK_REJECT")
 		else:
-			_set(tid, "SIGN_DRAG")
+			_set_state(tid, "SIGN_DRAG")
 			_emit(out, tid, t_ms, "SIGN_PICKUP", {"source": rec["source"]})
 	elif st == "SIGN_DRAG":
 		_emit(out, tid, t_ms, "SIGN_DRAG_MOVE", {"snap": _ring_near(pos)})
 	elif st == "MAP_PENDING" and moved > float(tok["pan_px"]):
-		_set(tid, "PAN")
+		_set_state(tid, "PAN")
 		_emit(out, tid, t_ms, "PAN", {"delta": delta})
 	elif st == "PAN":
 		_emit(out, tid, t_ms, "PAN", {"delta": delta})
@@ -161,10 +161,10 @@ func update(t_ms: int) -> Array:
 		var el: int = t_ms - int(rec["t0"])
 		if rec["state"] == "SIGN_PENDING" and rec["source"] == "sign" and el >= int(tok["long_press_ms"]) \
 				and (rec["start"] as Vector2).distance_to(rec["pos"]) <= float(tok["drag_px"]):
-			_set(tid, "SIGN_INSPECT")
+			_set_state(tid, "SIGN_INSPECT")
 			_emit(out, tid, t_ms, "INSPECT")
 		elif rec["state"] == "SIGN_DRAG" and el >= int(tok["hold_timeout_ms"]):
-			_set(tid, "IGNORED")
+			_set_state(tid, "IGNORED")
 			_emit(out, tid, t_ms, "SNAPBACK", {"reason": "timeout"})
 	return out
 
@@ -198,7 +198,7 @@ func up(tid: int, pos_in: Array, t_ms: int) -> Array:
 			_emit(out, tid, t_ms, "SIGN_DROP", {"slot": ring})
 		else:
 			_emit(out, tid, t_ms, "SNAPBACK", {"reason": "off_ring"})
-	_set(tid, "IDLE")
+	_set_state(tid, "IDLE")
 	_finish_pair(tid)
 	touches.erase(tid)
 	return out
@@ -212,7 +212,7 @@ func cancel(tid: int, t_ms: int) -> Array:
 		_emit(out, tid, t_ms, "SNAPBACK", {"reason": "cancelled"})
 	else:
 		_emit(out, tid, t_ms, "CANCELLED")
-	_set(tid, "IDLE")
+	_set_state(tid, "IDLE")
 	if not pair.is_empty() and (tid == pair["a"] or tid == pair["b"]):
 		pair = {}
 	touches.erase(tid)
@@ -224,5 +224,5 @@ func _finish_pair(tid: int) -> void:
 		return
 	var other: int = pair["b"] if tid == pair["a"] else pair["a"]
 	if touches.has(other) and touches[other]["state"] == "PINCH":
-		_set(other, "IGNORED")
+		_set_state(other, "IGNORED")
 	pair = {}
