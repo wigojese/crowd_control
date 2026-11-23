@@ -1,0 +1,44 @@
+{
+ "scenario": "no_sign",
+ "sign": [],
+ "result": {
+  "arrived": 17,
+  "ontime": 17,
+  "blocked_ticks": 2710,
+  "score": 86,
+  "passed": false
+ },
+ "claims": [
+  {
+   "id": "result",
+   "kind": "RESULT",
+   "evidence": {
+    "event": "WALKER_ARRIVED",
+    "count": 17
+   },
+   "text": "17 / 20 arrived. Goal 18: 1 short.",
+   "shown": true
+  },
+  {
+   "id": "no_sign",
+   "kind": "NO_SIGN",
+   "evidence": {
+    "event": "none",
+    "count": 0
+   },
+   "text": "No sign was placed in this round.",
+   "shown": true
+  },
+  {
+   "id": "bottleneck",
+   "kind": "BOTTLENECK",
+   "evidence": {
+    "event": "QUEUE_JOINED/EDGE_ENTERED",
+    "street": "B|D",
+    "wait_ticks": 2151
+   },
+   "text": "Most waiting: Canal Turn and Bridge West, 107.5 walker-seconds in queues (all walkers added up).",
+   "shown": true
+  }
+ ]
+}

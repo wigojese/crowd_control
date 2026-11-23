@@ -267,14 +267,19 @@ func step() -> void:
 		var pick := _choose(w, node, true, true)
 		var best_e: String = pick[0]
 		var reason := "lowest_cost"
+		var alt := ""
 		if (_out[node] as Array).size() == 1:
 			reason = "forced_single_exit"
 		else:
-			if _choose(w, node, false, true)[0] != best_e:
+			var without_sign: String = _choose(w, node, false, true)[0]
+			var without_queue: String = _choose(w, node, true, false)[0]
+			if without_sign != best_e:
 				reason = "sign_flipped"
-			elif _choose(w, node, true, false)[0] != best_e:
+				alt = without_sign
+			elif without_queue != best_e:
 				reason = "queue_flipped"
-		_emit("DECISION", {"walker": w["id"], "node": node, "chosen_edge": best_e, "reason": reason,
+				alt = without_queue
+		_emit("DECISION", {"walker": w["id"], "node": node, "chosen_edge": best_e, "reason": reason, "alt_edge": alt,
 			"cost_milli": int(round(float(pick[1]) * 1000.0))})
 		if w["q"] != best_e:
 			if w["q"] != "":

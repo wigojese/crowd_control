@@ -11,6 +11,8 @@ run python3 -I scripts/validate_scenarios.py --fixtures
 run python3 -I scripts/check_golden.py
 run python3 -I scripts/ref_input.py
 run python3 -I scripts/ref_ribbon.py
+run python3 -I scripts/ref_sim.py
+run python3 -I scripts/ref_explain.py
 run python3 -I scripts/ref_camera.py
 run python3 -I scripts/ref_transitions.py
 run python3 -I scripts/check_contrast.py

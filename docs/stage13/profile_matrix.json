@@ -1,0 +1,102 @@
+{
+ "east_at_north_gate": {
+  "C": {
+   "walkers": 11,
+   "rerouted": 7,
+   "arrived": 11,
+   "mean_arrival_s": 17.2
+  },
+  "F": {
+   "walkers": 6,
+   "rerouted": 1,
+   "arrived": 6,
+   "mean_arrival_s": 19.5
+  },
+  "I": {
+   "walkers": 3,
+   "rerouted": 0,
+   "arrived": 3,
+   "mean_arrival_s": 15.5
+  }
+ },
+ "no_sign": {
+  "C": {
+   "walkers": 11,
+   "rerouted": 0,
+   "arrived": 10,
+   "mean_arrival_s": 18.3
+  },
+  "F": {
+   "walkers": 6,
+   "rerouted": 0,
+   "arrived": 6,
+   "mean_arrival_s": 22.1
+  },
+  "I": {
+   "walkers": 3,
+   "rerouted": 0,
+   "arrived": 1,
+   "mean_arrival_s": 15.2
+  }
+ },
+ "east_at_canal_turn": {
+  "C": {
+   "walkers": 11,
+   "rerouted": 2,
+   "arrived": 11,
+   "mean_arrival_s": 18.3
+  },
+  "F": {
+   "walkers": 6,
+   "rerouted": 0,
+   "arrived": 6,
+   "mean_arrival_s": 22.1
+  },
+  "I": {
+   "walkers": 3,
+   "rerouted": 0,
+   "arrived": 3,
+   "mean_arrival_s": 25.0
+  }
+ },
+ "north_at_north_gate": {
+  "C": {
+   "walkers": 11,
+   "rerouted": 0,
+   "arrived": 10,
+   "mean_arrival_s": 18.3
+  },
+  "F": {
+   "walkers": 6,
+   "rerouted": 0,
+   "arrived": 6,
+   "mean_arrival_s": 22.1
+  },
+  "I": {
+   "walkers": 3,
+   "rerouted": 0,
+   "arrived": 1,
+   "mean_arrival_s": 15.2
+  }
+ },
+ "south_at_north_gate": {
+  "C": {
+   "walkers": 11,
+   "rerouted": 4,
+   "arrived": 10,
+   "mean_arrival_s": 21.4
+  },
+  "F": {
+   "walkers": 6,
+   "rerouted": 0,
+   "arrived": 6,
+   "mean_arrival_s": 21.6
+  },
+  "I": {
+   "walkers": 3,
+   "rerouted": 0,
+   "arrived": 1,
+   "mean_arrival_s": 13.8
+  }
+ }
+}

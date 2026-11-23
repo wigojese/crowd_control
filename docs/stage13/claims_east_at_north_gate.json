@@ -1,0 +1,62 @@
+{
+ "scenario": "east_at_north_gate",
+ "sign": [
+  "A",
+  "E"
+ ],
+ "result": {
+  "arrived": 20,
+  "ontime": 20,
+  "blocked_ticks": 1001,
+  "score": 99,
+  "passed": true
+ },
+ "claims": [
+  {
+   "id": "result",
+   "kind": "RESULT",
+   "evidence": {
+    "event": "WALKER_ARRIVED",
+    "count": 20
+   },
+   "text": "20 / 20 arrived. Goal 18: reached.",
+   "shown": true
+  },
+  {
+   "id": "reroute",
+   "kind": "REROUTE",
+   "evidence": {
+    "event": "DECISION:sign_flipped",
+    "count": 8,
+    "decisions": 22,
+    "top_group_walkers": 8
+   },
+   "text": "Your sign at North Gate (pointing east) changed the route of 8 walkers: all of them at North Gate took North Gate to Market instead of North Gate to Canal Turn.",
+   "shown": true
+  },
+  {
+   "id": "material",
+   "kind": "HELPED",
+   "evidence": {
+    "event": "baseline_run",
+    "arrived": 20,
+    "baseline_arrived": 17,
+    "blocked": 1001,
+    "baseline_blocked": 2710
+   },
+   "text": "Compared with no sign on the same seed, your sign delivered 3 more (20 against 17) and turned a miss into a pass.",
+   "shown": true
+  },
+  {
+   "id": "bottleneck",
+   "kind": "BOTTLENECK",
+   "evidence": {
+    "event": "QUEUE_JOINED/EDGE_ENTERED",
+    "street": "A|C",
+    "wait_ticks": 470
+   },
+   "text": "Most waiting: North Gate and Market, 23.5 walker-seconds in queues (all walkers added up).",
+   "shown": false
+  }
+ ]
+}

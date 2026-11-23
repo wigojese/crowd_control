@@ -1,0 +1,72 @@
+{
+ "scenario": "east_at_canal_turn",
+ "sign": [
+  "B",
+  "E"
+ ],
+ "result": {
+  "arrived": 20,
+  "ontime": 19,
+  "blocked_ticks": 1785,
+  "score": 97,
+  "passed": true
+ },
+ "claims": [
+  {
+   "id": "result",
+   "kind": "RESULT",
+   "evidence": {
+    "event": "WALKER_ARRIVED",
+    "count": 20
+   },
+   "text": "20 / 20 arrived. Goal 18: reached.",
+   "shown": true
+  },
+  {
+   "id": "reroute",
+   "kind": "REROUTE",
+   "evidence": {
+    "event": "DECISION:sign_flipped",
+    "count": 2,
+    "decisions": 2,
+    "top_group_walkers": 2
+   },
+   "text": "Your sign at Canal Turn (pointing east) changed the route of 2 walkers: all of them at Canal Turn took Canal Turn to Market instead of Canal Turn to Bridge West.",
+   "shown": true
+  },
+  {
+   "id": "material",
+   "kind": "HELPED",
+   "evidence": {
+    "event": "baseline_run",
+    "arrived": 20,
+    "baseline_arrived": 17,
+    "blocked": 1785,
+    "baseline_blocked": 2710
+   },
+   "text": "Compared with no sign on the same seed, your sign delivered 3 more (20 against 17) and turned a miss into a pass.",
+   "shown": true
+  },
+  {
+   "id": "bottleneck",
+   "kind": "BOTTLENECK",
+   "evidence": {
+    "event": "QUEUE_JOINED/EDGE_ENTERED",
+    "street": "B|D",
+    "wait_ticks": 1218
+   },
+   "text": "Most waiting: Canal Turn and Bridge West, 60.9 walker-seconds in queues (all walkers added up).",
+   "shown": false
+  },
+  {
+   "id": "late",
+   "kind": "LATE",
+   "evidence": {
+    "event": "WALKER_ARRIVED:on_time=0",
+    "count": 1
+   },
+   "text": "1 walker arrived after the deadline.",
+   "shown": false
+  }
+ ]
+}

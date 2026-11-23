@@ -230,6 +230,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: durations 550, 170, 800, 210, 650, 440 ms; auto-camera average limit 468 px/s (provisional)
 - rationale: a cancel at any point cannot change a run or duplicate a result
 - alternatives: end-of-transition callbacks (rejected: a skip could lose or repeat them)
-- approver status: PROPOSED. Awaiting "Approve Stage 12" and a decision on each transition
+- approver status: APPROVED (user: "Approve Stage 12, option A": all six as built)
 - affected files: data/transitions.json, src/camera/transition.gd, scripts/ref_transitions.py, scripts/stage12_preview.py, tests/test_transitions.gd, docs/TRANSITIONS.md, docs/stage12/*
+- supersedes: none
+
+**CC-D-020**
+- stage: 13
+- date: 2026-11-23
+- question: How is the result explained without inventing causes?
+- chosen option: claims built only from counted events of the real run plus an executed NO_SIGN baseline on the same seed; DECISION events now carry alt_edge; materiality = different arrivals, pass/fail flip, or at least 10% change in waiting; at most three lines on the result screen; counterfactual phrases banned
+- values: material blocked-time threshold 10%; bottleneck shown if at least 100 queue-ticks
+- rationale: the prompt forbids fake explanations
+- alternatives: model-written prose (rejected: unverifiable)
+- approver status: PROPOSED. Awaiting "Approve Stage 13" and the strategic-depth answer
+- affected files: src/simulation/explainer.gd, src/simulation/sim_world.gd (alt_edge), scripts/ref_sim.py, scripts/ref_explain.py, tests/test_explainer.gd, tests/fixtures/explainer_cases.json, docs/BEHAVIOR_MATRIX.md, docs/CAUSAL_EXPLANATION.md, docs/stage13/*
 - supersedes: none

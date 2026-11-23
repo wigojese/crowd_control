@@ -114,3 +114,15 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 | T12-07 | Timings from an actual capture, one MP4 per transition from the engine | **BLOCKED**. Substitute: six reference-driven sheets and quarter-speed videos from model data, clearly labelled | `docs/stage12/` |
 | T12-08 | Grain shimmer, black flashes, mandatory waits | No black overlay track exists; no mandatory wait (skip at any time); grain: none in direction C. Not seen on a screen | |
 | T12-09 | Transitions wired to game states | **NOT DONE** | |
+
+## Stage 13 (behaviour and causal explanation)
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T13-01 | The Python port of `sim_world.gd` reproduces the Stage 03 model on 9 cases | RAN, PASS | `python3 -I scripts/ref_sim.py`. This checks the **logic** I wrote in GDScript, not the GDScript itself |
+| T13-02 | 36 explainer checks: recounts from raw events, no help or harm for a sign with no effect, materiality thresholds, tamper test, no baseline, no sign, determinism, banned phrases | RAN, PASS | `python3 -I scripts/ref_explain.py` |
+| T13-03 | Outcome explanations never cite events that did not happen | RAN in the reference (removing the events removes the claim; claims equal raw recounts) | same |
+| T13-04 | GDScript explainer reproduces the reference texts on 5 real traces | **BLOCKED** | `tests/test_explainer.gd`; missing a runnable Godot |
+| T13-05 | Player can say why a reroute helped or hurt | **NOT TESTABLE**: needs people. The copy is generated; whether it is understood is unmeasured | |
+| T13-06 | No profile is a joke or a stereotype | Reviewed by me against the copy and profile names; no automated test beyond a banned-word list. A person should review it | |
+| T13-07 | Three scenario videos | RAN as model-data previews (not engine), 2x speed | `docs/stage13/scenario_*.mp4` |

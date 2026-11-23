@@ -1,0 +1,60 @@
+{
+ "scenario": "north_at_north_gate",
+ "sign": [
+  "A",
+  "N"
+ ],
+ "result": {
+  "arrived": 17,
+  "ontime": 17,
+  "blocked_ticks": 2710,
+  "score": 86,
+  "passed": false
+ },
+ "claims": [
+  {
+   "id": "result",
+   "kind": "RESULT",
+   "evidence": {
+    "event": "WALKER_ARRIVED",
+    "count": 17
+   },
+   "text": "17 / 20 arrived. Goal 18: 1 short.",
+   "shown": true
+  },
+  {
+   "id": "reroute",
+   "kind": "NO_REROUTE",
+   "evidence": {
+    "event": "DECISION:sign_flipped",
+    "count": 0
+   },
+   "text": "Your sign at North Gate (pointing north) changed no walker's route.",
+   "shown": true
+  },
+  {
+   "id": "material",
+   "kind": "NO_MATERIAL_CHANGE",
+   "evidence": {
+    "event": "baseline_run",
+    "arrived": 17,
+    "baseline_arrived": 17,
+    "blocked": 2710,
+    "baseline_blocked": 2710
+   },
+   "text": "The result matches no sign on the same seed (17 against 17 arrived).",
+   "shown": true
+  },
+  {
+   "id": "bottleneck",
+   "kind": "BOTTLENECK",
+   "evidence": {
+    "event": "QUEUE_JOINED/EDGE_ENTERED",
+    "street": "B|D",
+    "wait_ticks": 2151
+   },
+   "text": "Most waiting: Canal Turn and Bridge West, 107.5 walker-seconds in queues (all walkers added up).",
+   "shown": false
+  }
+ ]
+}
