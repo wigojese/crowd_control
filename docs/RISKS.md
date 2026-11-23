@@ -46,6 +46,9 @@ There is no code, so there are no code issues. VERIFIED: nothing to audit. Do no
 | 36 | R-36 | No engine screenshots exist; the visual identity is shown only from model data | The engine may look different | UNKNOWN | T10-08 |
 | 37 | R-37 | Camera logic is verified only in a Python reference; the GDScript port and the wiring to input, the sign and the renderer do not exist or have not run | Stage 11 may not work in the engine | UNKNOWN | T11-06, T11-07, T11-08 |
 | 38 | R-38 | In the narrow layout, walkers moving along a street still overlap (only queues become badges) | Crowd density still hard to read on 320 px | VERIFIED in the picture | Decide a density rule with the Stage 11 feedback |
+| 39 | R-39 | The auto-camera limit (1.2 viewport widths per second) is applied to average speed; peak speed with cubic easing is about 3 times higher | Whip-pan feel on a phone | UNKNOWN | Feel test on a device; may need a peak cap |
+| 40 | R-40 | consequence_follows_ink keeps the sign only 8 px below the HUD at its end | The sign sits tight under the HUD on short phones | VERIFIED by calculation at 390×844 | Recheck at 320×568 |
+| 41 | R-41 | None of the six transitions is wired to the game, and sound and haptic hooks are ids with no player | Stage 12 may not be felt as a whole | UNKNOWN | Stage 16 integration |
 
 ## Manual checks I could not do (reproducible later)
 

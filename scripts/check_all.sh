@@ -12,6 +12,7 @@ run python3 -I scripts/check_golden.py
 run python3 -I scripts/ref_input.py
 run python3 -I scripts/ref_ribbon.py
 run python3 -I scripts/ref_camera.py
+run python3 -I scripts/ref_transitions.py
 run python3 -I scripts/check_contrast.py
 if command -v godot >/dev/null 2>&1; then
   run godot --headless --path . --script res://tools/test_runner.gd

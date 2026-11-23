@@ -100,3 +100,17 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 | T11-07 | No input conflict with the sign | RAN only as a rule: a finger down outranks every camera request and freezes the camera. The router and the camera are not wired together. **BLOCKED** in the engine | |
 | T11-08 | 3× zoom screenshots at one tick, 20 s walkthrough, narrow capture | RAN as model-data previews (not engine). Engine captures: **BLOCKED** | `docs/stage11/` |
 | T11-09 | Reduced motion and RETURN TO SIGN | Logic RAN in the reference; no button exists in the engine | |
+
+## Stage 12 (six transitions)
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T12-01 | 60 transition checks on the Python reference | RAN, PASS | `python3 -I scripts/ref_transitions.py` |
+| T12-02 | Cancel, skip and app interruption at 0, 25, 50, 75, 99% for all six transitions | RAN, PASS in the reference (frozen values stay frozen, one on_end, identical game-state events) | same |
+| T12-03 | Replay state unchanged | RAN in a mock run: identical tick log in all 120 combinations. The real guarantee is structural (no simulation handle, lint L10). Engine replay hash: BLOCKED | |
+| T12-04 | No double result callback; skip returns control within 150 ms | RAN, PASS in the reference (callbacks only at start; settle 100 ms; no input lock) | |
+| T12-05 | Sign stays visible during consequence_follows_ink | RAN, PASS, but the margin is only 8 px to the HUD (added after I noticed the rule was only a data field, not a test) | |
+| T12-06 | GDScript transition tests (8) | **BLOCKED** | Missing: runnable Godot |
+| T12-07 | Timings from an actual capture, one MP4 per transition from the engine | **BLOCKED**. Substitute: six reference-driven sheets and quarter-speed videos from model data, clearly labelled | `docs/stage12/` |
+| T12-08 | Grain shimmer, black flashes, mandatory waits | No black overlay track exists; no mandatory wait (skip at any time); grain: none in direction C. Not seen on a screen | |
+| T12-09 | Transitions wired to game states | **NOT DONE** | |

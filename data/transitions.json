@@ -1,0 +1,67 @@
+{
+  "note": "Stage 12. Six transitions from master prompt C4. Times in ms. All game-state callbacks fire at START (on_start), never at the end, so cancelling or skipping can never change a run or lose a result. on_end is cosmetic. Tuned values are starting values; no on-device capture exists.",
+  "skip_settle_ms": 100,
+  "reduced_motion_ms": 150,
+  "max_auto_translation_viewport_widths_per_s": 1.2,
+  "viewport_width_px": 390,
+  "transitions": [
+    {
+      "id": "paper_unfolds", "trigger": "level_enter", "duration_ms": 550, "focus": "path A to B",
+      "tracks": [
+        {"name": "cam_center", "kind": "vec2", "from": [181, 262], "to": [136, 98], "easing": "cubic_out", "delay_ms": 0, "dur_ms": 550},
+        {"name": "cam_zoom", "kind": "scalar", "from": 0.72, "to": 1.15, "easing": "cubic_out", "delay_ms": 0, "dur_ms": 550},
+        {"name": "streets_alpha", "kind": "scalar", "from": 0.0, "to": 1.0, "easing": "cubic_out", "delay_ms": 0, "dur_ms": 200},
+        {"name": "labels_alpha", "kind": "scalar", "from": 0.0, "to": 1.0, "easing": "cubic_out", "delay_ms": 250, "dur_ms": 200}
+      ],
+      "on_start": ["level_ready"], "hooks": [{"at": 0.0, "id": "sound.paper_unfold"}, {"at": 0.0, "id": "haptic.none"}],
+      "skip": "settle_to_end", "reduced": "crossfade"
+    },
+    {
+      "id": "sign_drops", "trigger": "sign_release_on_socket", "duration_ms": 170, "focus": "sign",
+      "tracks": [
+        {"name": "sign_scale", "kind": "scalar", "from": 1.08, "to": 1.0, "easing": "spring", "delay_ms": 0, "dur_ms": 170},
+        {"name": "socket_glow", "kind": "scalar", "from": 1.0, "to": 0.0, "easing": "cubic_out", "delay_ms": 0, "dur_ms": 170}
+      ],
+      "on_start": [], "hooks": [{"at": 0.0, "id": "haptic.sign_drop"}, {"at": 0.0, "id": "sound.sign_drop"}],
+      "skip": "settle_to_end", "reduced": "crossfade"
+    },
+    {
+      "id": "consequence_follows_ink", "trigger": "sign_changed", "duration_ms": 800, "focus": "changed edge then rerouting path A, C, E",
+      "tracks": [
+        {"name": "edge_highlight", "kind": "scalar", "from": 0.0, "to": 1.0, "easing": "cubic_out", "delay_ms": 0, "dur_ms": 200},
+        {"name": "cam_path", "kind": "polyline", "points": [[180, 50], [270, 115], [254, 290]], "easing": "ease_in_out", "delay_ms": 0, "dur_ms": 800},
+        {"name": "cam_zoom", "kind": "scalar", "from": 1.15, "to": 1.15, "easing": "linear", "delay_ms": 0, "dur_ms": 800}
+      ],
+      "on_start": [], "hooks": [{"at": 0.0, "id": "sound.ink_follow"}, {"at": 0.0, "id": "haptic.tick"}],
+      "skip": "settle_to_end", "reduced": "crossfade", "never_hide": "sign_control", "cancel_on": ["pan", "tap"]
+    },
+    {
+      "id": "district_to_diagram", "trigger": "enter_atlas_band", "duration_ms": 210, "focus": "city aggregate",
+      "tracks": [
+        {"name": "agents_alpha", "kind": "scalar", "from": 1.0, "to": 0.0, "easing": "cubic_out", "delay_ms": 0, "dur_ms": 210},
+        {"name": "ribbons_alpha", "kind": "scalar", "from": 0.0, "to": 1.0, "easing": "cubic_out", "delay_ms": 0, "dur_ms": 210}
+      ],
+      "on_start": [], "hooks": [{"at": 0.0, "id": "sound.coalesce"}],
+      "skip": "settle_to_end", "reduced": "crossfade", "preserve": "people count and important targets"
+    },
+    {
+      "id": "outcome_pullback", "trigger": "level_end", "duration_ms": 650, "focus": "final arrival then all routes",
+      "tracks": [
+        {"name": "cam_center", "kind": "vec2", "from": [106, 470], "to": [181, 262], "easing": "ease_in_out", "delay_ms": 0, "dur_ms": 650},
+        {"name": "cam_zoom", "kind": "scalar", "from": 1.15, "to": 0.78, "easing": "ease_in_out", "delay_ms": 0, "dur_ms": 650},
+        {"name": "ribbons_alpha", "kind": "scalar", "from": 0.0, "to": 1.0, "easing": "ease_in_out", "delay_ms": 300, "dur_ms": 350}
+      ],
+      "on_start": ["result_shown"], "hooks": [{"at": 0.0, "id": "sound.result"}, {"at": 0.0, "id": "haptic.result"}],
+      "skip": "settle_to_end", "reduced": "crossfade", "note": "the result is available at t=0; watching is optional"
+    },
+    {
+      "id": "ghosted_rewind", "trigger": "retry", "duration_ms": 440, "focus": "whole map",
+      "tracks": [
+        {"name": "ghost_alpha", "kind": "scalar", "from": 1.0, "to": 0.25, "easing": "cubic_out", "delay_ms": 0, "dur_ms": 320},
+        {"name": "settle", "kind": "scalar", "from": 0.0, "to": 1.0, "easing": "cubic_out", "delay_ms": 320, "dur_ms": 120}
+      ],
+      "on_start": ["reset_run"], "hooks": [{"at": 0.0, "id": "sound.rewind"}],
+      "skip": "settle_to_end", "reduced": "crossfade", "note": "the old score and agents are gone at t=0; the ghost is only a picture"
+    }
+  ]
+}

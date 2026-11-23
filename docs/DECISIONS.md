@@ -218,6 +218,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: scroll gain 0.85; inertia k 6.0, cap 1.6 viewport heights per second; zoom 0.65 to 2.80; notes 18 logical px
 - rationale: the prompt's C1 to C3, with the camera unable to touch a run
 - alternatives: none compared
-- approver status: PROPOSED. Awaiting "Approve Stage 11" and the camera-feel choice
+- approver status: APPROVED (user: "Approve Stage 11, option A": slower editorial glide)
 - affected files: src/camera/*, scripts/ref_camera.py, scripts/stage11_preview.py, tests/test_camera.gd, data/art_tokens.json, docs/CAMERA.md, docs/stage11/*
+- supersedes: none
+
+**CC-D-019**
+- stage: 12
+- date: 2026-11-23
+- question: How are the six transitions built so they can be skipped or cancelled safely?
+- chosen option: one data-driven state machine (data/transitions.json, CcTransition); every game-state callback fires at start; on_end once and cosmetic; touch freezes, skip settles in 100 ms, reduced motion is a 150 ms crossfade
+- values: durations 550, 170, 800, 210, 650, 440 ms; auto-camera average limit 468 px/s (provisional)
+- rationale: a cancel at any point cannot change a run or duplicate a result
+- alternatives: end-of-transition callbacks (rejected: a skip could lose or repeat them)
+- approver status: PROPOSED. Awaiting "Approve Stage 12" and a decision on each transition
+- affected files: data/transitions.json, src/camera/transition.gd, scripts/ref_transitions.py, scripts/stage12_preview.py, tests/test_transitions.gd, docs/TRANSITIONS.md, docs/stage12/*
 - supersedes: none

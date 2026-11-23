@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        11 (Path scrolling and semantic zoom): PARTIAL, AWAITING APPROVAL. Camera logic checked in Python; GDScript, wiring and engine captures BLOCKED
-LAST_APPROVED_STAGE:  10 (user: \"Approve Stage 10, option B\", 2026-11-23): visual language approved with the narrow-phone fix (applied in Stage 11 as the badge rule). Engine runs still BLOCKED
-NEXT_ACTION:          User answers the Stage 11 camera-feel question. Stage 12 starts only after "Approve Stage 11"
+CURRENT_STAGE:        12 (Six transitions): PARTIAL, AWAITING APPROVAL. Driver checked in Python; GDScript, wiring and on-device capture BLOCKED
+LAST_APPROVED_STAGE:  11 (user: "Approve Stage 11, option A", 2026-11-23): slower editorial glide camera. Engine runs still BLOCKED
+NEXT_ACTION:          User approves or rejects individual transitions (docs/TRANSITIONS.md). Stage 13 starts only after "Approve Stage 12"
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       Godot 4.7.2 stable, provisional, pinned in project.godot and CI; never run in this project
 KNOWN_BLOCKERS:
