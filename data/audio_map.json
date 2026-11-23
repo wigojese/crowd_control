@@ -1,0 +1,178 @@
+{
+ "note": "Stage 15. Sounds map to real simulation events (data/events.schema.json), never to a timer. Critical cues must each have a visual equivalent in data/visual_cues.json (tested). No audio or haptic is required to play.",
+ "sample_rate": 22050,
+ "limits": {
+  "max_triggers_per_second": 10,
+  "max_voices": {
+   "effects": 6,
+   "texture": 1,
+   "ui": 2
+  },
+  "foot_bed_full_at_walkers": 20,
+  "queue_compress_cooldown_ms_per_street": 4000,
+  "reroute_tick_cooldown_ms": 250,
+  "arrival_pluck_cooldown_ms": 120
+ },
+ "defaults": {
+  "master": 0.8,
+  "effects": 0.8,
+  "texture": 0.5,
+  "ui": 0.8
+ },
+ "arrival_scale_semitones": [
+  0,
+  2,
+  4,
+  7,
+  9
+ ],
+ "cues": {
+  "sign_pickup": {
+   "file": "assets/audio/sign_pickup.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": true,
+   "duration_ms": 80,
+   "visual": "sign_lift",
+   "haptic": "light_tick"
+  },
+  "sign_turn": {
+   "file": "assets/audio/sign_turn.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": true,
+   "duration_ms": 200,
+   "visual": "arrow_turn_and_lock_ring",
+   "haptic": "none"
+  },
+  "sign_drop": {
+   "file": "assets/audio/sign_drop.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": true,
+   "duration_ms": 170,
+   "visual": "transition:sign_drops",
+   "haptic": "light_thud"
+  },
+  "command_rejected": {
+   "file": "assets/audio/command_rejected.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": true,
+   "duration_ms": 120,
+   "visual": "sign_shake_and_lock_text",
+   "haptic": "double_tick"
+  },
+  "foot_bed": {
+   "file": "assets/audio/foot_bed.wav",
+   "category": "texture",
+   "loop": true,
+   "critical": false,
+   "duration_ms": 2000,
+   "visual": "moving_notes",
+   "haptic": "none"
+  },
+  "queue_compress": {
+   "file": "assets/audio/queue_compress.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": false,
+   "duration_ms": 700,
+   "visual": "queue_hatch_and_badge",
+   "haptic": "none"
+  },
+  "reroute_tick": {
+   "file": "assets/audio/reroute_tick.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": false,
+   "duration_ms": 200,
+   "visual": "ink_tick_at_node",
+   "haptic": "none"
+  },
+  "arrival_pluck": {
+   "file": "assets/audio/arrival_pluck.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": false,
+   "duration_ms": 250,
+   "visual": "arrival_counter",
+   "haptic": "none"
+  },
+  "result_success": {
+   "file": "assets/audio/result_success.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": true,
+   "duration_ms": 1200,
+   "visual": "result_card_and_transition:outcome_pullback",
+   "haptic": "soft_pulse"
+  },
+  "result_failure": {
+   "file": "assets/audio/result_failure.wav",
+   "category": "effects",
+   "loop": false,
+   "critical": true,
+   "duration_ms": 1200,
+   "visual": "result_card_and_transition:outcome_pullback",
+   "haptic": "none"
+  },
+  "ui_tap": {
+   "file": "assets/audio/ui_tap.wav",
+   "category": "ui",
+   "loop": false,
+   "critical": false,
+   "duration_ms": 50,
+   "visual": "button_press_state",
+   "haptic": "none"
+  }
+ },
+ "events": [
+  {
+   "event": "SIGN_PICKED",
+   "cue": "sign_pickup"
+  },
+  {
+   "event": "SIGN_ROTATED",
+   "cue": "sign_turn"
+  },
+  {
+   "event": "SIGN_DROPPED",
+   "cue": "sign_drop"
+  },
+  {
+   "event": "COMMAND_REJECTED",
+   "cue": "command_rejected",
+   "cooldown_ms": 300
+  },
+  {
+   "event": "DECISION",
+   "when": {
+    "reason": "sign_flipped"
+   },
+   "cue": "reroute_tick",
+   "cooldown_key": "global"
+  },
+  {
+   "event": "QUEUE_JOINED",
+   "when": {
+    "position_at_least": 3
+   },
+   "cue": "queue_compress",
+   "cooldown_key": "edge"
+  },
+  {
+   "event": "WALKER_ARRIVED",
+   "cue": "arrival_pluck",
+   "cooldown_key": "global"
+  },
+  {
+   "event": "RUN_ENDED",
+   "cue_if_passed": "result_success",
+   "cue_if_failed": "result_failure"
+  }
+ ],
+ "continuous": {
+  "foot_bed": "gain follows the number of walkers on streets (EDGE_ENTERED minus NODE_ARRIVED), full at 20, times the texture slider"
+ }
+}

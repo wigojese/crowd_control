@@ -254,6 +254,18 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - values: L02 pass mark 28 of 30; L03 pass mark 29 of 40; moving to Canal Turn at ticks 100 to 230 passes L02
 - rationale: found by search in the reference model; each has exactly one lesson and a second solution
 - alternatives: new graphs per level (rejected: composition risk); a second wave from the same gate (rejected: gained at most 2)
-- approver status: PROPOSED. Awaiting "Approve Stage 14" and the pacing answer
+- approver status: APPROVED (user: "Approve Stage 14, option A": future content emphasises timing)
 - affected files: data/levels/*, data/replays/*, scripts/check_levels.py, scripts/stage14_diagrams.py, docs/analysis/stage14_level_search.py, tests/test_levels.gd, docs/LEVELS.md, docs/LEVELS_L04_L08_SPEC.md, docs/stage14/*
+- supersedes: none
+
+**CC-D-022**
+- stage: 15
+- date: 2026-11-23
+- question: What does the game sound like, what can the player switch, and what is the default?
+- chosen option: eleven original synthesised cues mapped to real events; four independent sliders; haptics off; reduced motion follows the system; patterns always on; left-handed mirror layout; trigger cap 10 per second; critical cues never dropped
+- values: master 0.8, effects 0.8, texture 0.5, ui 0.8; max 6 effect voices; cooldowns reroute 250 ms, arrival 120 ms, queue 4 s per street
+- rationale: restrained by rule, and tested against a 50-walker stream
+- alternatives: licensed music (not allowed without permission)
+- approver status: PROPOSED. Awaiting "Approve Stage 15" after listening
+- affected files: assets/audio/*, data/audio_map.json, data/visual_cues.json, data/settings_schema.json, src/audio/*, src/core/settings.gd, src/input/dock_layout.gd, scripts/synth_audio.py, ref_audio.py, ref_settings.py, check_audio_files.py, docs/AUDIO.md, docs/ACCESSIBILITY.md, docs/stage15/*
 - supersedes: none

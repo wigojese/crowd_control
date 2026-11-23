@@ -15,6 +15,9 @@ run python3 -I scripts/ref_sim.py
 run python3 -I scripts/check_levels.py
 run python3 -I scripts/ref_explain.py
 run python3 -I scripts/ref_camera.py
+run python3 -I scripts/check_audio_files.py
+run python3 -I scripts/ref_audio.py
+run python3 -I scripts/ref_settings.py
 run python3 -I scripts/ref_transitions.py
 run python3 -I scripts/check_contrast.py
 if command -v godot >/dev/null 2>&1; then

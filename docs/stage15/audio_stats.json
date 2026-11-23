@@ -1,0 +1,112 @@
+{
+ "sign_pickup": {
+  "duration_ms": 80,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -23.3,
+  "clipped_samples": 0,
+  "dc_offset": -1e-05,
+  "spectral_centroid_hz": 3038,
+  "first_sample": 0.0,
+  "last_sample": 0.0
+ },
+ "sign_turn": {
+  "duration_ms": 200,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -20.4,
+  "clipped_samples": 0,
+  "dc_offset": 0.00268,
+  "spectral_centroid_hz": 1275,
+  "first_sample": 0.0,
+  "last_sample": 0.0
+ },
+ "sign_drop": {
+  "duration_ms": 170,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -16.4,
+  "clipped_samples": 0,
+  "dc_offset": 0.00191,
+  "spectral_centroid_hz": 650,
+  "first_sample": 0.0,
+  "last_sample": 0.0
+ },
+ "command_rejected": {
+  "duration_ms": 120,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -15.9,
+  "clipped_samples": 0,
+  "dc_offset": 0.00752,
+  "spectral_centroid_hz": 405,
+  "first_sample": 0.0,
+  "last_sample": 0.0
+ },
+ "foot_bed": {
+  "duration_ms": 2000,
+  "peak_dbfs": -9.1,
+  "rms_dbfs": -30.0,
+  "clipped_samples": 0,
+  "dc_offset": -0.0001,
+  "spectral_centroid_hz": 742,
+  "first_sample": 0.0,
+  "last_sample": 0.0
+ },
+ "queue_compress": {
+  "duration_ms": 700,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -14.9,
+  "clipped_samples": 0,
+  "dc_offset": 4e-05,
+  "spectral_centroid_hz": 818,
+  "first_sample": 0.0,
+  "last_sample": -0.0
+ },
+ "reroute_tick": {
+  "duration_ms": 200,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -15.6,
+  "clipped_samples": 0,
+  "dc_offset": -4e-05,
+  "spectral_centroid_hz": 1002,
+  "first_sample": 0.0,
+  "last_sample": 0.0
+ },
+ "arrival_pluck": {
+  "duration_ms": 250,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -15.8,
+  "clipped_samples": 0,
+  "dc_offset": 3e-05,
+  "spectral_centroid_hz": 646,
+  "first_sample": 0.0,
+  "last_sample": -0.0
+ },
+ "result_success": {
+  "duration_ms": 1200,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -16.6,
+  "clipped_samples": 0,
+  "dc_offset": 1e-05,
+  "spectral_centroid_hz": 955,
+  "first_sample": 0.0,
+  "last_sample": -0.0
+ },
+ "result_failure": {
+  "duration_ms": 1200,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -17.8,
+  "clipped_samples": 0,
+  "dc_offset": 2e-05,
+  "spectral_centroid_hz": 485,
+  "first_sample": 0.0,
+  "last_sample": 0.0
+ },
+ "ui_tap": {
+  "duration_ms": 50,
+  "peak_dbfs": -4.4,
+  "rms_dbfs": -16.2,
+  "clipped_samples": 0,
+  "dc_offset": 0.0,
+  "spectral_centroid_hz": 1036,
+  "first_sample": 0.0,
+  "last_sample": -0.0
+ }
+}

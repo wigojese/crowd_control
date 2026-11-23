@@ -1,0 +1,16 @@
+{
+ "A/E": {
+  "duration_s": 33.5,
+  "peak_dbfs": -2.3,
+  "rms_dbfs": -26.3,
+  "clipped": 0,
+  "scaled_down": false
+ },
+ "L02 move": {
+  "duration_s": 33.5,
+  "peak_dbfs": -1.7,
+  "rms_dbfs": -24.3,
+  "clipped": 0,
+  "scaled_down": false
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "note": "Stage 15 player settings. Nothing here is required to play: defaults give sound at moderate level, no haptics, OS reduced-motion preference, normal camera, right hand layout, patterns always on.",
+  "fields": {
+    "master": {"type": "float", "min": 0.0, "max": 1.0, "default": 0.8},
+    "effects": {"type": "float", "min": 0.0, "max": 1.0, "default": 0.8},
+    "texture": {"type": "float", "min": 0.0, "max": 1.0, "default": 0.5},
+    "ui": {"type": "float", "min": 0.0, "max": 1.0, "default": 0.8},
+    "haptics": {"type": "bool", "default": false},
+    "reduced_motion": {"type": "enum", "values": ["system", "on", "off"], "default": "system"},
+    "static_camera": {"type": "bool", "default": false},
+    "left_handed": {"type": "bool", "default": false},
+    "pattern_equivalents": {"type": "bool", "default": true},
+    "larger_targets": {"type": "bool", "default": false}
+  }
+}

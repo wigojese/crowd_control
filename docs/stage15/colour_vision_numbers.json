@@ -1,0 +1,60 @@
+{
+ "delta_e76_normal": {
+  "amber vs sage": 41.6,
+  "vermilion vs amber": 47.8,
+  "coral vs plum": 33.3,
+  "sage vs stave": 33.4,
+  "vermilion vs plum": 46.1
+ },
+ "delta_e76_by_simulation": {
+  "protanopia": {
+   "amber vs sage": 26.9,
+   "vermilion vs amber": 36.6,
+   "coral vs plum": 33.4,
+   "sage vs stave": 31.7,
+   "vermilion vs plum": 42.1
+  },
+  "deuteranopia": {
+   "amber vs sage": 29.3,
+   "vermilion vs amber": 19.9,
+   "coral vs plum": 33.1,
+   "sage vs stave": 28.4,
+   "vermilion vs plum": 44.2
+  },
+  "tritanopia": {
+   "amber vs sage": 41.8,
+   "vermilion vs amber": 44.8,
+   "coral vs plum": 18.5,
+   "sage vs stave": 21.6,
+   "vermilion vs plum": 33.0
+  }
+ },
+ "pairs": [
+  {
+   "pair": "amber vs sage",
+   "meaning": "School and Plaza routes",
+   "non_colour_cue": "solid vs dashed line"
+  },
+  {
+   "pair": "vermilion vs amber",
+   "meaning": "sign and School route",
+   "non_colour_cue": "disc with arrow vs line and notes"
+  },
+  {
+   "pair": "coral vs plum",
+   "meaning": "queue colours",
+   "non_colour_cue": "hatch pattern"
+  },
+  {
+   "pair": "sage vs stave",
+   "meaning": "Plaza route and street line",
+   "non_colour_cue": "dashed vs solid, ribbon width"
+  },
+  {
+   "pair": "vermilion vs plum",
+   "meaning": "sign and queue hatch",
+   "non_colour_cue": "disc vs diagonal hatch"
+  }
+ ],
+ "method": "Machado, Oliveira and Fernandes 2009 matrices at severity 1.0, applied in linear RGB; CIE76 delta E. A delta E under 10 is treated as 'needs a non-colour cue'."
+}

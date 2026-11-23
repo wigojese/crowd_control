@@ -139,3 +139,19 @@ Code: `src/input/gesture_router.gd`, `data/input_tokens.json`; reference `script
 | T14-06 | Level changes never break composition or input | RAN for geometry only (identical geometry, sockets far enough apart). Real screen and input: BLOCKED | |
 | T14-07 | A user can complete L01 to L03 without a manual | **UNTESTED**: needs people and a playable build | |
 | T14-08 | Follower behaviour (R-42) | RAN: event log shows `queue_flipped` for walkers 7 and 8; explained, not a bug | `docs/BEHAVIOR_MATRIX.md` |
+
+## Stage 15 (audio, haptics, accessibility)
+
+| ID | Test | Result | Evidence |
+|---|---|---|---|
+| T15-01 | Sound files: format, length against the map, peak, clipping, DC, silent ends, loop ends (11 cues) | RAN, PASS | `python3 -I scripts/check_audio_files.py` |
+| T15-02 | Deterministic synthesis | RAN: three runs give identical file hashes | `scripts/synth_audio.py` |
+| T15-03 | Scheduler: one result sound, pitches on the scale, limits, mute and independent sliders, determinism, every play traces to a real event, 50-walker stress | RAN, PASS (18 checks) | `python3 -I scripts/ref_audio.py` |
+| T15-04 | Settings and dock layout (55 checks) | RAN, PASS | `python3 -I scripts/ref_settings.py` |
+| T15-05 | The first dock layout run failed 3 checks: larger targets did not fit three controls at 320 wide, and my mirror code was wrong. Fixed | RAN | same |
+| T15-06 | GDScript scheduler, settings and dock tests | **BLOCKED** | `tests/test_audio.gd`, `tests/test_settings.gd`; missing Godot |
+| T15-07 | Colour-vision simulation, three deficiencies | RAN | `docs/stage15/colour_vision_*` |
+| T15-08 | Muted play: every critical cue visible | **NOT MET** in the game (3 of 6 designed only) | `docs/stage15/muted_timeline.png` |
+| T15-09 | How the sounds sound | **UNVERIFIED**: I cannot hear. Please listen to the two mix files | `docs/stage15/mix_*.wav` |
+| T15-10 | Reduced-motion recording | RAN as reference renderings, not engine | `docs/stage15/reduced_motion_*` |
+| T15-11 | Haptics on a device, speakers, earphones, screen readers | **BLOCKED**: no device | |

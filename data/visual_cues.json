@@ -1,0 +1,45 @@
+{
+ "note": "Every gameplay-critical sound has a visual equivalent so a muted player misses nothing. status: implemented_in_data = exists in a data file used by tested code; implemented_in_code = drawing code written (not run); designed = in a spec or preview only, not built.",
+ "visuals": {
+  "sign_lift": {
+   "status": "designed",
+   "where": "docs/INPUT_SPEC.md: lift on the first frame, glow ring"
+  },
+  "arrow_turn_and_lock_ring": {
+   "status": "designed",
+   "where": "docs/INPUT_SPEC.md: turn 140-180 ms, lock ring starts the same frame"
+  },
+  "transition:sign_drops": {
+   "status": "implemented_in_data",
+   "where": "data/transitions.json id sign_drops"
+  },
+  "sign_shake_and_lock_text": {
+   "status": "designed",
+   "where": "docs/INPUT_SPEC.md: shake 100 ms and the reason text"
+  },
+  "moving_notes": {
+   "status": "implemented_in_code",
+   "where": "src/rendering/map_view.gd _draw_walker"
+  },
+  "queue_hatch_and_badge": {
+   "status": "implemented_in_code",
+   "where": "src/rendering/map_view.gd _draw_queue; CcZoomBands.cluster_badges"
+  },
+  "ink_tick_at_node": {
+   "status": "designed",
+   "where": "docs/INPUT_SPEC.md onboarding: ink tick at a changed decision"
+  },
+  "arrival_counter": {
+   "status": "designed",
+   "where": "HUD count in docs/stage10 pictures; no HUD code yet"
+  },
+  "result_card_and_transition:outcome_pullback": {
+   "status": "implemented_in_data",
+   "where": "data/transitions.json id outcome_pullback; copy from CcExplainer"
+  },
+  "button_press_state": {
+   "status": "designed",
+   "where": "docs/INPUT_SPEC.md: press state on touch-down"
+  }
+ }
+}

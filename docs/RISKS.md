@@ -55,6 +55,10 @@ There is no code, so there are no code issues. VERIFIED: nothing to audit. Do no
 | 45 | R-45 | L03 passes with a margin of 2 walkers over no sign, and L02's pass window is wide only for the one move tested | Levels may be too tight or too easy in the engine | VERIFIED in the reference, UNKNOWN in the engine | Playtest and engine run |
 | 46 | R-46 | The ruleset has no randomness, so the level seed has no effect and daily reproducibility adds no variety | A share or daily feature would be an empty promise | VERIFIED | Do not ship a seed or share feature unless randomness is approved |
 | 47 | R-47 | No level where a wrong sign hurts was found; L06 as sketched may not exist under these rules | A lesson in the plan may be impossible | VERIFIED so far (no counter-example found) | Search at Stage 14 follow-up if L06 is authorized |
+| 48 | R-48 | Nobody has heard the sounds (I cannot); tone, annoyance and balance are unverified, and the 32 s mixes peak at -2.3 and -1.7 dBFS | The sound may be harsh, repetitive or too loud | UNKNOWN | Listen to docs/stage15/mix_*.wav; adjust defaults |
+| 49 | R-49 | 3 of 6 critical cues have a visual equivalent that is only designed (pickup lift, turn ring, refused-action shake) | A muted player misses them in the game | VERIFIED | Build them in the Stage 16 integration |
+| 50 | R-50 | Static camera, reduced motion and the other settings exist as data and logic but are not wired to the camera, transitions or any menu | Settings that do nothing | VERIFIED | Wire at integration |
+| 51 | R-51 | Screen-reader support, dynamic text size and testing with disabled players are not done | Excludes some players | VERIFIED gap | Plan with real testers at Stage 17 |
 
 ## Manual checks I could not do (reproducible later)
 

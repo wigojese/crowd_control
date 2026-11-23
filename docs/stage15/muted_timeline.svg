@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="Inter, sans-serif">
+<rect width="900" height="420" fill="#17120F"/>
+<text x="16" y="26" font-size="14" font-weight="700" fill="#EFE3C8">Muted play: every sound has a visual equivalent. L02 solution run (sign moved at 8 s), real events, 32 s</text>
+<text x="16" y="44" font-size="11" fill="#B7A98F">dot = a sound would play here. dot colour = how far the matching visual is built: green in drawing code, amber in a data file, coral designed only (not built)</text>
+<text x="16" y="84" font-size="11" fill="#EFE3C8">sign_pickup  (critical)</text>
+<line x1="200" y1="80" x2="880" y2="80" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<circle cx="370.0" cy="80" r="4" fill="#E8765A"/>
+<text x="885" y="74" font-size="8.5" fill="#B7A98F" text-anchor="end">sign_lift</text>
+<text x="16" y="114" font-size="11" fill="#EFE3C8">sign_turn  (critical)</text>
+<line x1="200" y1="110" x2="880" y2="110" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<text x="885" y="104" font-size="8.5" fill="#B7A98F" text-anchor="end">arrow_turn_and_lock_ring</text>
+<text x="16" y="144" font-size="11" fill="#EFE3C8">sign_drop  (critical)</text>
+<line x1="200" y1="140" x2="880" y2="140" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<circle cx="380.6" cy="140" r="4" fill="#E6A532"/>
+<text x="885" y="134" font-size="8.5" fill="#B7A98F" text-anchor="end">transition:sign_drops</text>
+<text x="16" y="174" font-size="11" fill="#EFE3C8">command_rejected  (critical)</text>
+<line x1="200" y1="170" x2="880" y2="170" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<text x="885" y="164" font-size="8.5" fill="#B7A98F" text-anchor="end">sign_shake_and_lock_text</text>
+<text x="16" y="204" font-size="11" fill="#EFE3C8">queue_compress</text>
+<line x1="200" y1="200" x2="880" y2="200" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<circle cx="200.0" cy="200" r="4" fill="#A8B56A"/>
+<circle cx="200.0" cy="200" r="4" fill="#A8B56A"/>
+<circle cx="370.0" cy="200" r="4" fill="#A8B56A"/>
+<circle cx="370.0" cy="200" r="4" fill="#A8B56A"/>
+<text x="885" y="194" font-size="8.5" fill="#B7A98F" text-anchor="end">queue_hatch_and_badge</text>
+<text x="16" y="234" font-size="11" fill="#EFE3C8">reroute_tick</text>
+<line x1="200" y1="230" x2="880" y2="230" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<circle cx="200.0" cy="230" r="4" fill="#E8765A"/>
+<circle cx="210.6" cy="230" r="4" fill="#E8765A"/>
+<circle cx="221.2" cy="230" r="4" fill="#E8765A"/>
+<circle cx="231.9" cy="230" r="4" fill="#E8765A"/>
+<circle cx="242.5" cy="230" r="4" fill="#E8765A"/>
+<circle cx="380.6" cy="230" r="4" fill="#E8765A"/>
+<circle cx="391.2" cy="230" r="4" fill="#E8765A"/>
+<text x="885" y="224" font-size="8.5" fill="#B7A98F" text-anchor="end">ink_tick_at_node</text>
+<text x="16" y="264" font-size="11" fill="#EFE3C8">arrival_pluck</text>
+<line x1="200" y1="260" x2="880" y2="260" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<circle cx="448.6" cy="260" r="4" fill="#E8765A"/>
+<circle cx="524.1" cy="260" r="4" fill="#E8765A"/>
+<circle cx="530.4" cy="260" r="4" fill="#E8765A"/>
+<circle cx="537.9" cy="260" r="4" fill="#E8765A"/>
+<circle cx="544.2" cy="260" r="4" fill="#E8765A"/>
+<circle cx="547.4" cy="260" r="4" fill="#E8765A"/>
+<circle cx="559.1" cy="260" r="4" fill="#E8765A"/>
+<circle cx="576.1" cy="260" r="4" fill="#E8765A"/>
+<circle cx="583.6" cy="260" r="4" fill="#E8765A"/>
+<circle cx="591.0" cy="260" r="4" fill="#E8765A"/>
+<circle cx="594.2" cy="260" r="4" fill="#E8765A"/>
+<circle cx="598.4" cy="260" r="4" fill="#E8765A"/>
+<circle cx="612.2" cy="260" r="4" fill="#E8765A"/>
+<circle cx="649.4" cy="260" r="4" fill="#E8765A"/>
+<circle cx="680.2" cy="260" r="4" fill="#E8765A"/>
+<circle cx="733.4" cy="260" r="4" fill="#E8765A"/>
+<circle cx="802.4" cy="260" r="4" fill="#E8765A"/>
+<circle cx="807.8" cy="260" r="4" fill="#E8765A"/>
+<circle cx="819.4" cy="260" r="4" fill="#E8765A"/>
+<circle cx="825.8" cy="260" r="4" fill="#E8765A"/>
+<circle cx="837.5" cy="260" r="4" fill="#E8765A"/>
+<circle cx="854.5" cy="260" r="4" fill="#E8765A"/>
+<circle cx="861.9" cy="260" r="4" fill="#E8765A"/>
+<text x="885" y="254" font-size="8.5" fill="#B7A98F" text-anchor="end">arrival_counter</text>
+<text x="16" y="294" font-size="11" fill="#EFE3C8">result_success  (critical)</text>
+<line x1="200" y1="290" x2="880" y2="290" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<circle cx="880.0" cy="290" r="4" fill="#E6A532"/>
+<text x="885" y="284" font-size="8.5" fill="#B7A98F" text-anchor="end">result_card_and_transition:outcome_pullback</text>
+<text x="16" y="324" font-size="11" fill="#EFE3C8">result_failure  (critical)</text>
+<line x1="200" y1="320" x2="880" y2="320" stroke="#EFE3C8" stroke-width=".5" opacity=".3"/>
+<text x="885" y="314" font-size="8.5" fill="#B7A98F" text-anchor="end">result_card_and_transition:outcome_pullback</text>
+<text x="200" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">0 s</text>
+<text x="285" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">4 s</text>
+<text x="370" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">8 s</text>
+<text x="455" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">12 s</text>
+<text x="540" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">16 s</text>
+<text x="625" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">20 s</text>
+<text x="710" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">24 s</text>
+<text x="795" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">28 s</text>
+<text x="880" y="364" font-size="10" fill="#B7A98F" text-anchor="middle">32 s</text>
+<text x="16" y="394" font-size="12" fill="#E8765A">Honest result: 3 of 6 critical cues have a visual equivalent that is only designed, not built. The muted-player requirement is met on paper, not in the game.</text></svg>
