@@ -141,10 +141,11 @@ IDs are stable. Nothing below is **approved** yet. Every entry is PROPOSED until
 - stage: 05
 - date: 2026-11-23
 - question: Which art direction is chosen: A print atlas (Civic Press), B fold-out paper theater, or C transit score?
-- chosen option: **Not chosen yet.** Recommended: A as the base, optionally with C's dock timeline
+- chosen option: **C, transit score (dark theme), chosen by the user on 2026-11-23.** The assistant had recommended A; the user's choice stands. The user changed their mind twice in the same message (A, then C); the final instruction was "continue with C, dar[k] theme"
 - values: weighted rubric (spec B5): A 7.58, B 6.70, C 7.28 (my judgements from static pictures); palette tokens for each in docs/ART_BIBLE.md
 - rationale: A scores highest, is the cheapest to build and reads best. C is more distinctive but weak in sunlight and for touch feel. B is the most tactile but the most expensive and noisy. If distinctiveness is weighted above 30 %, C overtakes A
 - alternatives: B; C; a revision of any
-- approver status: PROPOSED. Awaiting the user's choice and "Approve Stage 05". Supersedes the provisional status of CC-D-004 only after approval
+- approver status: APPROVED by the user on 2026-11-23 ("Approve Stage 05 … continue with C, dark theme"). CC-D-004 (Civic Press D2 provisional) is superseded: D2 is no longer the working direction
 - affected files: docs/ART_BIBLE.md, docs/stage05-art/*
-- supersedes: CC-D-004 (once chosen)
+- supersedes: CC-D-004
+- required changes to C before Stage 10 (PROPOSED, from the contrast tests): use plum for hatched fills only (4.07:1 is below text size 4.5:1); disabled text raised to at least 4.5:1; sign arrow drawn dark on the vermilion disc (4.69:1) instead of parchment (3.11:1); keep daylight legibility as a measured gate on a real phone (R-21)

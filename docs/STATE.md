@@ -1,9 +1,9 @@
 # STATE
 
 ```
-CURRENT_STAGE:        05 (Art direction competition with complete visual grammar): AWAITING USER APPROVAL
-LAST_APPROVED_STAGE:  04 (user: "Approve Stage 04, choose A", 2026-11-23). Default sign control A: drag primary, tap alternative
-NEXT_ACTION:          User picks one art direction (A, B or C, optionally with one named detail from another) and says "Approve Stage 05". Stage 06 starts only after that.
+CURRENT_STAGE:        06 (Technical spike and documented engine selection): IN PROGRESS
+LAST_APPROVED_STAGE:  05 (user: "Approve Stage 05 … continue with C, dark theme", 2026-11-23). Art direction C chosen
+NEXT_ACTION:          Finish the Stage 06 spike and docs/ENGINE_DECISION.md; present the Stage 06 gate; STOP. Stage 07 starts only after "Approve Stage 06".
 BUILD_HASH:           none (no build exists). Docs commit: see `git log`
 ENGINE_VERSION:       none selected. Candidate only: Godot 4.7 stable (UNVERIFIED from this container)
 KNOWN_BLOCKERS:

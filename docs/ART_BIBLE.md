@@ -145,3 +145,36 @@ Approve **one** direction, optionally with one named detail from another:
 - **C**.
 
 If none, say what to change; I will revise Stage 05 and not move on.
+
+## 7. CHOSEN: Direction C, transit score (dark theme). DO, DO NOT and objective tests
+
+Chosen by the user on 2026-11-23 (CC-D-012). The five moments, palette and tokens in section 1C are the working definition. Changes required before it is realised in the engine, from the tests in section 3:
+
+| Change | Reason |
+|---|---|
+| Use plum `#B8566F` for hatched fills only, never for small text | 4.07:1 on night |
+| Raise disabled-control text to at least 4.5:1 | the faint grey is 3.15:1 |
+| Draw the sign arrow dark (`#17120F`) on the vermilion disc, keep the parchment ring | parchment on vermilion is 3.11:1; dark on vermilion is 4.69:1 |
+| Add a high-contrast variant with thicker lines (staff lines off, 2.4 px centre line) | spec accessibility requirement and daylight risk R-21 |
+| Make the notes at least 18 px and keep beamed pairs for followers | notes were the smallest marks in the mockups |
+
+| DO | DO NOT |
+|---|---|
+| Keep vermilion exclusive to the sign | Use vermilion for any other control or text |
+| Draw streets as one bright centre line with two thin side lines | Add glow or blur to roads |
+| Separate walker types by note shape (single, beamed pair, flagged), not by colour | Colour-code walker types |
+| Use amber for School-bound routes and sage for Plaza-bound routes, always with a shape cue | Use amber or sage as the only way to tell destinations apart |
+| Show the clock as a timeline with 4-second ticks in the dock | Hide the lock timer |
+| Keep staff lines static and anchored to the screen's map area | Animate or scroll the staff lines with the camera (shimmer risk) |
+| Use Inter, Inter Display and JetBrains Mono (all verified SIL OFL) | Ship a font whose licence has not been read |
+| Keep text at least 12.5 px and 4.5:1 | Put thin text (weight under 400) at body sizes |
+
+| Objective test | Pass condition |
+|---|---|
+| Grayscale | The sign, a queue and both destinations are identifiable in the grayscale mid-round at 390×844 |
+| Sunlight | On a real phone outdoors, a tester finds the sign and the queue within 3 seconds. **Not yet testable (R-01, R-21)** |
+| Contrast | Body text at least 4.5:1; sign against its ground at least 3:1; plum never used for text |
+| Small phone | At 320×568 every required control is at least 44 px and no label overlaps a decision node |
+| Palette audit | No blue, teal, cyan or navy anywhere, including charts and icons |
+| Silent view | In a 6-second muted recording, a stranger can point to the sign and to a rerouted walker |
+| Fonts | Licence files for Inter, Inter Display and JetBrains Mono are in the repository; Georgian fallback chosen before localisation (R-22) |
